@@ -91,3 +91,10 @@ cache/
 
 # Large sensor CSV exports (use Parquet instead)
 data/car_cam/**/*.csv
+
+**/raw/**
+**/_raw/**
+**/proximity/population/**
+**/proximity/streets/**
+
+*.osm

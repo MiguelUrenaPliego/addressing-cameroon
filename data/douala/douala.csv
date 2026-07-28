@@ -1,0 +1,718 @@
+id,landuse,products,rtk_lat,rtk_lon,rtk_timestamp,rtk_precision,mobile_lat,mobile_lon,mobile_timestamp,mobile_precision,mobile_error,comments_landuse,comments_gnss
+1,residential,,4.086757952,9.738364243,2026-03-20T12:34:14,0.012,4.086781667,9.73837,2026-03-20T12:34:19,1.4,2.7131925313727865,R+Rs,
+2,residential,,4.086605717,9.73836759,2026-03-20T12:37:48,0.015,4.086633333,9.738378333,2026-03-20T12:37:34,1.5,3.2938282904365375,Rs plants of the bled,
+3,residential,,4.086405382,9.738365175,2026-03-20T12:39:16,0.014,4.086451667,9.738345,2026-03-20T12:39:18,1.9,5.612056401203577,Rs My Jane,
+4,residential,,4.08627165,9.738377718,2026-03-20T12:41:04,0.01,4.086275,9.738388333,2026-03-20T12:41:11,1.5,1.2348574378650206,Residential,
+5,residential,,4.085938852,9.738364542,2026-03-20T12:43:12,0.01,4.085963333,9.738355,2026-03-20T12:43:17,1.8,2.9206546469433157,Gs,
+6,residential,,4.085872445,9.738358455,2026-03-20T12:44:11,0.012,4.08589,9.738358333,2026-03-20T12:44:13,1.5,1.9520738356950484,R+Rs,
+7,residential,,4.08553507,9.738365305,2026-03-20T12:45:13,0.014,4.085558333,9.73838,2026-03-20T12:45:19,1.4,3.057383467865634,Rs,
+8,commercial,general_retail,4.085365885,9.738382052,2026-03-20T12:46:12,0.01,4.085395,9.738396667,2026-03-20T12:46:12,1.3,3.6205814648445327,Shops,
+9,residential|commercial,general_retail,4.085229495,9.738373818,2026-03-20T12:47:20,0.013,4.085261667,9.738393333,2026-03-20T12:47:38,1.6,4.181195370640323,Shops+Rs,
+10,commercial,drinks|general_retail,4.084957063,9.738377078,2026-03-20T12:49:02,0.018,4.08498,9.738396667,2026-03-20T12:49:10,1.6,3.3504336787338778,Wine store,
+11,public_service,education,4.084900058,9.738550158,2026-03-20T12:50:48,0.017,4.084946667,9.738516667,2026-03-20T12:50:48,1.6,6.37638118213168,Vocational center,
+12,residential,,4.084908417,9.738655113,2026-03-20T12:51:10,0.019,4.084928333,9.738643333,2026-03-20T12:51:09,1.5,2.571252038101569,R,
+13,residential,,4.084900423,9.73875944,2026-03-20T12:51:43,0.01,4.084891667,9.73873,2026-03-20T12:51:46,1.7,3.40732740396691,R,
+14,commercial,general_retail,4.085239285,9.739033333,2026-03-20T13:03:14,0.2,4.085276667,9.738981667,2026-03-20T13:03:36,1.7,7.079233302018376,Music center,
+15,residential,,4.085374508,9.739056268,2026-03-20T13:04:08,0.095,4.085405,9.739088333,2026-03-20T13:05:00,1.7,4.913642989536723,R,
+16,commercial,general_retail,4.084345102,9.738608652,2026-03-20T13:17:03,0.13,4.084378333,9.738601667,2026-03-20T13:17:20,1.6,3.77546006856109,Mini market,
+17,commercial,clothing|general_retail,4.084354145,9.738661887,2026-03-20T13:17:46,0.01,4.084393333,9.738648333,2026-03-20T13:17:45,1.3,4.609533725769596,Cloths shop,
+18,residential,,4.084359432,9.738689888,2026-03-20T13:18:18,0.036,4.084376667,9.73869,2026-03-20T13:18:16,1.5,1.9164848199904911,R,
+19,commercial,general_retail,4.084363942,9.738922157,2026-03-20T13:19:42,0.01,4.084365,9.73891,2026-03-20T13:19:42,1.3,1.353485984886188,Medical shop,
+20,office,professional_services,4.084343737,9.739102633,2026-03-20T13:20:54,0.01,4.084356667,9.739081667,2026-03-20T13:20:53,1.3,2.7339666932382385,Offices,
+21,commercial,dry_cleaning_services,4.084351577,9.73920982,2026-03-20T13:21:42,0.01,4.084351667,9.739186667,2026-03-20T13:21:41,1.2,2.5679771186799067,P premium pressing,
+22,commercial,furniture_and_home_goods,4.084354087,9.739249942,2026-03-20T13:22:26,0.012,4.084355,9.739231667,2026-03-20T13:22:27,1.2,2.0294671352873075,La Maison luminaire,
+23,residential,,4.084663428,9.73988528,2026-03-20T13:30:06,0.012,4.084658333,9.739943333,2026-03-20T13:30:54,3.4,6.463678411333758,R,
+24,residential,,4.085298463,9.739644102,2026-03-20T13:33:27,0.011,4.085288333,9.739566667,2026-03-20T13:33:28,2.1,8.662051581887333,R,
+25,residential,,4.085351407,9.739644467,2026-03-20T13:33:40,0.059,4.08536,9.739608333,2026-03-20T13:33:42,1.5,4.120036437448594,R,
+26,residential,,4.085597532,9.73964618,2026-03-20T13:34:11,0.076,4.085625,9.739668333,2026-03-20T13:34:15,2.5,3.91992523582937,R,
+27,residential,,4.085667428,9.739837132,2026-03-20T13:35:40,0.69,4.085656667,9.739735,2026-03-20T13:35:22,2.7,11.390721888817126,R,
+28,residential,,4.085958355,9.739680298,2026-03-20T13:36:45,0.11,4.086005,9.739613333,2026-03-20T13:36:51,1.9,9.059009243107463,R,
+29,residential,,4.086091072,9.739741388,2026-03-20T13:37:24,0.17,4.086065,9.739681667,2026-03-20T13:37:26,2.2,7.230439640850758,R,
+30,residential,,4.086260503,9.739840175,2026-03-20T13:38:22,0.3,4.086301667,9.739783333,2026-03-20T13:38:27,1.6,7.790854466238918,R,
+31,residential,,4.086589433,9.739780253,2026-03-20T13:39:44,0.12,4.086575,9.739765,2026-03-20T13:39:46,3.7,2.331871762471077,R,
+32,commercial,construction_materials,4.086819988,9.739682568,2026-03-20T13:40:30,0.83,4.0868,9.739696667,2026-03-20T13:40:30,1.6,2.71755557938652,Construction site,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+33,commercial,general_retail,4.084372492,9.739717522,2026-03-20T13:46:50,0.7,4.084376667,9.739698333,2026-03-20T13:46:51,1.4,2.1783433929941274,Shop,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+34,commercial,dry_cleaning_services,4.084383213,9.73979191,2026-03-20T13:47:42,0.76,4.084335,9.739771667,2026-03-20T13:47:48,1.4,5.812202105954436,Preference pressing,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+35,commercial,furniture_and_home_goods,4.084348643,9.7398281,2026-03-20T13:50:36,7.6,4.084338333,9.739806667,2026-03-20T13:48:18,1.4,2.6391857460628585,La Maison of the rideau,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+36,public_service,healthcare,4.084367295,9.740437728,2026-03-20T13:56:22,0.12,4.084343333,9.740388333,2026-03-20T13:56:25,1.4,6.092087821884397,Health centre,
+37,public_service,healthcare,4.084397267,9.740611283,2026-03-20T13:57:22,3.79,4.084393333,9.740661667,2026-03-20T13:57:23.500000,1.4,5.605311299031049,Pharmacies center,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+38,residential,,4.084472148,9.740981882,2026-03-20T14:07:01,0.019,4.084523333,9.740986667,2026-03-20T14:07:02,1.6,5.716202612332486,R,
+39,commercial,construction_materials|general_retail,4.084741828,9.74098383,2026-03-20T14:08:31,0.018,4.08474,9.741045,2026-03-20T14:08:56,1.5,6.7875598909579,Construction shop,
+40,commercial,construction_materials|general_retail,4.084913587,9.740987427,2026-03-20T14:09:34,1.1,4.084905,9.740966667,2026-03-20T14:10:01,1.4,2.4926698965922576,Material shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+41,commercial,construction_materials|general_retail,4.08509152,9.74096274,2026-03-20T14:10:28,0.01,4.085121667,9.740975,2026-03-20T14:10:55,1.4,3.617488018616356,Material shop,
+42,residential,,4.085217767,9.7409803,2026-03-20T14:11:03,0.042,4.085238333,9.740975,2026-03-20T14:11:40,1.4,2.3611786297646518,R,
+43,commercial,construction_materials|general_retail,4.085287755,9.74098,2026-03-20T14:11:42,0.068,4.085298333,9.740991667,2026-03-20T14:12:03,1.4,1.7487046141264069,Material shop,
+44,commercial,electronics|general_retail,4.085387263,9.740967495,2026-03-20T14:12:16,0.01,4.085396667,9.740985,2026-03-20T14:12:32,1.4,2.205208620612136,Electronic shop,
+45,commercial,banking_and_finance,4.085427712,9.740930652,2026-03-20T14:12:39,0.036,4.085468333,9.740925,2026-03-20T14:12:49,1.5,4.560142579676537,Eco bank,
+46,residential,,4.085503668,9.740736795,2026-03-20T14:13:39,0.051,4.08554,9.740751667,2026-03-20T14:13:37,1.5,4.363700268525557,R,
+47,residential,,4.085538765,9.740561173,2026-03-20T14:14:21,0.84,4.085561667,9.740591667,2026-03-20T14:14:28,1.5,4.2336883430140535,R,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+48,residential,,4.085225387,9.740095912,2026-03-20T14:15:59,0.036,4.08526,9.74007,2026-03-20T14:16:02,1.5,4.803419869099414,R,
+49,residential,,4.085206195,9.740058782,2026-03-20T14:16:31,1.1,4.08526,9.74007,2026-03-20T14:16:02,1.5,6.110849566149608,R,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+50,residential,,4.0852378,9.740019143,2026-03-20T14:16:47,0.9,4.085255,9.740023333,2026-03-20T14:16:34,1.4,1.9682035960681035,R,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+51,residential,,4.085296143,9.739928923,2026-03-20T14:17:25,0.012,4.085325,9.739951667,2026-03-20T14:17:29,1.5,4.081612018154352,R,
+52,residential,,4.085345393,9.739981158,2026-03-20T14:17:43,0.018,4.085378333,9.739948333,2026-03-20T14:17:45,1.7,5.1643495338020555,R,
+53,residential,,4.085405892,9.740029022,2026-03-20T14:18:31,0.089,4.085435,9.740021667,2026-03-20T14:18:36,1.5,3.3378804094387564,R,
+54,residential,,4.085318705,9.74016351,2026-03-20T14:19:04,0.034,4.085341667,9.740105,2026-03-20T14:19:06,1.8,6.973702397802488,R,
+55,commercial,general_retail,4.085544045,9.740723913,2026-03-20T14:24:01,0.024,4.085588333,9.740755,2026-03-20T14:24:14,1.5,6.011649657678938,Shop,
+56,residential,,4.085557238,9.740772782,2026-03-20T14:24:12,0.035,4.085583333,9.740825,2026-03-20T14:24:47,1.8,6.477834740764288,R,
+57,residential,,4.08657653,9.740939212,2026-03-20T14:39:42,0.18,4.086596667,9.740923333,2026-03-20T14:39:52,1.5,2.848763004777874,R,
+58,residential,,4.08672208,9.740395302,2026-03-20T14:45:59,0.01,4.08677,9.740383333,2026-03-20T14:46:34,1.5,5.49133616896721,R,
+59,residential,,4.086713093,9.740750455,2026-03-20T14:49:18,0.015,4.08675,9.740748333,2026-03-20T14:49:43,1.8,4.110614403193874,R,
+60,residential,,4.08652301,9.740672215,2026-03-20T14:50:48,0.1,4.08649,9.740668333,2026-03-20T14:51:54,1.5,3.6957110449982844,R,
+61,residential,,4.0864012,9.74061775,2026-03-20T14:52:18,3.79,4.086448333,9.740563333,2026-03-20T14:53:47,1.6,7.993432066247321,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+62,residential,,4.08701768,9.73996773,2026-03-20T15:03:39,0.23,4.087051667,9.739951667,2026-03-20T15:03:30,1.5,4.178067779481954,R,
+63,commercial,general_retail,4.08699965,9.739846743,2026-03-20T15:04:02,0.12,4.087038333,9.73985,2026-03-20T15:04:04,1.3,4.316495753969766,Baby shop,
+64,residential,,4.086966728,9.739411548,2026-03-20T15:04:49,0.097,4.086998333,9.739406667,2026-03-20T15:05:16,1.4,3.555768217005415,R,
+65,commercial,electronics|general_retail,4.086992217,9.73907335,2026-03-20T15:07:41,3.79,4.08701,9.73904,2026-03-20T15:07:50,1.4,4.194286737974409,Electricity shop,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+66,commercial,beauty_services,4.08697568,9.73897795,2026-03-20T15:08:51,0.11,4.086995,9.739015,2026-03-20T15:08:55,1.4,4.636964707440462,Beauty centre,
+67,commercial,clothing|general_retail,4.087001733,9.738781267,2026-03-20T15:10:09,4.2,4.08701,9.738805,2026-03-20T15:10:11,1.4,2.788172537463528,MLeuko shop,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+68,commercial,clothing|general_retail,4.086961732,9.738773963,2026-03-20T15:10:37,0.21,4.087011667,9.738746667,2026-03-20T15:11:15,1.4,6.32423647214713,M leuko shop,
+69,public_service,education,4.08490754,9.738552087,2026-03-20T12:59:14,0.01,,,,,,Voc center,No mobile-phone reading available for this point.
+70,residential,,4.084915162,9.738658267,2026-03-20T12:59:35,0.011,,,,,,R,No mobile-phone reading available for this point.
+71,residential,,4.084915433,9.73875844,2026-03-20T12:59:56,0.014,,,,,,R,No mobile-phone reading available for this point.
+72,residential,,4.085070285,9.738850377,2026-03-20T13:00:30,0.014,,,,,,R,No mobile-phone reading available for this point.
+73,residential,,4.085096985,9.73893322,2026-03-20T13:00:46,0.015,,,,,,R,No mobile-phone reading available for this point.
+74,residential,,4.08538155,9.739115917,2026-03-20T13:04:59,0.11,,,,,,R,No mobile-phone reading available for this point.
+75,residential,,4.0939195,9.7363501,2026-03-20T13:08:19.680000,100.0,,,,,,,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+76,residential,,4.0939195,9.7363501,2026-03-20T13:08:19.680000,100.0,,,,,,,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+77,commercial,general_retail,4.0939195,9.7363501,2026-03-20T13:10:19.686000,100.0,,,,,,Shops,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+78,residential,,4.084388987,9.7399207,2026-03-20T13:52:43,1.7,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+79,residential,,4.084328577,9.740846417,2026-03-20T13:59:32,0.048,,,,,,R+Rs,No mobile-phone reading available for this point.
+80,commercial,construction_materials|general_retail,4.086314317,9.740983852,2026-03-20T14:31:57,0.012,,,,,,Construction shops,No mobile-phone reading available for this point.
+81,commercial,construction_materials|general_retail,4.086544133,9.741050633,2026-03-20T14:33:02,3.974,,,,,,Construction shops,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+82,commercial,general_retail,4.087000008,9.740748623,2026-03-20T14:43:26,0.12,,,,,,Shop,No mobile-phone reading available for this point.
+83,residential,,4.0867341,9.740043083,2026-03-20T14:57:51,3.79,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+84,commercial,general_retail,4.086818533,9.7402729,2026-03-20T14:59:32,0.15,,,,,,Shop,No mobile-phone reading available for this point.
+85,residential,,4.086976433,9.73845425,2026-03-20T15:12:18,3.79,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+86,residential,,4.087019462,9.738516308,2026-03-20T15:12:35,0.44,,,,,,R,No mobile-phone reading available for this point.
+87,commercial,jewelry|general_retail,4.085057818,9.738367397,2026-03-20T12:48:17,0.015,,,,,,Diamond shop,No mobile-phone reading available for this point.
+88,residential,,4.0939195,9.7363501,2026-03-20T12:53:40.607000,100.0,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+89,residential,,4.0939195,9.7363501,2026-03-20T12:54:40.611000,100.0,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+90,residential,,4.085088755,9.73888613,2026-03-20T13:01:03,0.013,,,,,,,No mobile-phone reading available for this point.
+91,residential,,4.085284077,9.739046402,2026-03-20T13:03:37,0.12,,,,,,R,No mobile-phone reading available for this point.
+92,residential,,4.0939195,9.7363501,2026-03-20T13:07:49.678000,100.0,,,,,,,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+93,residential,,4.0939195,9.7363501,2026-03-20T13:09:49.684000,100.0,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+94,residential|commercial,beauty_services|general_retail,4.0939195,9.7363501,2026-03-20T13:14:56.929000,100.0,,,,,,R+barber shop,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+95,commercial,beauty_services,4.0939195,9.7363501,2026-03-20T13:23:30.324000,100.0,,,,,,Essential beauty,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+96,commercial,beauty_services,4.08436897,9.739496602,2026-03-20T13:24:23,0.14,,,,,,Essentials beauty,No mobile-phone reading available for this point.
+97,residential,,4.084569085,9.739649192,2026-03-20T13:25:23,0.01,,,,,,R,No mobile-phone reading available for this point.
+98,residential,,4.084663625,9.739642723,2026-03-20T13:26:29,0.29,,,,,,R,No mobile-phone reading available for this point.
+99,industry,storage_and_warehousing,4.084773503,9.739644242,2026-03-20T13:27:24,0.23,,,,,,Storage,No mobile-phone reading available for this point.
+100,residential,,4.084914018,9.739642283,2026-03-20T13:27:47,0.24,,,,,,R,No mobile-phone reading available for this point.
+101,residential,,4.084786523,9.739884292,2026-03-20T13:29:28,0.01,,,,,,R,No mobile-phone reading available for this point.
+102,residential,,4.084780975,9.740023665,2026-03-20T13:30:53,0.01,,,,,,R,No mobile-phone reading available for this point.
+103,residential,,4.084979188,9.739896983,2026-03-20T13:32:03,0.32,,,,,,R,No mobile-phone reading available for this point.
+104,commercial,furniture_and_home_goods,4.08434788,9.739817703,2026-03-20T13:51:42,3.3,,,,,,La Maison of the rideau,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+105,residential,,4.084385117,9.74079395,2026-03-20T13:58:49,3.79,,,,,,R+Rs,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+106,residential,,4.085527447,9.740639063,2026-03-20T14:14:02,1.0,,,,,,R,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+107,residential,,4.085494048,9.74040071,2026-03-20T14:14:52,0.02,,,,,,R,No mobile-phone reading available for this point.
+108,residential,,4.085280915,9.740148392,2026-03-20T14:15:36,0.017,,,,,,R,No mobile-phone reading available for this point.
+109,residential,,4.085282513,9.739958415,2026-03-20T14:17:12,0.022,,,,,,R,No mobile-phone reading available for this point.
+110,residential,,4.085446148,9.740261778,2026-03-20T14:21:12,0.13,,,,,,R,No mobile-phone reading available for this point.
+111,public_service,healthcare,4.085573748,9.740209885,2026-03-20T14:21:59,0.025,,,,,,Medical center,No mobile-phone reading available for this point.
+112,residential,,4.085650345,9.740173048,2026-03-20T14:22:37,0.013,,,,,,R,No mobile-phone reading available for this point.
+113,residential,,4.085555713,9.740861022,2026-03-20T14:24:43,0.059,,,,,,R,No mobile-phone reading available for this point.
+114,commercial,general_retail,4.085631725,9.740992142,2026-03-20T14:26:26,0.01,,,,,,Mini shop,No mobile-phone reading available for this point.
+115,commercial,general_retail,4.08568767,9.740984288,2026-03-20T14:27:03,0.01,,,,,,Shop,No mobile-phone reading available for this point.
+116,commercial,construction_materials|general_retail,4.085897802,9.740989723,2026-03-20T14:28:13,0.027,,,,,,Construction shop,No mobile-phone reading available for this point.
+117,commercial,construction_materials|general_retail,4.086013172,9.740996472,2026-03-20T14:29:19,0.01,,,,,,Multi construction shop,No mobile-phone reading available for this point.
+118,residential,,4.086113,9.74098559,2026-03-20T14:30:02,0.017,,,,,,R,No mobile-phone reading available for this point.
+119,residential|commercial,automotive,4.08618766,9.740952985,2026-03-20T14:30:59,0.01,,,,,,R+saviour automile,No mobile-phone reading available for this point.
+120,residential,,4.0866017,9.740955517,2026-03-20T14:38:56,3.79,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+121,residential,,4.086713572,9.740952857,2026-03-20T14:40:30,0.021,,,,,,R,No mobile-phone reading available for this point.
+122,residential,,4.086928318,9.740979965,2026-03-20T14:41:45,0.022,,,,,,R,No mobile-phone reading available for this point.
+123,commercial,general_retail,4.086990835,9.740894397,2026-03-20T14:42:51,0.38,,,,,,Shop,No mobile-phone reading available for this point.
+124,residential,,4.086982387,9.740633653,2026-03-20T14:44:09,0.1,,,,,,R,No mobile-phone reading available for this point.
+125,residential,,4.086700333,9.740353265,2026-03-20T14:46:22,0.01,,,,,,Rs,No mobile-phone reading available for this point.
+126,residential,,4.086547053,9.740586927,2026-03-20T14:47:37,0.01,,,,,,R,No mobile-phone reading available for this point.
+127,residential,,4.086606412,9.740632545,2026-03-20T14:48:34,0.012,,,,,,R,No mobile-phone reading available for this point.
+128,residential,,4.086691147,9.7407647,2026-03-20T14:49:38,0.11,,,,,,R,No mobile-phone reading available for this point.
+129,residential,,4.086344533,9.740689467,2026-03-20T14:51:38.570000,6.106,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+130,residential,,4.086385318,9.740592015,2026-03-20T14:52:38,0.88,,,,,,R,No mobile-phone reading available for this point.
+131,residential,,4.086405218,9.74053043,2026-03-20T14:53:40,0.17,,,,,,R,No mobile-phone reading available for this point.
+132,residential,,4.08647819,9.740456312,2026-03-20T14:54:18,0.18,,,,,,R,No mobile-phone reading available for this point.
+133,residential,,4.086576542,9.740373222,2026-03-20T14:54:54,0.079,,,,,,R,No mobile-phone reading available for this point.
+134,residential,,4.086645205,9.740195322,2026-03-20T14:55:42,1.0,,,,,,R,No mobile-phone reading available for this point.
+135,residential,,4.086596233,9.740137083,2026-03-20T14:56:04,5.541,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+136,residential,,4.086520433,9.740069333,2026-03-20T14:56:23,3.79,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+137,residential,,4.086683195,9.73999563,2026-03-20T14:57:01,0.22,,,,,,R,No mobile-phone reading available for this point.
+138,residential,,4.086561333,9.7400782,2026-03-20T14:57:37,6.697,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+139,residential,,4.086777828,9.740042753,2026-03-20T14:58:15,0.28,,,,,,R,No mobile-phone reading available for this point.
+140,commercial,general_retail,4.086996552,9.740205878,2026-03-20T15:00:28,0.1,,,,,,Shopping,No mobile-phone reading available for this point.
+141,commercial,beauty_services|general_retail,4.086986412,9.740072358,2026-03-20T15:02:44,0.29,,,,,,Beauty shop,No mobile-phone reading available for this point.
+142,residential,,4.086960267,9.739396397,2026-03-20T15:05:15,0.36,,,,,,R,No mobile-phone reading available for this point.
+143,commercial,clothing|general_retail,4.086978235,9.739105563,2026-03-20T15:06:50,0.1,,,,,,Tieds shop,No mobile-phone reading available for this point.
+144,office,professional_services,4.086962225,9.738727917,2026-03-20T15:11:20,0.091,,,,,,ABis AGency,No mobile-phone reading available for this point.
+145,commercial,general_retail,4.086963125,9.738615992,2026-03-20T15:11:47,0.15,,,,,,Nice shop,No mobile-phone reading available for this point.
+146,residential,,,,,,4.08507,9.738876667,2026-03-20T12:54:53,1.9,,,No RTK reading available for this point.
+147,commercial,jewelry|general_retail,,,,,4.085125,9.738423333,2026-03-20T12:48:22,1.5,,Diamond shop,No RTK reading available for this point.
+148,residential,,,,,,4.085088333,9.738823333,2026-03-20T12:53:53,1.6,,R,No RTK reading available for this point.
+149,residential,,,,,,4.08507,9.738876667,2026-03-20T12:54:53,1.9,,R,No RTK reading available for this point.
+150,commercial,general_retail,,,,,4.085226667,9.738986667,2026-03-20T13:03:21,1.6,,Music center,No RTK reading available for this point.
+151,residential,,,,,,4.085386667,9.739021667,2026-03-20T13:04:10,1.6,,R,No RTK reading available for this point.
+152,residential,,,,,,4.084723333,9.738388333,2026-03-20T13:09:53,1.4,,R,No RTK reading available for this point.
+153,commercial,general_retail,,,,,4.084588333,9.738383333,2026-03-20T13:10:50,1.2,,Shops,No RTK reading available for this point.
+154,residential|commercial,beauty_services|general_retail,,,,,4.08435,9.738443333,2026-03-20T13:15:08,1.4,,R+barber shop,No RTK reading available for this point.
+155,commercial,beauty_services,,,,,4.084383333,9.739488333,2026-03-20T13:23:24,1.5,,Essential beauty,No RTK reading available for this point.
+156,residential,,,,,,4.084621667,9.73962,2026-03-20T13:25:24,1.7,,R,No RTK reading available for this point.
+157,residential,,,,,,4.084686667,9.739616667,2026-03-20T13:26:30,1.8,,R,No RTK reading available for this point.
+158,industry,storage_and_warehousing,,,,,4.08484,9.739628333,2026-03-20T13:27:27,1.8,,Storage,No RTK reading available for this point.
+159,residential,,,,,,4.084961667,9.739648333,2026-03-20T13:27:50,1.5,,R,No RTK reading available for this point.
+160,residential,,,,,,4.084828333,9.73988,2026-03-20T13:29:33,1.7,,R,No RTK reading available for this point.
+161,residential,,,,,,4.084695,9.739865,2026-03-20T13:30:07,1.5,,R,No RTK reading available for this point.
+162,residential,,,,,,4.084985,9.739893333,2026-03-20T13:32:05,1.6,,R,No RTK reading available for this point.
+163,residential,,,,,,4.085288333,9.739566667,2026-03-20T13:33:28,2.1,,R,No RTK reading available for this point.
+164,residential,,,,,,4.084351667,9.73991,2026-03-20T13:52:29,1.4,,R,No RTK reading available for this point.
+165,residential|commercial,general_retail,,,,,4.084318333,9.740821667,2026-03-20T13:58:50,1.2,,Rs+shops,No RTK reading available for this point.
+166,residential,,,,,,4.085551667,9.740731667,2026-03-20T14:14:01,2.1,,R,No RTK reading available for this point.
+167,residential,,,,,,4.085571667,9.740375,2026-03-20T14:14:55,1.4,,R,No RTK reading available for this point.
+168,residential,,,,,,4.085345,9.74012,2026-03-20T14:15:40,1.5,,R,No RTK reading available for this point.
+169,residential,,,,,,4.085255,9.740023333,2026-03-20T14:16:49,1.4,,R,No RTK reading available for this point.
+170,public_service,healthcare,,,,,4.085575,9.740231667,2026-03-20T14:22:23,1.6,,Medical centre,No RTK reading available for this point.
+171,residential,,,,,,4.085668333,9.740165,2026-03-20T14:22:43,1.6,,R,No RTK reading available for this point.
+172,commercial,general_retail,,,,,4.085586667,9.740686667,2026-03-20T14:24:03,1.5,,Shop,No RTK reading available for this point.
+173,commercial,general_retail,,,,,4.085686667,9.741011667,2026-03-20T14:26:29,1.5,,Mini market,No RTK reading available for this point.
+174,commercial,general_retail,,,,,4.085743333,9.74101,2026-03-20T14:27:06,1.7,,Shop,No RTK reading available for this point.
+175,commercial,construction_materials|general_retail,,,,,4.08593,9.740993333,2026-03-20T14:28:04,1.4,,Construction shop,No RTK reading available for this point.
+176,commercial,construction_materials|general_retail,,,,,4.086075,9.741,2026-03-20T14:29:22,1.4,,Multi construction shop,No RTK reading available for this point.
+177,residential,,,,,,4.086148333,9.740993333,2026-03-20T14:30:03,1.7,,R,No RTK reading available for this point.
+178,residential|commercial,automotive,,,,,4.086193333,9.740965,2026-03-20T14:30:51,1.3,,Saviour automobile+R,No RTK reading available for this point.
+179,commercial,construction_materials|general_retail,,,,,4.086343333,9.740996667,2026-03-20T14:31:59,1.4,,Construction shop,No RTK reading available for this point.
+180,commercial,construction_materials|general_retail,,,,,4.08653,9.74099,2026-03-20T14:37:46,1.6,,Construction shop,No RTK reading available for this point.
+181,residential,,,,,,4.08692,9.740981667,2026-03-20T14:41:52,1.8,,R,No RTK reading available for this point.
+182,commercial,general_retail,,,,,4.087013333,9.740856667,2026-03-20T14:43:02,1.5,,Shop,No RTK reading available for this point.
+183,residential,,,,,,4.087018333,9.74065,2026-03-20T14:44:11,1.6,,R,No RTK reading available for this point.
+184,residential,,,,,,4.086778333,9.740403333,2026-03-20T14:46:02,2.0,,R,No RTK reading available for this point.
+185,residential,,,,,,4.086576667,9.740576667,2026-03-20T14:47:34,1.6,,R,No RTK reading available for this point.
+186,residential,,,,,,4.086645,9.74065,2026-03-20T14:48:19,1.4,,R,No RTK reading available for this point.
+187,residential,,,,,,4.086775,9.74074,2026-03-20T14:49:19.001000,2.1,,R,No RTK reading available for this point.
+188,residential,,,,,,4.086536667,9.74065,2026-03-20T14:50:57,1.5,,R,No RTK reading available for this point.
+189,residential,,,,,,4.08646,9.74062,2026-03-20T14:52:33,1.4,,R,No RTK reading available for this point.
+190,residential,,,,,,4.086503333,9.740516667,2026-03-20T14:54:21,1.5,,R,No RTK reading available for this point.
+191,residential,,,,,,4.086606667,9.740356667,2026-03-20T14:55:00,1.6,,R,No RTK reading available for this point.
+192,residential,,,,,,4.086683333,9.740191667,2026-03-20T14:55:42,1.6,,R,No RTK reading available for this point.
+193,residential,,,,,,4.08662,9.740188333,2026-03-20T14:56:05,1.6,,R,No RTK reading available for this point.
+194,residential,,,,,,4.086598333,9.740085,2026-03-20T14:56:26,1.4,,,No RTK reading available for this point.
+195,residential,,,,,,4.086685,9.740036667,2026-03-20T14:57:06,1.5,,R,No RTK reading available for this point.
+196,residential,,,,,,4.086733333,9.740091667,2026-03-20T14:57:39,1.5,,R,No RTK reading available for this point.
+197,residential,,,,,,4.086756667,9.740035,2026-03-20T14:58:19,1.7,,R,No RTK reading available for this point.
+198,commercial,general_retail,,,,,4.086871667,9.74029,2026-03-20T14:59:34,1.6,,Shop,No RTK reading available for this point.
+199,commercial,general_retail,,,,,4.087011667,9.740225,2026-03-20T15:00:33,1.4,,Shopping,No RTK reading available for this point.
+200,commercial,general_retail,,,,,4.087066667,9.740111667,2026-03-20T15:02:20,1.9,,Shop,No RTK reading available for this point.
+201,commercial,beauty_services|general_retail,,,,,4.087066667,9.740083333,2026-03-20T15:02:45,1.4,,MB beauty shop,No RTK reading available for this point.
+202,commercial,clothing|general_retail,,,,,4.087035,9.73912,2026-03-20T15:07:34,1.7,,Tier shop,No RTK reading available for this point.
+203,commercial,electronics|general_retail,,,,,4.087008333,9.739045,2026-03-20T15:07:49,1.4,,Electricity shop,No RTK reading available for this point.
+204,commercial,general_retail,,,,,4.08704,9.738615,2026-03-20T15:11:49,1.4,,Nice shop,No RTK reading available for this point.
+205,residential,,,,,,4.087005,9.738516667,2026-03-20T15:12:39,1.7,,R,No RTK reading available for this point.
+206,commercial,restaurant|food,4.086447907,9.738284373,2026-03-20T12:36:45,0.012,4.086483333,9.738318333,2026-03-20T12:36:54,1.5,5.4501696482327215,Rest,
+207,commercial,general_retail,4.086312125,9.73827904,2026-03-20T12:37:44,0.047,4.08635,9.738286667,2026-03-20T12:37:30,1.5,4.295624756087141,Multiservice,
+208,commercial,beauty_services,4.086284148,9.73826841,2026-03-20T12:38:27,0.86,4.086313333,9.738276667,2026-03-20T12:38:29,1.4,3.371968645570036,Barber,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+209,commercial,restaurant|food,4.086215993,9.738268558,2026-03-20T12:38:49,0.73,4.086238333,9.738281667,2026-03-20T12:38:50,1.4,2.8783143581478425,Rest,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+210,commercial,beauty_services|clothing,4.08607378,9.738275167,2026-03-20T12:41:18,0.84,4.086108333,9.7383,2026-03-20T12:41:15,1.6,4.7273625999975515,Cosmetics and cloth,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+211,commercial,bar|drinks,4.085953955,9.738275155,2026-03-20T12:43:01,0.78,4.085971667,9.738298333,2026-03-20T12:42:58,1.6,3.23844063761547,Lykea lounge,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+212,residential,,4.085882552,9.738271085,2026-03-20T12:43:32,0.71,4.085913333,9.738273333,2026-03-20T12:43:29,1.8,3.431760454462418,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+213,commercial,general_retail,4.085688438,9.73827507,2026-03-20T12:44:21,0.65,4.0857,9.738281667,2026-03-20T12:44:19,1.6,1.4792658951626687,Multiservice,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+214,commercial,general_retail,4.085465395,9.73827717,2026-03-20T12:45:17,0.65,4.085488333,9.738268333,2026-03-20T12:45:15,1.5,2.7324284588927203,Multiservice,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+215,residential,,4.085251262,9.738269065,2026-03-20T12:47:39,0.61,4.085265,9.738278333,2026-03-20T12:47:37,1.5,1.841250077515229,Petit vacant plot,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+216,residential,,4.084885653,9.738670088,2026-03-20T12:51:10,0.71,4.084866667,9.738633333,2026-03-20T12:51:11,2.3,4.590806391682707,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+217,residential,,4.08489656,9.738808938,2026-03-20T12:51:49,0.86,4.084963333,9.738828333,2026-03-20T12:51:48,1.8,7.73015959494759,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+218,residential,,4.084887828,9.738994298,2026-03-20T12:52:38,0.71,4.08493,9.739018333,2026-03-20T12:52:37,1.5,5.39407429397259,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+219,commercial,restaurant|food,4.084778558,9.739161852,2026-03-20T12:53:49,0.67,4.084825,9.739198333,2026-03-20T12:53:46,2.2,6.560472179456942,Restaurant,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+220,residential,,4.084708087,9.73931003,2026-03-20T12:54:34,0.67,4.084761667,9.739301667,2026-03-20T12:54:31,1.8,6.029596852468305,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+221,residential,,4.084805545,9.739382608,2026-03-20T12:54:54,0.69,4.084756667,9.739323333,2026-03-20T12:54:59,1.9,8.530003833506003,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+222,residential,,4.08481298,9.739230205,2026-03-20T12:55:22,0.71,4.084771667,9.73925,2026-03-20T12:55:20,1.8,5.091486560365923,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+223,residential,,4.084898383,9.739074652,2026-03-20T12:56:54,0.013,4.084963333,9.739078333,2026-03-20T12:56:50.500000,2.6,7.2336410746281405,Residential,
+224,residential,,4.085222518,9.73910188,2026-03-20T13:02:24,0.068,4.085276667,9.739133333,2026-03-20T13:02:25,1.5,6.9586923404576355,Residential,
+225,residential,,4.085228267,9.73924621,2026-03-20T13:03:08,0.053,4.085273333,9.739255,2026-03-20T13:03:09,2.0,5.105065919599479,Residential,
+226,residential,,4.085236688,9.7393523,2026-03-20T13:03:40,0.074,4.08527,9.739383333,2026-03-20T13:03:43,1.8,5.056434154595503,Residential,
+227,residential,,4.085256072,9.739562555,2026-03-20T13:04:30,0.1,4.085305,9.739581667,2026-03-20T13:04:48,1.9,5.838913125319468,Residential,
+228,residential,,4.085261148,9.73937308,2026-03-20T13:05:25,0.12,4.085273333,9.73938,2026-03-20T13:05:26,1.8,1.5571958754652275,Residential,
+229,residential,,4.085304345,9.739232152,2026-03-20T13:06:16,0.012,4.085335,9.739216667,2026-03-20T13:06:18,1.7,3.8169142508800897,Residential,
+230,residential,,4.0853713,9.739206252,2026-03-20T13:06:38,0.018,4.085401667,9.73921,2026-03-20T13:06:42,1.7,3.4021484645413467,Residential,
+231,commercial,bar|drinks,4.084536035,9.73837777,2026-03-20T13:10:14,0.01,4.084593333,9.738373333,2026-03-20T13:10:08,1.6,6.390224408524281,Mk cave,
+232,residential,,4.084327437,9.738744627,2026-03-20T13:18:14,0.034,4.084345,9.738726667,2026-03-20T13:18:14,1.7,2.789606198804608,Residential,
+233,commercial,general_retail,4.084335445,9.738962522,2026-03-20T13:19:44,0.016,4.08436,9.738946667,2026-03-20T13:19:45,1.4,3.2476796383614746,Multiple commerce,
+234,commercial,automotive,4.084338317,9.739035998,2026-03-20T13:20:42,0.012,4.084363333,9.738998333,2026-03-20T13:20:43,1.3,5.018890709761323,Moto repair,
+235,residential,,4.084369792,9.739283465,2026-03-20T13:21:38,0.01,4.08438,9.739256667,2026-03-20T13:21:39,1.4,3.181599386307032,Residential,
+236,public_service,healthcare,4.084368243,9.739341343,2026-03-20T13:22:17,0.01,4.084376667,9.73931,2026-03-20T13:22:17,1.4,3.6003188806253004,Physiotherapy,
+237,commercial,beauty_services,4.08436457,9.739375302,2026-03-20T13:22:37,0.019,4.084376667,9.73931,2026-03-20T13:22:35,1.5,7.366657881960709,Barber,
+238,public_service,healthcare,4.084377643,9.739435823,2026-03-20T13:23:12,0.01,4.084383333,9.739428333,2026-03-20T13:23:12,1.8,1.0442358126015723,Centre imagery,
+239,residential,,4.084493882,9.739644792,2026-03-20T13:24:12,0.1,4.08454,9.739625,2026-03-20T13:24:12,1.8,5.578180593526114,Residential,
+240,residential,,4.08450332,9.739603985,2026-03-20T13:24:56,0.14,4.084526667,9.739608333,2026-03-20T13:24:53,1.6,2.6404794091588815,Residential,
+241,commercial,automotive|general_retail,4.084608817,9.73961359,2026-03-20T13:25:36,0.096,4.084621667,9.739595,2026-03-20T13:25:35,1.5,2.508566427333705,Wheel tyres shop,
+242,residential,,4.084641127,9.739599647,2026-03-20T13:26:00,0.011,4.084648333,9.739598333,2026-03-20T13:26:00,1.5,0.8144166605213372,Residential,
+243,residential,,4.084774213,9.739610537,2026-03-20T13:26:41,0.01,4.084811667,9.73962,2026-03-20T13:26:41,1.6,4.294911933586797,Residential,
+244,residential,,4.085080993,9.739617515,2026-03-20T13:27:42,0.045,4.085103333,9.73961,2026-03-20T13:27:42,1.8,2.62020226812456,Residential,
+245,residential,,4.085238043,9.739604477,2026-03-20T13:28:40,0.1,4.085253333,9.739585,2026-03-20T13:28:40,1.7,2.7490397810305254,Residential,
+246,commercial,beauty_services,4.08630411,9.739842817,2026-03-20T13:36:48,0.069,4.086363333,9.739853333,2026-03-20T13:37:21,1.8,6.687788738704002,Beauty salon,
+247,commercial,restaurant|food,4.086796133,9.739676542,2026-03-20T13:40:04,1.1,4.086848333,9.739625,2026-03-20T13:40:28,1.9,8.146821076111594,Restaurant,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+248,commercial,automotive,4.084340964,9.739983147,2026-03-20T13:47:19,0.62,4.084323333,9.73996,2026-03-20T13:46:50,1.4,3.2302418307858867,Wheel repair and appliance,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+249,commercial,optics|general_retail,4.084363836,9.740073068,2026-03-20T13:48:03,0.62,4.08434,9.74007,2026-03-20T13:48:15.999000,1.7,2.6721965593860006,Eye optics shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+250,residential,,4.084377846,9.740208601,2026-03-20T13:49:01,0.62,4.08439,9.740191667,2026-03-20T13:48:49,1.5,2.313884168215332,Incomplete residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+251,residential,,4.084378337,9.740297459,2026-03-20T13:49:41,0.62,4.084383333,9.740288333,2026-03-20T13:49:41,1.6,1.1546156208944895,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+252,commercial,automotive,4.08433592,9.740366415,2026-03-20T13:54:49,0.63,4.084331667,9.740383333,2026-03-20T13:54:47,1.4,1.9350944724529289,Wheel sales and repair,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+253,residential,,4.08456409,9.740565498,2026-03-20T13:55:48,0.14,4.084585,9.740518333,2026-03-20T13:55:48,2.1,5.724626507136821,Residential,
+254,residential,,4.084620607,9.739985635,2026-03-20T13:57:25,0.093,4.08464,9.740013333,2026-03-20T13:57:27,1.6,3.753343891835787,Residential,
+255,residential,,4.084671668,9.739885317,2026-03-20T13:57:51,0.12,4.084686667,9.73989,2026-03-20T13:57:48,1.8,1.746819632107036,Residential,
+256,residential,,4.084805508,9.73987584,2026-03-20T13:58:14,1.0,4.084818333,9.739891667,2026-03-20T13:58:14,1.8,2.261671764465039,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+257,residential,,4.084775622,9.73998773,2026-03-20T13:58:50,0.092,4.08476,9.73998,2026-03-20T13:58:48,1.8,1.9371439057725977,Residential,
+258,residential,,4.084738088,9.740244222,2026-03-20T13:59:38,0.085,4.084746667,9.740226667,2026-03-20T13:59:33,1.7,2.1681972250662427,Residential,
+259,residential,,4.084693132,9.740332838,2026-03-20T14:00:13,0.97,4.084691667,9.740333333,2026-03-20T14:00:11,1.4,0.17190342872017197,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+260,residential,,4.084692352,9.740438188,2026-03-20T14:00:35,0.78,4.084673333,9.740421667,2026-03-20T14:00:35,1.6,2.798228524763022,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+261,residential,,4.084682835,9.740557502,2026-03-20T14:04:41,0.79,4.084673333,9.740556667,2026-03-20T14:04:29,16.4,1.0606252838150747,Uncompleted residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+262,residential,,4.084697647,9.740677702,2026-03-20T14:05:36,0.65,4.084705,9.740693333,2026-03-20T14:05:35,1.7,1.9167989043726712,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+263,residential,,4.08471096,9.740792965,2026-03-20T14:07:22,0.64,4.084673333,9.740768333,2026-03-20T14:07:19,4.1,4.996907585114242,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+264,residential,,4.084639137,9.740781392,2026-03-20T14:07:47,0.66,4.084675,9.740801667,2026-03-20T14:07:49,1.7,4.578132522667702,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+265,residential,,4.084687412,9.74092805,2026-03-20T14:09:12,1.1,4.084698333,9.740913333,2026-03-20T14:08:33,1.8,2.034470293690679,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+266,residential,,4.085060347,9.740802415,2026-03-20T14:10:32,0.01,4.085116667,9.740813333,2026-03-20T14:10:30,1.8,6.37850018517238,Residential,
+267,residential,,4.085059348,9.740613982,2026-03-20T14:11:11,0.031,4.085101667,9.74061,2026-03-20T14:11:13,1.5,4.726338515535337,Residential,
+268,residential,,4.08508918,9.740396573,2026-03-20T14:12:05,0.87,4.085123333,9.740398333,2026-03-20T14:12:03,1.6,3.8026539942427515,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+269,residential,,4.085102155,9.740542257,2026-03-20T14:12:28,0.033,4.085131667,9.740526667,2026-03-20T14:12:26,1.8,3.7092680876920294,Residential,
+270,commercial,shoe_repair_services,4.085081332,9.740662905,2026-03-20T14:13:08,0.025,4.08513,9.740661667,2026-03-20T14:13:06,1.7,5.4133763897451335,Shoe repair / cobbler,
+271,residential,,4.085081188,9.740720988,2026-03-20T14:13:39,0.055,4.085111667,9.74071,2026-03-20T14:13:37,1.7,3.601570660350925,Residential,
+272,residential,,4.08509019,9.740789812,2026-03-20T14:13:59,1.1,4.085103333,9.740768333,2026-03-20T14:14:00,1.8,2.794832267291337,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+273,residential,,4.086243578,9.740025255,2026-03-20T14:18:35,1.2,4.086278333,9.740028333,2026-03-20T14:18:37,1.6,3.879629078506265,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+274,residential,,4.086126163,9.74013052,2026-03-20T14:19:06,0.014,4.086176667,9.740135,2026-03-20T14:19:07,1.7,5.637728088154248,Residential,
+275,residential,,4.086110432,9.740073603,2026-03-20T14:19:25,0.033,4.08614,9.740091667,2026-03-20T14:19:26,1.5,3.8501681658944578,Residential,
+276,residential,,4.086004065,9.740016182,2026-03-20T14:19:50,0.053,4.086048333,9.740008333,2026-03-20T14:19:47,1.7,4.998765221981389,Residential,
+277,residential,,4.086030373,9.740197578,2026-03-20T14:20:25,0.78,4.086021667,9.740198333,2026-03-20T14:20:26,1.7,0.9716780412555378,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+278,residential,,4.085913453,9.740116033,2026-03-20T14:20:52,0.012,4.085973333,9.740136667,2026-03-20T14:20:53,1.7,7.0406804567150045,Residential,
+279,residential,,4.085841258,9.740171543,2026-03-20T14:21:23,0.012,4.085895,9.74018,2026-03-20T14:21:24,1.6,6.0490043348274245,Residential,
+280,residential,,4.085790417,9.740343713,2026-03-20T14:21:58,0.03,4.08584,9.740356667,2026-03-20T14:21:56,2.0,5.697509244093069,Residential,
+281,residential,,4.085726262,9.740413877,2026-03-20T14:22:35,0.015,4.085763333,9.740413333,2026-03-20T14:22:36,1.6,4.122548680801233,Residential,
+282,residential,,4.085570547,9.740527008,2026-03-20T14:23:24,0.034,4.085621667,9.740523333,2026-03-20T14:23:18,1.7,5.698879898331746,Residential,
+283,residential,,4.085555667,9.740594523,2026-03-20T14:23:43,0.02,4.085596667,9.740586667,2026-03-20T14:23:39,1.6,4.641510475843664,Residential,
+284,residential,,4.085554455,9.740653632,2026-03-20T14:24:04,0.03,4.085553333,9.740621667,2026-03-20T14:24:00,1.5,3.547507953952286,Residential,
+285,commercial,construction_materials,4.085600302,9.740994423,2026-03-20T14:25:02,0.99,4.085621667,9.74097,2026-03-20T14:25:23,1.5,3.6029873034718527,Mekem construction materials,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+286,commercial,plumbing_services,4.085726798,9.740990035,2026-03-20T14:26:15,0.01,4.08579,9.740995,2026-03-20T14:26:17,1.5,7.049283814473321,Pkombing,
+287,residential,,4.085792468,9.740972308,2026-03-20T14:26:54,0.01,4.085828333,9.740965,2026-03-20T14:26:57,1.7,4.069542852666462,Residential,
+288,residential,,4.085939352,9.740885492,2026-03-20T14:28:46,0.062,4.086003333,9.740888333,2026-03-20T14:28:47,1.6,7.121337261821725,Residential,
+289,residential,,4.085967255,9.740791713,2026-03-20T14:29:05,0.98,4.086003333,9.740796667,2026-03-20T14:29:06,1.7,4.0491439755808205,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+290,residential,,4.085939058,9.740717235,2026-03-20T14:29:22,0.01,4.085986667,9.740716667,2026-03-20T14:29:30,1.6,5.294254094655716,Residential,
+291,residential,,4.08594035,9.740603803,2026-03-20T14:29:54,0.01,4.086008333,9.740596667,2026-03-20T14:29:54,1.9,7.600685471963244,Residential,
+292,residential,,4.085920303,9.740529057,2026-03-20T14:30:14,0.01,4.085978333,9.740536667,2026-03-20T14:30:15,1.6,6.507610272470633,Residential,
+293,residential,,4.085937805,9.740478943,2026-03-20T14:30:33,0.01,4.085971667,9.740501667,2026-03-20T14:30:34,1.6,4.530962771573381,Residential,
+294,residential,,4.08597701,9.74047673,2026-03-20T14:30:44,0.01,4.085971667,9.740501667,2026-03-20T14:30:45,1.5,2.8289100551471322,Residential,
+295,residential,,4.085977428,9.740550323,2026-03-20T14:31:04,0.01,4.086011667,9.740555,2026-03-20T14:31:04,1.5,3.8423798959600073,Residential,
+296,residential,,4.085957295,9.740663837,2026-03-20T14:31:23,0.013,4.085983333,9.740651667,2026-03-20T14:31:24,1.8,3.1944783129675245,Residential,
+297,residential,,4.085954303,9.740801817,2026-03-20T14:31:43,0.02,4.085975,9.740788333,2026-03-20T14:31:47,1.6,2.744647988578179,Residential,
+298,residential,,4.085955392,9.74089202,2026-03-20T14:32:04,0.011,4.08599,9.740876667,2026-03-20T14:32:04,1.6,4.208153663228441,Residential,
+299,commercial,construction_materials,4.086634235,9.740934018,2026-03-20T14:34:16,0.016,4.086668333,9.740943333,2026-03-20T14:34:18,1.7,3.9297648724863645,Fona construction,
+300,commercial,plumbing_services|general_retail,4.086645812,9.740911693,2026-03-20T14:34:50,0.028,4.086705,9.740911667,2026-03-20T14:34:51,1.6,6.581405949984834,Plumbing shop,
+301,commercial,restaurant|food,4.086665285,9.740894955,2026-03-20T14:35:32,0.033,4.086715,9.740903333,2026-03-20T14:35:34,1.5,5.605609240203135,Restaurant,
+302,commercial,construction_materials,4.08667536,9.74086174,2026-03-20T14:36:07,0.017,4.086726667,9.74087,2026-03-20T14:36:09,1.7,5.778167444562511,Tchoffo construction materials,
+303,commercial,plumbing_services|general_retail,4.086696333,9.740854302,2026-03-20T14:36:33,0.035,4.086735,9.740843333,2026-03-20T14:36:30,1.7,4.468382710820017,Plumbing shop,
+304,residential,,4.086750705,9.740963925,2026-03-20T14:39:00,0.12,4.086775,9.740966667,2026-03-20T14:38:57,1.4,2.7185451846368713,Mendjo olomb,
+305,commercial,construction_materials,4.086793817,9.740970445,2026-03-20T14:39:33,0.016,4.086826667,9.74097,2026-03-20T14:39:35,1.6,3.6530867731231567,Diva construction materials,
+306,commercial,construction_materials,4.086818208,9.740977645,2026-03-20T14:39:52,0.016,4.08686,9.740975,2026-03-20T14:39:56,1.6,4.656308968872409,Construction materials,
+307,commercial,plumbing_services|electronics,4.086839015,9.740981218,2026-03-20T14:40:42,0.013,4.08686,9.740975,2026-03-20T14:40:42,1.5,2.4332066274431234,Grand electric and plomb,
+308,commercial,construction_materials,4.086865713,9.740982718,2026-03-20T14:41:16,0.014,4.08692,9.741,2026-03-20T14:41:12,1.7,6.3334553756367455,Leader construction materials,
+309,commercial,construction_materials,4.086896675,9.740977825,2026-03-20T14:41:48,0.013,4.08694,9.740988333,2026-03-20T14:41:50,1.6,4.956491665620796,Construction materials,
+310,commercial,construction_materials,4.086970765,9.740852573,2026-03-20T14:42:48,0.01,4.087008333,9.740881667,2026-03-20T14:42:54,1.8,5.278557763586333,Construction materials,
+311,commercial,construction_materials,4.086970043,9.740824762,2026-03-20T14:43:11,0.011,4.087041667,9.740828333,2026-03-20T14:43:12,1.6,7.974067716444729,Construction materials,
+312,commercial,gas_and_fuel,4.086979672,9.740795432,2026-03-20T14:43:45,0.01,4.087035,9.740808333,2026-03-20T14:43:46,1.4,6.316398381121261,Magni gaz,
+313,commercial,clothing|general_retail,4.0869702,9.740205237,2026-03-20T14:46:22,0.017,4.086963333,9.740225,2026-03-20T14:46:19,1.8,2.321146964374915,Eskiss clothing shop,
+314,commercial,electronics,4.086972615,9.74012296,2026-03-20T14:47:06,0.012,4.087006667,9.74013,2026-03-20T14:47:03,1.5,3.8660807450256525,Chint electric,
+315,commercial,clothing|general_retail,4.0869718,9.740085405,2026-03-20T14:47:31,0.011,4.086988333,9.740085,2026-03-20T14:47:33,1.5,1.8389344247060053,Clothing shop,
+316,commercial,beauty_services,4.08697063,9.740054918,2026-03-20T14:48:07,0.011,4.086996667,9.740046667,2026-03-20T14:48:09,1.5,3.036371991705217,MB beauty fashion,
+317,commercial,beauty_services,4.086970202,9.740025163,2026-03-20T14:48:44,0.048,4.087011667,9.740011667,2026-03-20T14:48:46,1.6,4.847592584927395,Pris kids cosmetic,
+318,commercial,bar|drinks,4.086976478,9.739973678,2026-03-20T14:49:38,0.063,4.08699,9.739981667,2026-03-20T14:49:39,1.7,1.7452446970671058,The bouchon cave,
+319,commercial,clothing|general_retail,4.086955133,9.739843397,2026-03-20T14:50:50,0.053,4.086988333,9.739835,2026-03-20T14:50:32,1.5,3.807336785667286,TMAAS cloth shop,
+320,residential,,4.08695959,9.739595102,2026-03-20T14:52:16,0.01,4.087013333,9.739593333,2026-03-20T14:52:24,1.4,5.9791689740272185,Incomplete residential,
+321,residential,,4.086936422,9.739397858,2026-03-20T14:53:02,0.018,4.086986667,9.739403333,2026-03-20T14:53:03,1.5,5.619892566368917,Residential,
+322,residential,,4.086942315,9.739263853,2026-03-20T14:53:26,0.01,4.08698,9.739276667,2026-03-20T14:53:29,1.6,4.424836900065066,Residential,
+323,commercial,automotive,4.086952375,9.739157542,2026-03-20T14:54:24,0.011,4.08701,9.73916,2026-03-20T14:54:25,1.5,6.413404600590532,Garage,
+324,commercial,general_retail,4.086952632,9.739065505,2026-03-20T14:55:05,0.011,4.086995,9.73905,2026-03-20T14:55:07,1.4,5.015164005622671,Multiple serv,
+325,public_service,healthcare,4.086603212,9.739219837,2026-03-20T14:57:35,0.01,4.086643333,9.739203333,2026-03-20T14:57:35,1.6,4.822186073589837,Centre medical,
+326,residential,,4.086667783,9.739286098,2026-03-20T14:58:05,0.01,4.086718333,9.739281667,2026-03-20T14:58:07,1.4,5.6423471752616905,Residential,
+327,residential,,4.086703313,9.739319493,2026-03-20T14:58:25,0.011,4.086745,9.739315,2026-03-20T14:58:26,1.6,4.6620924460102895,Residential,
+328,residential,,4.086612767,9.739415715,2026-03-20T14:59:04,0.02,4.086661667,9.739406667,2026-03-20T14:59:05,1.7,5.529262660735433,Residential,
+329,residential,,4.086576923,9.739454205,2026-03-20T14:59:22,0.016,4.086628333,9.739446667,2026-03-20T14:59:21,1.5,5.77734530395249,Residential,
+330,residential,,4.086530245,9.739384863,2026-03-20T14:59:43,0.016,4.086556667,9.739383333,2026-03-20T14:59:44,1.4,2.9428890037394013,Residential,
+331,residential,,4.086361277,9.739458598,2026-03-20T15:00:27,0.016,4.086385,9.739438333,2026-03-20T15:00:28,1.4,3.4655831552912635,Residential,
+332,residential,,4.086345253,9.739438333,2026-03-20T15:00:44,0.062,4.086385,9.739438333,2026-03-20T15:00:46,1.6,4.419664749314237,Residential,
+333,residential,,4.086406333,9.739380983,2026-03-20T15:01:03,0.01,4.086445,9.739388333,2026-03-20T15:01:04,1.5,4.376173856440723,Residential,
+334,residential,,4.086509977,9.73929225,2026-03-20T15:01:25,0.01,4.086531667,9.739286667,2026-03-20T15:01:27,1.4,2.490040744675778,Residential,
+335,commercial,general_retail,4.086338888,9.739068878,2026-03-20T15:02:19,0.048,4.086361667,9.73906,2026-03-20T15:02:26,1.7,2.7175764487728746,Multiple serv,
+336,residential,,4.086250267,9.739087145,2026-03-20T15:02:56,0.01,4.086273333,9.739085,2026-03-20T15:02:57,1.7,2.575832379477839,Residential,
+337,residential,,4.08600275,9.73917827,2026-03-20T15:03:41,0.01,4.086041667,9.739166667,2026-03-20T15:03:43,1.4,4.514676927076689,Residential,
+338,residential,,4.085999077,9.739262898,2026-03-20T15:03:58,0.01,4.086045,9.739248333,2026-03-20T15:04:00,1.6,5.355838540995632,Residential,
+339,residential,,4.086002378,9.73935101,2026-03-20T15:04:20,0.01,4.08605,9.739336667,2026-03-20T15:04:21,1.6,5.529119007997843,Residential,
+340,residential,,4.086000648,9.739477525,2026-03-20T15:04:40,0.01,4.086038333,9.739458333,2026-03-20T15:04:41,1.7,4.7000373887568685,Residential,
+341,residential,,4.085987787,9.739581028,2026-03-20T15:04:58,0.01,4.086018333,9.739568333,2026-03-20T15:05:00,1.5,3.6768429779010043,Residential,
+342,residential,,4.085973473,9.739559845,2026-03-20T15:05:11,0.011,4.086016667,9.739556667,2026-03-20T15:05:11,1.5,4.815870171806375,Residential,
+343,residential,,4.08597712,9.739466142,2026-03-20T15:05:26,0.012,4.086008333,9.739473333,2026-03-20T15:05:25,1.7,3.561188848668922,Residential,
+344,residential,,4.085977187,9.739399695,2026-03-20T15:05:40,0.01,4.086015,9.739396667,2026-03-20T15:05:38,1.6,4.21800509920194,Residential,
+345,residential,,4.085930713,9.739230337,2026-03-20T15:06:12,0.01,4.085963333,9.73923,2026-03-20T15:06:09,1.4,3.627371086061571,Residential,
+346,residential,,4.085846665,9.739226887,2026-03-20T15:06:26,0.01,4.085896667,9.739213333,2026-03-20T15:06:28,1.5,5.7596162663205845,Residential,
+347,residential,,4.085847122,9.739189588,2026-03-20T15:06:37,0.01,4.085883333,9.739181667,2026-03-20T15:06:38,1.4,4.121208964483898,Residential,
+348,residential,,4.085844055,9.739116987,2026-03-20T15:06:52,0.01,4.085891667,9.739108333,2026-03-20T15:06:50,1.5,5.380517929446117,Residential,
+349,residential,,4.085844793,9.73907399,2026-03-20T15:07:04,0.01,4.085878333,9.739075,2026-03-20T15:07:02,1.4,3.731159840994589,Residential,
+350,residential,,4.085857755,9.739045062,2026-03-20T15:07:13,0.01,4.085888333,9.739065,2026-03-20T15:07:14,1.5,4.055978475471305,Residential,
+351,residential,,4.085921237,9.739046107,2026-03-20T15:07:27,0.01,4.085948333,9.739075,2026-03-20T15:07:25,1.5,4.3985435690228485,Residential,
+352,residential,,4.086032907,9.73904783,2026-03-20T15:07:45,0.01,4.086058333,9.739055,2026-03-20T15:07:46,1.6,2.9369553786941567,Residential,
+353,residential,,4.08609184,9.738817672,2026-03-20T15:08:25,0.019,4.086138333,9.738826667,2026-03-20T15:08:26,1.5,5.265168735572158,Residential,
+354,residential,,4.0860975,9.738624972,2026-03-20T15:08:57,0.016,4.08612,9.738638333,2026-03-20T15:08:51,1.7,2.907826908223745,Residential,
+355,residential,,4.086098162,9.73849081,2026-03-20T15:09:21,0.012,4.086113333,9.738491667,2026-03-20T15:09:19,1.6,1.6896139938544552,Residential,
+356,residential,,4.08612203,9.73850122,2026-03-20T15:09:30,0.011,4.086116667,9.738493333,2026-03-20T15:09:34,1.7,1.0586942496669496,Residential,
+357,residential,,4.086123223,9.738594243,2026-03-20T15:09:56,0.013,4.086155,9.73859,2026-03-20T15:09:57,1.8,3.564641874833098,Residential,
+358,residential,,4.086121997,9.738695678,2026-03-20T15:10:16,0.012,4.086118333,9.738681667,2026-03-20T15:10:14,2.0,1.606511898410325,Residential,
+359,residential,,4.086119485,9.7387912,2026-03-20T15:10:32,0.01,4.086145,9.73879,2026-03-20T15:10:35,1.8,2.840258681553598,Residential,
+360,residential,,4.08611752,9.738946793,2026-03-20T15:10:55,0.01,4.086165,9.73895,2026-03-20T15:10:56,1.7,5.291503610331929,Residential,
+361,residential,,4.086161073,9.738995668,2026-03-20T15:11:16,0.01,4.086216667,9.739008333,2026-03-20T15:11:14,1.7,6.339359793987512,Residential,
+362,residential,,4.086465562,9.738987553,2026-03-20T15:11:59,0.09,4.086493333,9.739028333,2026-03-20T15:11:52,1.6,5.476608774900484,Residential,
+363,residential,,4.08647008,9.738832565,2026-03-20T15:12:28,0.19,4.086488333,9.738846667,2026-03-20T15:12:29,1.6,2.562382108053643,Residential,
+364,residential,,4.086485838,9.738690322,2026-03-20T15:12:50,0.1,4.086488333,9.738708333,2026-03-20T15:12:51,1.6,2.016812874888686,Residential,
+365,residential,,4.086492417,9.738582807,2026-03-20T15:13:08,0.12,4.086513333,9.738586667,2026-03-20T15:13:10,1.6,2.3648287815312496,Residential,
+366,residential,,4.086495048,9.73847838,2026-03-20T15:13:37,0.084,4.086548333,9.738473333,2026-03-20T15:13:37,1.5,5.9514056035638605,Residential,
+367,residential,,4.08656747,9.738505265,2026-03-20T15:13:54,0.013,4.086548333,9.738473333,2026-03-20T15:13:55,1.6,4.131754371196526,Residential,
+368,commercial,beauty_services|general_retail,4.086564925,9.738553977,2026-03-20T15:14:29,0.011,4.08658,9.738556667,2026-03-20T15:14:31,1.4,1.7026081198745522,Everything Shop beauty,
+369,residential,,4.08656678,9.73863034,2026-03-20T15:14:51,0.01,4.086611667,9.738648333,2026-03-20T15:14:51,1.4,5.375382477703484,Residential,
+370,residential,,4.086559138,9.738700625,2026-03-20T15:15:05,0.01,4.086591667,9.738706667,2026-03-20T15:15:07,1.5,3.6786135611169812,Residential,
+371,residential,,4.086575305,9.738814918,2026-03-20T15:15:30,0.01,4.0866,9.738811667,2026-03-20T15:15:30,1.4,2.7695313722119748,Residential,
+372,residential,,4.086801342,9.738828122,2026-03-20T15:16:13,0.015,4.086831667,9.738833333,2026-03-20T15:16:14,1.4,3.421159490969702,Residential,
+373,commercial,clothing|general_retail,4.086968407,9.738787932,2026-03-20T15:17:54,0.011,4.087015,9.738778333,2026-03-20T15:17:39,1.4,5.289163405902848,Nkeuko cloth shop,
+374,office,professional_services,4.086962932,9.738726648,2026-03-20T15:18:32,0.018,4.087001667,9.738726667,2026-03-20T15:18:21,1.4,4.307135999143218,Abis agency,
+375,commercial,restaurant|food,4.08696438,9.738666207,2026-03-20T15:19:00,0.015,4.087006667,9.738671667,2026-03-20T15:18:57,1.5,4.7409356375059,Restaurant,
+376,commercial,clothing|general_retail,4.086964035,9.738625798,2026-03-20T15:19:45,0.015,4.087025,9.73862,2026-03-20T15:19:42,1.6,6.809431748968364,Nice cloth shop,
+377,commercial,clothing|general_retail,4.086961875,9.738552142,2026-03-20T15:20:11,0.015,4.087011667,9.738536667,2026-03-20T15:20:09,1.5,5.796554797881629,Cloth shop,
+378,residential,,4.086814155,9.739601623,2026-03-20T13:40:28,0.88,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+379,residential,,4.085203885,9.739135665,2026-03-20T12:58:06,0.11,,,,,,Residential,No mobile-phone reading available for this point.
+380,commercial,automotive,4.085313957,9.739598618,2026-03-20T13:32:32,0.023,,,,,,Vehicle repair,No mobile-phone reading available for this point.
+381,residential,,4.08555186,9.739606235,2026-03-20T13:33:25,0.011,,,,,,Residential,No mobile-phone reading available for this point.
+382,residential,,4.085754402,9.739599947,2026-03-20T13:34:01,0.029,,,,,,Residential,No mobile-phone reading available for this point.
+383,residential,,4.085991043,9.739594652,2026-03-20T13:34:41,0.017,,,,,,Residential,No mobile-phone reading available for this point.
+384,residential,,4.08602217,9.739667232,2026-03-20T13:35:14,0.013,,,,,,Residential,No mobile-phone reading available for this point.
+385,commercial,hotel,4.086195208,9.73974201,2026-03-20T13:36:03,0.014,,,,,,Hotel alassandra,No mobile-phone reading available for this point.
+386,residential,,4.086381788,9.739884662,2026-03-20T13:37:23,0.059,,,,,,Residential,No mobile-phone reading available for this point.
+387,commercial,automotive,4.08657038,9.739769052,2026-03-20T13:38:56,0.23,,,,,,AC repair,No mobile-phone reading available for this point.
+388,residential,,4.086692095,9.739675575,2026-03-20T13:39:37,0.13,,,,,,Residential,No mobile-phone reading available for this point.
+389,residential,,4.08506008,9.740726595,2026-03-20T14:10:51,0.02,,,,,,Residential,No mobile-phone reading available for this point.
+390,residential,,4.085021485,9.740491722,2026-03-20T14:11:39,0.06,,,,,,Residential,No mobile-phone reading available for this point.
+391,commercial,construction_materials|general_retail,4.08583252,9.740987033,2026-03-20T14:27:50,0.019,,,,,,Hardware store,No mobile-phone reading available for this point.
+392,road,drive,4.086868512,9.738277548,2026-03-20T12:32:01,0.014,,,,,,Ro,No mobile-phone reading available for this point.
+393,road,drive,4.086781718,9.738287345,2026-03-20T12:33:05,0.01,,,,,,Ro2,No mobile-phone reading available for this point.
+394,road,drive,4.086645002,9.738283128,2026-03-20T12:33:53,0.01,,,,,,Ro3,No mobile-phone reading available for this point.
+395,commercial,automotive,,,,,4.085318333,9.73961,2026-03-20T13:29:30,1.5,,Vehicle repai,No RTK reading available for this point.
+396,residential,,,,,,4.085295,9.739143333,2026-03-20T12:58:06,1.7,,Residential,No RTK reading available for this point.
+397,residential,,,,,,4.08545,9.739616667,2026-03-20T13:33:21,2.9,,Residential,No RTK reading available for this point.
+398,residential,,,,,,4.085781667,9.739605,2026-03-20T13:34:01,1.9,,Residential,No RTK reading available for this point.
+399,residential,,,,,,4.086013333,9.739591667,2026-03-20T13:34:41,2.0,,Residential,No RTK reading available for this point.
+400,residential,,,,,,4.086016667,9.739666667,2026-03-20T13:35:15,1.5,,Residential,No RTK reading available for this point.
+401,commercial,hotel,,,,,4.0862,9.739736667,2026-03-20T13:36:01,2.0,,Hotel alassandra,No RTK reading available for this point.
+402,commercial,beauty_services,,,,,4.08631,9.739823333,2026-03-20T13:36:45,1.8,,Beauty salon,No RTK reading available for this point.
+403,commercial,automotive,,,,,4.086596667,9.73973,2026-03-20T13:38:58,1.9,,AC repair,No RTK reading available for this point.
+404,residential,,,,,,4.086748333,9.739675,2026-03-20T13:39:36,2.1,,Residential,No RTK reading available for this point.
+405,commercial,restaurant|food,,,,,4.086826667,9.739678333,2026-03-20T13:40:04,1.9,,Restaurant,No RTK reading available for this point.
+406,residential,,,,,,4.08514,9.740718333,2026-03-20T14:10:51,1.6,,Residential,No RTK reading available for this point.
+407,residential,,,,,,4.085096667,9.740495,2026-03-20T14:11:38,1.6,,Residential,No RTK reading available for this point.
+408,commercial,construction_materials|general_retail,,,,,4.085843333,9.741316667,2026-03-20T14:28:06.500000,2.8,,Hardware store,No RTK reading available for this point.
+409,road,drive,,,,,4.086928333,9.738308333,2026-03-20T12:32:37,1.5,,Ro,No RTK reading available for this point.
+410,road,drive,,,,,4.086825,9.738335,2026-03-20T12:33:12,1.6,,Ro2,No RTK reading available for this point.
+411,road,drive,,,,,4.086693333,9.738308333,2026-03-20T12:33:50,1.6,,Ro3,No RTK reading available for this point.
+412,commercial,food|general_retail,4.087015107,9.74128802,2026-03-21T12:09:53,0.074,,,,,,Basic need store,No mobile-phone reading available for this point.
+413,commercial,beauty_services|general_retail,4.087016965,9.741323603,2026-03-21T12:10:34,0.05,,,,,,Beauty shop,No mobile-phone reading available for this point.
+414,commercial,automotive,4.087021392,9.741389103,2026-03-21T12:11:19,0.012,,,,,,Moto part sale,No mobile-phone reading available for this point.
+415,commercial,dry_cleaning_services,4.087018167,9.741450465,2026-03-21T12:11:56,0.01,,,,,,Pressing,No mobile-phone reading available for this point.
+416,commercial,beauty_services|general_retail,4.087020152,9.741485855,2026-03-21T12:12:28,0.013,,,,,,Beauty shop,No mobile-phone reading available for this point.
+417,commercial,general_retail,4.087018978,9.74159473,2026-03-21T12:13:34,0.01,,,,,,Multiservice building,No mobile-phone reading available for this point.
+418,residential,,4.087021713,9.741804467,2026-03-21T12:14:09,0.01,,,,,,Residential,No mobile-phone reading available for this point.
+419,commercial,hotel,4.087020043,9.742008533,2026-03-21T12:14:50,0.01,,,,,,Motel,No mobile-phone reading available for this point.
+420,industry,metalwork,4.087013615,9.742123613,2026-03-21T12:15:35,0.01,,,,,,Aluminum sale,No mobile-phone reading available for this point.
+421,commercial,beauty_services,4.087017937,9.742222112,2026-03-21T12:16:08,0.01,,,,,,Cosmetic,No mobile-phone reading available for this point.
+422,commercial,restaurant|food,4.087028537,9.742503845,2026-03-21T12:16:46,0.012,,,,,,Restaurant,No mobile-phone reading available for this point.
+423,commercial,general_retail,4.087024728,9.74274514,2026-03-21T12:17:26,0.01,,,,,,Multiple sale store,No mobile-phone reading available for this point.
+424,commercial,beauty_services,4.08701772,9.74282592,2026-03-21T12:18:03,0.01,,,,,,Beauty,No mobile-phone reading available for this point.
+425,commercial,general_retail,4.087020318,9.743105462,2026-03-21T12:19:10,0.013,,,,,,Multiservice,No mobile-phone reading available for this point.
+426,office,professional_services,4.087016045,9.74333883,2026-03-21T12:19:48,0.01,,,,,,Travel agency,No mobile-phone reading available for this point.
+427,residential,,4.087012907,9.743601275,2026-03-21T12:20:48,0.015,,,,,,Residential,No mobile-phone reading available for this point.
+428,residential,,4.08689883,9.743751163,2026-03-21T12:21:40,0.01,,,,,,Residential,No mobile-phone reading available for this point.
+429,residential,,4.086676642,9.743749973,2026-03-21T12:22:13,0.01,,,,,,Residential,No mobile-phone reading available for this point.
+430,public_service,healthcare,4.086155505,9.743750988,2026-03-21T12:24:29,0.01,,,,,,Fitness club,No mobile-phone reading available for this point.
+431,industry,carpentry_and_woodwork,4.086027308,9.743754413,2026-03-21T12:26:26,0.01,,,,,,Wood work,No mobile-phone reading available for this point.
+432,commercial,beauty_services,4.08499197,9.743750755,2026-03-21T12:28:51,0.022,,,,,,Cosmetic,No mobile-phone reading available for this point.
+433,residential,,4.084890543,9.743750623,2026-03-21T12:29:11,0.03,,,,,,Residential,No mobile-phone reading available for this point.
+434,residential,,4.084832558,9.743749305,2026-03-21T12:29:39,0.046,,,,,,Residential,No mobile-phone reading available for this point.
+435,industry,metalwork,4.084716577,9.743772202,2026-03-21T12:31:03,0.64,,,,,,Aluminum workshop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+436,office,professional_services,4.084441973,9.743792052,2026-03-21T12:31:52,0.66,,,,,,Travel agency,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+437,commercial,general_retail,4.084369833,9.743664333,2026-03-21T12:32:32,0.69,,,,,,Baby shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+438,residential,,4.084381252,9.74328641,2026-03-21T12:33:12,0.65,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+439,commercial,furniture_and_home_goods|general_retail,4.084375382,9.743034922,2026-03-21T12:34:45,0.84,,,,,,Decor shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+440,commercial,automotive,4.084376943,9.742605842,2026-03-21T12:35:39,0.61,,,,,,Vehicle part sale,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+441,commercial,electronics,4.0843778,9.742486912,2026-03-21T12:36:31,0.62,,,,,,Electrical appliance,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+442,commercial,automotive|general_retail,4.084378243,9.74214175,2026-03-21T12:37:34,0.75,,,,,,Automobile shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+443,commercial,plumbing_services|general_retail,4.08437756,9.741776978,2026-03-21T12:38:11,0.71,,,,,,Plumbing shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+444,commercial,construction_materials,4.084379232,9.741725895,2026-03-21T12:38:38,0.72,,,,,,Cement sale,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+445,residential,,4.084390543,9.74147039,2026-03-21T12:39:11,0.58,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+446,commercial,construction_materials,4.084373097,9.741353985,2026-03-21T12:39:36,0.59,,,,,,Construction materials,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+447,commercial,construction_materials,4.084369173,9.741306395,2026-03-21T12:39:55,0.67,,,,,,Construction materials,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+448,commercial,bar|drinks,4.084505923,9.741141575,2026-03-21T12:40:31,0.64,,,,,,Snack,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+449,residential,,4.08471457,9.741166122,2026-03-21T12:41:18,0.62,,,,,,Abandon building,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+450,commercial,general_retail,4.085063857,9.74117114,2026-03-21T12:42:07,0.75,,,,,,Multiservice,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+451,commercial,banking_and_finance,4.085202493,9.741175642,2026-03-21T12:42:44,0.99,,,,,,Panafrican bank,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+452,commercial,electronics,4.085274602,9.741193853,2026-03-21T12:43:22,1.1,,,,,,Electrical materials,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+453,commercial,electronics,4.085455198,9.741176075,2026-03-21T12:44:07,0.9,,,,,,Electrical materials,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+454,commercial,plumbing_services|general_retail|construction_materials,4.085676845,9.741155973,2026-03-21T12:45:03,0.69,,,,,,Construction and plumbing shops,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+455,residential,,4.085807987,9.741151412,2026-03-21T12:45:36,0.65,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+456,commercial,construction_materials,4.086402757,9.74116437,2026-03-21T12:46:47,0.61,,,,,,Fona construction,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+457,commercial,construction_materials,4.086462968,9.74116164,2026-03-21T12:47:14,0.62,,,,,,Construction materials,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+458,commercial,construction_materials,4.08683386,9.741173143,2026-03-21T12:47:55,0.66,,,,,,Construction materials,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+459,office,banking_and_finance,4.086899035,9.741192632,2026-03-21T12:48:27,0.78,,,,,,Insurance company,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+460,commercial|residential,general_retail,4.08688345,9.741571193,2026-03-21T12:50:08,1.1,,,,,,Residential+multiservice,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+461,residential,,4.086739,9.741563538,2026-03-21T12:50:37,1.0,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+462,residential,,4.086653295,9.74157559,2026-03-21T12:50:57,0.94,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+463,residential,,4.08644276,9.741585627,2026-03-21T12:51:37,0.89,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+464,residential,,4.086230912,9.741487273,2026-03-21T12:52:38,0.65,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+465,residential,,4.08622506,9.741427023,2026-03-21T12:52:58,0.65,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+466,industry,metalwork,4.086213472,9.741301535,2026-03-21T12:53:44,0.75,,,,,,Welding work,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+467,commercial,plumbing_services|general_retail,4.086167338,9.74125758,2026-03-21T12:54:02,0.73,,,,,,Plumbing shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+468,residential,,4.086159955,9.741493687,2026-03-21T12:54:35,0.65,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+469,residential,,4.085982755,9.741567563,2026-03-21T12:55:10,0.72,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+470,residential,,4.085855172,9.741557472,2026-03-21T12:55:56,0.72,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+471,residential,,4.0857549,9.741556778,2026-03-21T12:56:17,0.78,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+472,residential,,4.085686775,9.741550638,2026-03-21T12:56:39,0.8,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+473,residential,,4.085489435,9.741556492,2026-03-21T12:57:06,0.81,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+474,commercial,furniture_and_home_goods|general_retail,4.085345962,9.741546352,2026-03-21T12:57:52,0.73,,,,,,Decorations shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+475,residential,,4.085202542,9.741544713,2026-03-21T12:58:14,0.71,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+476,residential,,4.08506132,9.741560278,2026-03-21T12:58:39,0.82,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+477,residential,,4.084981172,9.741564835,2026-03-21T12:59:05,0.88,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+478,residential,,4.08486846,9.741555495,2026-03-21T12:59:37,0.76,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+479,residential,,4.084805177,9.74135894,2026-03-21T13:00:23,0.75,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+480,residential,,4.084802398,9.741357063,2026-03-21T13:01:19,0.77,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+481,residential,,4.084775253,9.741327392,2026-03-21T13:01:42,0.86,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+482,commercial,beauty_services|general_retail,4.084778458,9.741389977,2026-03-21T13:02:06,0.85,,,,,,Beauty shop,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+483,residential,,4.084786212,9.741444242,2026-03-21T13:02:42,0.78,,,,,,Incomplete buil,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+484,residential,,4.084805333,9.741616547,2026-03-21T13:03:17,0.71,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+485,residential,,4.084797748,9.741693328,2026-03-21T13:03:37,0.67,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+486,residential,,4.084793305,9.741761958,2026-03-21T13:04:43,0.64,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+487,residential,,4.08473113,9.74195019,2026-03-21T13:05:14,0.64,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+488,residential,,4.084576812,9.741940245,2026-03-21T13:05:37,0.81,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+489,residential,,4.084507897,9.741942967,2026-03-21T13:05:59,0.88,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+490,commercial,beauty_services,4.084504233,9.742039055,2026-03-21T13:06:25,0.79,,,,,,Natural cosmetics,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+491,commercial,general_retail,4.084559807,9.742026847,2026-03-21T13:06:53,0.74,,,,,,Molticommerce,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+492,commercial,general_retail,4.084665905,9.742012522,2026-03-21T13:07:14,0.75,,,,,,Multiservice,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+493,residential,,4.084744872,9.742018257,2026-03-21T13:07:35,0.74,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+494,residential,,4.0848908,9.742017853,2026-03-21T13:08:05,0.72,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+495,commercial,bar|drinks,4.084997072,9.742016817,2026-03-21T13:08:33,0.78,,,,,,Bar,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+496,residential,,4.0847797,9.742157597,2026-03-21T13:09:19,0.73,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+497,residential,,4.084757328,9.742233958,2026-03-21T13:09:47,0.71,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+498,residential,,4.084777007,9.742247268,2026-03-21T13:10:01,0.69,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+499,commercial,electronics,4.084774143,9.742280327,2026-03-21T13:10:28,0.68,,,,,,ElecAM,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+500,residential,,4.084747728,9.742380242,2026-03-21T13:10:59,0.65,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+501,residential,,4.084772382,9.742433642,2026-03-21T13:11:17,0.72,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+502,residential,,4.084746395,9.74248104,2026-03-21T13:11:32,0.77,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+503,residential,,4.084773825,9.742524455,2026-03-21T13:11:45,0.75,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+504,residential,,4.084749943,9.742579628,2026-03-21T13:12:05,0.73,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+505,residential,,4.084777183,9.742669612,2026-03-21T13:12:24,0.75,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+506,residential,,4.084749427,9.742697387,2026-03-21T13:12:43,0.73,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+507,residential,,4.08477993,9.742759578,2026-03-21T13:12:57,0.73,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+508,residential,,4.084756225,9.74286703,2026-03-21T13:13:16,0.76,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+509,residential,,4.084781883,9.742905175,2026-03-21T13:13:31,0.77,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+510,residential,,4.08474813,9.742928995,2026-03-21T13:13:46,0.76,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+511,residential,,4.084768002,9.743044415,2026-03-21T13:14:10,0.84,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+512,residential,,4.084752468,9.743088845,2026-03-21T13:14:26,0.86,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+513,residential,,4.084758687,9.743262615,2026-03-21T13:14:56,0.68,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+514,residential,,4.08458662,9.743353472,2026-03-21T13:15:28,0.69,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+515,residential,,4.084561597,9.743380588,2026-03-21T13:15:43,0.68,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+516,residential,,4.08455906,9.743382295,2026-03-21T13:15:56,0.67,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+517,residential,,4.084579575,9.743387563,2026-03-21T13:16:14,0.66,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+518,residential,,4.084744955,9.743390435,2026-03-21T13:16:36,0.72,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+519,residential,,4.084787682,9.743387018,2026-03-21T13:18:22,0.64,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+520,residential,,4.084916282,9.743394753,2026-03-21T13:19:04,0.66,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+521,residential,,4.084993575,9.743400352,2026-03-21T13:19:41,0.76,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+522,residential,,4.085128162,9.743483942,2026-03-21T13:20:20,0.81,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+523,commercial|residential,beauty_services,4.085154025,9.743538385,2026-03-21T13:20:56,0.85,,,,,,Beauty and residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+524,residential,,4.085164287,9.743645668,2026-03-21T13:21:18,0.93,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+525,residential,,4.085220043,9.743601998,2026-03-21T13:21:43,0.85,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+526,residential,,4.085227195,9.743501965,2026-03-21T13:22:01,0.8,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+527,residential,,4.085257108,9.743360147,2026-03-21T13:22:26,0.68,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+528,residential,,4.085439792,9.743373402,2026-03-21T13:22:52,0.71,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+529,residential,,4.08543775,9.743414005,2026-03-21T13:23:05,0.73,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+530,residential,,4.08551908,9.743418422,2026-03-21T13:23:27,0.76,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+531,residential,,4.085528435,9.743382892,2026-03-21T13:23:40,0.79,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+532,residential,,4.08561664,9.743408255,2026-03-21T13:23:58,0.79,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+533,residential,,4.085682453,9.743376822,2026-03-21T13:24:13,0.79,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+534,residential,,4.085789507,9.743379875,2026-03-21T13:24:35,0.85,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+535,residential,,4.08580921,9.743409782,2026-03-21T13:24:43,0.86,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+536,residential,,4.085887488,9.743405297,2026-03-21T13:25:01,0.79,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+537,residential,,4.08589817,9.743375385,2026-03-21T13:25:11,0.79,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+538,residential,,4.085943082,9.743404483,2026-03-21T13:25:24,0.81,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+539,residential,,4.085991307,9.74337716,2026-03-21T13:25:39,0.81,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+540,residential,,4.086056927,9.743373943,2026-03-21T13:25:54,0.83,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+541,residential,,4.086083895,9.743403487,2026-03-21T13:26:06,0.85,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+542,residential,,4.086223012,9.743400342,2026-03-21T13:26:24,0.84,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+543,residential,,4.086257667,9.743376467,2026-03-21T13:26:37,0.79,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+544,residential,,4.086340583,9.743401495,2026-03-21T13:26:55,0.73,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+545,residential,,4.086413723,9.743395463,2026-03-21T13:27:19,0.66,,,,,,Residential,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+546,residential,,4.086574183,9.743597698,2026-03-21T13:28:56,0.76,,,,,,Residential,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+547,office,banking_and_finance,4.086989092,9.741174388,2026-03-21T12:10:51,0.25,4.086899717,9.741100817,2026-03-21T12:11:35,4.945,12.858811918038613,AGC insurance,
+548,commercial,construction_materials|general_retail,4.087030845,9.741686393,2026-03-21T12:13:27,0.15,4.086982483,9.741660167,2026-03-21T12:13:22,3.79,6.113893418139248,Construction shop,
+549,residential,,4.087021782,9.74172702,2026-03-21T12:13:55,0.17,4.087017217,9.741699733,2026-03-21T12:13:43,4.198,3.0687330137532776,R,
+550,commercial,beauty_services|general_retail,4.087022583,9.741912568,2026-03-21T12:14:39,0.14,4.087007217,9.741901,2026-03-21T12:14:33,3.79,2.136716437232525,Beauty shop,
+551,commercial,clothing|general_retail,4.087025255,9.742072978,2026-03-21T12:15:05,0.12,4.086997867,9.7420535,2026-03-21T12:15:01,3.791,3.733845277620208,Cloth shop,
+552,commercial,clothing|general_retail,4.087031903,9.742146463,2026-03-21T12:15:30,0.11,4.086974217,9.742157583,2026-03-21T12:15:28,4.081,6.531886507363599,Cloth shop,
+553,commercial,general_retail,4.08703031,9.742180168,2026-03-21T12:15:46,0.096,4.087002317,9.742195433,2026-03-21T12:15:41,3.817,3.54334218227144,Shop,
+554,commercial,clothing,4.087017557,9.742287948,2026-03-21T12:16:06,0.083,4.0869907,9.742299383,2026-03-21T12:16:08,3.851,3.244517571380481,Cloth,
+555,residential,,4.087014858,9.742353797,2026-03-21T12:16:18,0.096,4.086982233,9.742367233,2026-03-21T12:16:22,3.79,3.921887349371286,R,
+556,residential,,4.08700606,9.74262569,2026-03-21T12:17:06,0.066,4.086988417,9.742610367,2026-03-21T12:17:02,3.79,2.5955790513253474,R,
+557,residential|commercial,automotive,4.087016647,9.743197127,2026-03-21T12:19:14,0.08,4.08699065,9.743168833,2026-03-21T12:19:12,3.863,4.266652331465934,Auto+R,
+558,residential,,4.087017405,9.743279805,2026-03-21T12:19:32,0.073,4.086985917,9.743277917,2026-03-21T12:19:34,3.79,3.5075621045055145,R,
+559,public_service,healthcare,4.087011012,9.74339556,2026-03-21T12:19:57,0.046,4.0869562,9.743409633,2026-03-21T12:20:05,3.79,6.2915094474715065,Dental,
+560,residential|commercial,drinks,4.086959117,9.743553117,2026-03-21T12:20:35,3.79,4.086981217,9.743560983,2026-03-21T12:20:33,3.79,2.607680271363196,Wine +R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+561,residential,,4.086993567,9.743699633,2026-03-21T12:20:55,3.79,4.086988,9.743713633,2026-03-21T12:20:55,3.79,1.6716111138189886,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+562,residential,,4.087011025,9.743697547,2026-03-21T12:21:25,0.14,4.086965283,9.743675367,2026-03-21T12:21:24,3.79,5.649954248615677,R,
+563,residential,,4.08682603,9.743756468,2026-03-21T12:21:55,0.012,4.086801167,9.743756,2026-03-21T12:21:55,3.79,2.7651267017437835,Rs,
+564,residential,,4.086579577,9.74375311,2026-03-21T12:22:24,0.01,4.086554267,9.743775433,2026-03-21T12:22:32,3.79,3.7484100536729947,Rs,
+565,residential,,4.086582873,9.743750358,2026-03-21T12:22:49,0.26,4.086548817,9.743782517,2026-03-21T12:22:50,3.79,5.2021643318592945,Rs,
+566,residential,,4.086421527,9.743754485,2026-03-21T12:23:21,0.01,4.086393083,9.743769483,2026-03-21T12:23:21,3.79,3.573596093529977,R,
+567,commercial,clothing|general_retail,4.086350718,9.743754905,2026-03-21T12:23:49,0.01,4.086333383,9.743772717,2026-03-21T12:23:45,3.79,2.760140541286978,Cloth shop,
+568,commercial,clothing|dry_cleaning_services|general_retail,4.086287125,9.743753028,2026-03-21T12:24:17,0.01,4.086270883,9.743778717,2026-03-21T12:24:11,3.79,3.373398853504348,Washing cloth store,
+569,commercial,clothing|general_retail,4.086103403,9.743754257,2026-03-21T12:24:49,0.01,4.086084483,9.743769417,2026-03-21T12:24:43,3.79,2.6931794593770886,Cloth shop,
+570,commercial,construction_materials|general_retail,4.085942365,9.743758082,2026-03-21T12:25:21,0.01,4.085925167,9.743762683,2026-03-21T12:25:18,3.79,1.9792476128640821,Materials shop,
+571,residential,,4.085834727,9.743753842,2026-03-21T12:25:38,0.01,4.085815683,9.743765117,2026-03-21T12:25:36,3.79,2.459279335437805,R,
+572,residential|commercial,clothing,4.085755998,9.743754957,2026-03-21T12:26:01,0.01,4.0857378,9.743758583,2026-03-21T12:25:58,3.79,2.0631029356574024,R+cloths,
+573,commercial,hotel,4.08555522,9.743752073,2026-03-21T12:26:31,0.01,4.085520617,9.743763417,2026-03-21T12:26:30,3.79,4.048168461459589,Hotel,
+574,residential|commercial,mobile_phones|general_retail,4.085380195,9.743754897,2026-03-21T12:27:13,0.01,4.085342367,9.743730183,2026-03-21T12:27:05,3.79,5.020594826741724,R+communications store,
+575,residential,,4.08501111,9.743753705,2026-03-21T12:28:52,0.01,4.084971533,9.743759833,2026-03-21T12:28:48,3.79,4.45293790269258,R,
+576,residential,,4.084955238,9.743765823,2026-03-21T12:29:54,0.01,4.084925767,9.743767933,2026-03-21T12:29:50,3.79,3.2853713862553438,R,
+577,residential|commercial,general_retail,4.084687517,9.74375738,2026-03-21T12:30:47,0.01,4.084674933,9.743808667,2026-03-21T12:30:40,3.79,5.857944047540566,R+cleaning shop,
+578,commercial,general_retail,4.084529932,9.743768767,2026-03-21T12:31:21,0.01,4.084516333,9.743785933,2026-03-21T12:31:31,3.79,2.4313562427213102,Shops,
+579,office,professional_services,4.08440721,9.74369864,2026-03-21T12:32:11,0.01,4.084391433,9.743725833,2026-03-21T12:32:09,3.79,3.489150113089054,Travel agency,
+580,residential,,4.084425185,9.74354542,2026-03-21T12:32:33,0.01,4.08446595,9.743557133,2026-03-21T12:32:31,4.959,4.715351382472789,R,
+581,commercial,beauty_services|clothing|general_retail,4.084426858,9.743459328,2026-03-21T12:32:57,0.01,4.084507267,9.743466533,2026-03-21T12:32:56,3.79,8.976713427634678,Cloths +hair shop,
+582,residential|public_service|commercial,education|automotive|furniture_and_home_goods,4.084425838,9.743060918,2026-03-21T12:34:02,0.01,4.08442345,9.743071967,2026-03-21T12:33:53,3.838,1.2539100822004288,R+Auto school +decorations,
+583,residential,,4.084446388,9.742855873,2026-03-21T12:34:34,0.014,4.084423483,9.74286995,2026-03-21T12:34:36,3.79,2.9873912105113765,Rs,
+584,residential,,4.084418293,9.742807055,2026-03-21T12:34:52,0.01,4.084393667,9.7428126,2026-03-21T12:34:52,3.79,2.8065011720316764,R,
+585,residential|commercial,general_retail,4.084420552,9.742635245,2026-03-21T12:35:30,0.012,4.084391917,9.742649133,2026-03-21T12:35:35,3.79,3.5370847130282668,R+shops,
+586,residential|commercial,construction_materials,4.084416717,9.742376292,2026-03-21T12:36:23,0.01,4.084377583,9.74238195,2026-03-21T12:36:12,3.79,4.396519321676247,R+Construction,
+587,commercial,general_retail,4.084438,9.742233427,2026-03-21T12:36:55,0.012,4.084426817,9.742239317,2026-03-21T12:37:00,3.79,1.4046502490845687,Shops,
+588,commercial,clothing,4.08442677,9.741856413,2026-03-21T12:38:19,0.011,4.084396733,9.741871233,2026-03-21T12:38:04,3.79,3.722522400425958,Cloth+As,
+589,commercial,furniture_and_home_goods,4.084424307,9.741583493,2026-03-21T12:38:58,0.01,4.08440405,9.741592917,2026-03-21T12:38:53,3.79,2.4831778275347025,Furniture,
+590,commercial,construction_materials|general_retail,4.084485488,9.741130323,2026-03-21T12:40:09,0.015,4.084468133,9.741141683,2026-03-21T12:40:05,3.79,2.3046899989859835,Construction shop,
+591,residential,,4.084589333,9.741139035,2026-03-21T12:40:40,0.01,4.084579183,9.741154933,2026-03-21T12:40:41,3.79,2.0935573807791767,Rs,
+592,residential|commercial,automotive,4.084858013,9.741130523,2026-03-21T12:41:31,0.01,4.08483685,9.741144733,2026-03-21T12:41:23,3.79,2.8322464521458195,R+Auto,
+593,residential|commercial,plumbing_services|clothing,4.084936373,9.741166745,2026-03-21T12:42:07,0.017,4.08491575,9.74118385,2026-03-21T12:41:59,3.79,2.9762137370449895,Cloth+plumber +R,
+594,residential,,4.085052645,9.741161122,2026-03-21T12:42:30,0.021,4.08505025,9.741194467,2026-03-21T12:42:32,3.79,3.707950684500459,R,
+595,residential|public_service|commercial,education|automotive|construction_materials,4.085404893,9.741160367,2026-03-21T12:43:30,0.2,4.085391983,9.741176633,2026-03-21T12:43:37,3.79,2.3055402344053904,R+driving school+construction,
+596,residential|commercial,construction_materials|general_retail,4.085623618,9.74114367,2026-03-21T12:44:27,0.01,4.085594917,9.741156033,2026-03-21T12:44:16,3.79,3.4735118743855535,R+construction shop,
+597,residential,,4.085849425,9.741113848,2026-03-21T12:44:55,0.012,4.0858188,9.741113,2026-03-21T12:45:00,3.79,3.406643234448774,Rs,
+598,commercial,electronics|general_retail,4.085946455,9.741121488,2026-03-21T12:45:29,0.01,4.085916017,9.74112835,2026-03-21T12:45:24,3.79,3.4690675667646595,Electric shop,
+599,commercial,construction_materials|general_retail,4.086065747,9.7411319,2026-03-21T12:45:53,0.01,4.086045383,9.7411302,2026-03-21T12:45:48,3.79,2.2722100963144287,Construction shop,
+600,residential|commercial,construction_materials|general_retail,4.086375183,9.741134517,2026-03-21T12:46:40,0.01,4.086340117,9.741133667,2026-03-21T12:46:36,3.79,3.9003008446365164,R+construction shop,
+601,residential|commercial,construction_materials,4.086620285,9.741131015,2026-03-21T12:47:15,0.01,4.086592983,9.741141083,2026-03-21T12:47:17,3.79,3.234700432728211,R+construction,
+602,commercial,banking_and_finance,4.086736362,9.741156478,2026-03-21T12:47:49,0.01,4.086711567,9.741166433,2026-03-21T12:47:46,3.79,2.969947012374056,Bank,
+603,commercial,beauty_services,4.086905905,9.741542953,2026-03-21T12:50:14,0.068,4.086901883,9.74160935,2026-03-21T12:50:05,4.593,7.377802680039439,Hair dresser,
+604,residential,,4.086783647,9.741545575,2026-03-21T12:50:30,0.078,4.086754467,9.741636683,2026-03-21T12:50:30,3.79,10.613135462073094,R,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.
+605,residential,,4.08663967,9.74173706,2026-03-21T12:51:08,0.053,4.086616383,9.7417857,2026-03-21T12:51:09,3.79,5.98402153019495,R,
+606,residential,,4.086646967,9.7418396,2026-03-21T12:51:36,0.054,4.086612133,9.7418767,2026-03-21T12:51:25,3.79,5.651095570885485,R,
+607,residential,,4.086648103,9.74199143,2026-03-21T12:52:04,0.059,4.086624017,9.742027417,2026-03-21T12:52:07,3.79,4.806685899002823,R,
+608,residential,,4.086647953,9.742100808,2026-03-21T12:52:21,0.063,4.0866248,9.742144517,2026-03-21T12:52:20,3.79,5.489061172027907,R,
+609,residential,,4.086644355,9.742171832,2026-03-21T12:52:32,0.061,4.086623867,9.742205917,2026-03-21T12:52:33,3.79,4.413815403424416,R,
+610,residential,,4.086650555,9.742328112,2026-03-21T12:52:50,0.05,4.086627033,9.742338833,2026-03-21T12:52:49,3.79,2.8731370093815767,R,
+611,residential,,4.086649477,9.742450835,2026-03-21T12:53:07,0.01,4.08662935,9.742467133,2026-03-21T12:53:04,3.79,2.8768599103825445,R,
+612,residential,,4.086648565,9.742528723,2026-03-21T12:53:19,0.01,4.086633417,9.742547333,2026-03-21T12:53:18,3.79,2.664122524015194,R,
+613,residential,,4.08664776,9.742688572,2026-03-21T12:53:36,0.016,4.0866361,9.742710317,2026-03-21T12:53:36,3.79,2.7381944149286737,R,
+614,residential,,4.086620688,9.742701295,2026-03-21T12:53:47,0.013,4.086616317,9.742727867,2026-03-21T12:53:44,3.79,2.986967603644413,R,
+615,residential,,4.086615208,9.742622227,2026-03-21T12:53:58,0.018,4.086606033,9.742648267,2026-03-21T12:53:58,3.79,3.0630489133469614,R,
+616,residential,,4.086612473,9.742428652,2026-03-21T12:54:22,0.012,4.08660505,9.742453683,2026-03-21T12:54:18,3.79,2.8963447933093915,R,
+617,public_service,education,4.086618905,9.742320457,2026-03-21T12:55:03,0.011,4.08660505,9.742453683,2026-03-21T12:54:18,3.79,14.856485701948376,Kind garten,
+618,residential,,4.08661121,9.742012578,2026-03-21T12:55:44,0.19,4.0866107,9.7421499,2026-03-21T12:55:25,3.79,15.230792004225236,R,
+619,residential,,4.08626251,9.742160457,2026-03-21T12:57:27,0.069,4.086250717,9.742033983,2026-03-21T12:57:05,3.79,14.08867621127962,R,
+620,residential,,4.08626078,9.742291745,2026-03-21T12:57:44,0.067,4.0862571,9.742181367,2026-03-21T12:57:23,3.79,12.249110021476179,R,
+621,residential,,4.086269647,9.742642967,2026-03-21T12:58:25,0.057,4.086249533,9.742555383,2026-03-21T12:58:09,3.79,9.968288079784436,R,
+622,residential,,4.086258297,9.742709998,2026-03-21T12:58:39,0.054,4.086245783,9.742657633,2026-03-21T12:58:24,3.79,5.972285456493259,R,
+623,residential,,4.08599294,9.741915637,2026-03-21T13:01:02,0.13,4.086049167,9.741916533,2026-03-21T13:00:38,3.79,6.252946887581255,R,
+624,residential,,4.08594804,9.741910552,2026-03-21T13:01:20,0.11,4.085955883,9.741914683,2026-03-21T13:00:54,3.79,0.9851341533357918,R,
+625,residential,,4.085623163,9.741908622,2026-03-21T13:02:06,0.094,4.085677833,9.741924383,2026-03-21T13:01:50,3.79,6.3253759991176866,R,
+626,public_service,healthcare,4.085433718,9.74190532,2026-03-21T13:02:57,0.08,4.085588933,9.741935883,2026-03-21T13:02:05,3.79,17.58886250354427,Hospital,
+627,residential,,4.085270162,9.741917578,2026-03-21T13:03:19,0.069,4.0853919,9.741929467,2026-03-21T13:02:34,3.79,13.600722150932814,R,
+628,residential,,4.08532571,9.741562653,2026-03-21T13:05:38,0.21,4.085295067,9.741557583,2026-03-21T13:04:56,3.79,3.4534356834709072,R,
+629,residential,,4.085432182,9.741565667,2026-03-21T13:06:16,0.096,4.085303383,9.741578283,2026-03-21T13:05:36,3.79,14.389988897351019,R,
+630,residential,,4.085910213,9.741565965,2026-03-21T13:07:40,4.1,4.085755133,9.741575183,2026-03-21T13:07:11,3.95,17.274390979388123,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+631,commercial,electronics|general_retail,4.08517764,9.742930358,2026-03-21T13:12:25,0.1,4.085133883,9.742966967,2026-03-21T13:12:28,3.79,6.337225412186477,TV shop,
+632,residential,,4.085162505,9.742843008,2026-03-21T13:12:41,0.15,4.08513205,9.7428663,2026-03-21T13:12:40,3.79,4.259318763804949,R,
+633,residential,,4.085165738,9.742783707,2026-03-21T13:12:53,0.14,4.08511905,9.742817567,2026-03-21T13:12:52,3.79,6.407424208040281,R,
+634,residential,,4.08517032,9.742691277,2026-03-21T13:13:06,0.13,4.085136217,9.742719283,2026-03-21T13:13:07,3.79,4.901880685030735,R,
+635,residential|industry,storage_and_warehousing,4.085144117,9.74259035,2026-03-21T13:13:32,3.79,4.085152917,9.74262415,2026-03-21T13:13:21,3.79,3.8744406062410546,Storage+R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+636,residential,,4.085163933,9.742516483,2026-03-21T13:13:47,3.79,4.085149617,9.74258065,2026-03-21T13:13:28,3.79,7.292773255684051,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy."
+637,residential,,4.085150942,9.742256802,2026-03-21T13:14:37,0.73,4.085136567,9.742276867,2026-03-21T13:14:13,3.79,2.740005551846213,R,
+638,commercial,general_retail,4.08517101,9.742148195,2026-03-21T13:15:04,0.18,4.085135367,9.742295133,2026-03-21T13:14:41,3.815,16.77224490643268,Shops,
+639,commercial,bar|drinks,4.085023905,9.742001845,2026-03-21T13:16:08,0.36,4.085004633,9.742007767,2026-03-21T13:15:37,3.79,2.241349104802466,Bar,
+640,residential,,4.084939263,9.741999613,2026-03-21T13:16:29,0.21,4.085005267,9.742024083,2026-03-21T13:16:08,3.79,7.8250504542654395,R,
+641,residential,,4.084806813,9.742092627,2026-03-21T13:17:06,0.016,4.0848971,9.742051583,2026-03-21T13:16:27,3.79,11.023340434627581,R,
+642,residential,,4.084812597,9.742231373,2026-03-21T13:17:25,0.013,4.084793517,9.742125283,2026-03-21T13:17:05,3.79,11.956440880094469,R,
+643,residential,,4.084811452,9.742286822,2026-03-21T13:17:35,0.013,4.0847907,9.742275367,2026-03-21T13:17:23,3.79,2.634162325280218,R,
+644,residential,,4.086437057,9.742908252,2026-03-21T13:22:34,0.016,4.086360167,9.742924417,2026-03-21T13:22:15,3.79,8.735741502350717,R,
+645,commercial,general_retail,4.086860515,9.743023088,2026-03-21T13:25:02,0.095,4.086850567,9.742927867,2026-03-21T13:23:51,3.79,10.618939735282899,Mini market,
+646,commercial,beauty_services,4.086800422,9.74302365,2026-03-21T13:25:18,0.083,4.086831117,9.743015633,2026-03-21T13:24:59,3.79,3.527051309552646,Hair dresser,
+647,residential,,4.086716793,9.74301019,2026-03-21T13:25:52,0.41,4.086780683,9.743042267,2026-03-21T13:25:18,3.79,7.945295840027381,R,
+648,residential,,4.086618068,9.743323612,2026-03-21T13:27:29,0.012,4.08651935,9.743387633,2026-03-21T13:27:04,3.79,13.07338228793223,R,
+649,residential,,4.086652132,9.743224107,2026-03-21T13:28:00,0.014,4.086586983,9.743349733,2026-03-21T13:27:25,3.79,15.70414640642309,R,
+650,residential,,4.086642413,9.74355522,2026-03-21T13:28:50,0.38,4.086601983,9.743486017,2026-03-21T13:28:28,4.021,8.895120315964892,R,
+651,residential,,4.086615483,9.742123457,2026-03-21T12:55:29,0.027,,,,,,R,No mobile-phone reading available for this point.
+652,residential,,4.086418427,9.741833612,2026-03-21T12:56:26,0.069,,,,,,R,No mobile-phone reading available for this point.
+653,residential,,4.086266128,9.742011903,2026-03-21T12:57:06,0.097,,,,,,R,No mobile-phone reading available for this point.
+654,residential,,4.08626815,9.742530298,2026-03-21T12:58:12,0.061,,,,,,R,No mobile-phone reading available for this point.
+655,public_service,education,4.08617523,9.742318868,2026-03-21T12:59:51,0.016,,,,,,Primary school,No mobile-phone reading available for this point.
+656,residential,,4.086074488,9.741915662,2026-03-21T13:00:41,0.16,,,,,,R,No mobile-phone reading available for this point.
+657,commercial,automotive,4.08571511,9.741910585,2026-03-21T13:01:52,0.098,,,,,,Car mechanic,No mobile-phone reading available for this point.
+658,residential,,4.085076517,9.741640383,2026-03-21T13:04:23,3.79,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+659,residential,,4.085290883,9.7415318,2026-03-21T13:04:57,3.79,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+660,residential,,4.08532571,9.741562653,2026-03-21T13:05:38,0.21,,,,,,R,No mobile-phone reading available for this point.
+661,residential,,4.085548788,9.741564698,2026-03-21T13:06:38,0.12,,,,,,R,No mobile-phone reading available for this point.
+662,residential,,4.085661418,9.741565025,2026-03-21T13:06:55,0.28,,,,,,R,No mobile-phone reading available for this point.
+663,residential,,4.085772745,9.741560092,2026-03-21T13:07:06,0.36,,,,,,R,RTK correction was lost during capture; this point reflects a DGPS-corrected fix.; No mobile-phone reading available for this point.
+664,residential,,4.085906223,9.74155935,2026-03-21T13:07:29,0.28,,,,,,R,No mobile-phone reading available for this point.
+665,residential,,4.086098353,9.741550845,2026-03-21T13:08:03,0.3,,,,,,Rs,No mobile-phone reading available for this point.
+666,commercial,general_retail,4.08617558,9.741669362,2026-03-21T13:08:44,0.13,,,,,,Shops,No mobile-phone reading available for this point.
+667,residential,,4.08617447,9.741752755,2026-03-21T13:09:00,0.01,,,,,,R,No mobile-phone reading available for this point.
+668,residential,,4.085143233,9.742290917,2026-03-21T13:14:19,3.79,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+669,commercial,bar|drinks,4.085146583,9.741893767,2026-03-21T13:15:41,19.328,,,,,,Bar,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+670,residential,,4.08495367,9.743065738,2026-03-21T13:19:14,0.13,,,,,,R,No mobile-phone reading available for this point.
+671,residential,,4.085296398,9.74300293,2026-03-21T13:20:02,0.014,,,,,,R,No mobile-phone reading available for this point.
+672,residential,,4.08553198,9.74301561,2026-03-21T13:20:29,0.016,,,,,,R,No mobile-phone reading available for this point.
+673,residential,,4.085737245,9.743020948,2026-03-21T13:20:53,0.085,,,,,,R,No mobile-phone reading available for this point.
+674,residential,,4.085870142,9.74301807,2026-03-21T13:21:09,0.086,,,,,,R,No mobile-phone reading available for this point.
+675,residential,,4.086044208,9.743018035,2026-03-21T13:21:30,0.052,,,,,,R,No mobile-phone reading available for this point.
+676,residential,,4.086161428,9.743007998,2026-03-21T13:21:47,0.016,,,,,,R,No mobile-phone reading available for this point.
+677,residential,,4.086389247,9.742897288,2026-03-21T13:22:16,0.015,,,,,,R,No mobile-phone reading available for this point.
+678,residential,,4.086389492,9.742897333,2026-03-21T13:22:17,0.014,,,,,,,No mobile-phone reading available for this point.
+679,residential,,4.086728572,9.742930047,2026-03-21T13:23:29,1.6,,,,,,R,"RTK correction was lost during capture; this point reflects an autonomous GPS fix, at phone-grade accuracy.; No mobile-phone reading available for this point."
+680,commercial,hotel,4.086904458,9.742943435,2026-03-21T13:24:20,0.29,,,,,,Hotel,No mobile-phone reading available for this point.
+681,residential,,4.086544235,9.743376602,2026-03-21T13:27:08,0.011,,,,,,R,No mobile-phone reading available for this point.
+682,residential,,4.0866451,9.743465617,2026-03-21T13:28:35,3.1,,,,,,R,No mobile-phone reading available for this point.
+683,public_service|commercial,construction_materials,,,,,4.086163633,9.74167605,2026-03-21T13:08:44,3.79,,Construction and fountain,No RTK reading available for this point.
+684,residential,,,,,,4.086160833,9.741766467,2026-03-21T13:08:58,3.79,,R,No RTK reading available for this point.
+685,residential,,,,,,4.086568567,9.743559217,2026-03-21T13:28:52,3.942,,R,No RTK reading available for this point.
+686,public_service,education,,,,,4.086616333,9.742352533,2026-03-21T12:54:46,3.79,,Kindergarten,No RTK reading available for this point.
+687,residential,,,,,,4.086608233,9.742037433,2026-03-21T12:55:43,3.79,,R,No RTK reading available for this point.
+688,residential,,,,,,4.086407667,9.741852217,2026-03-21T12:56:22,3.79,,R,No RTK reading available for this point.
+689,residential,,,,,,4.086247133,9.7423091,2026-03-21T12:57:43,3.79,,R,No RTK reading available for this point.
+690,residential,,,,,,4.0862497,9.742731667,2026-03-21T12:58:38,3.79,,R,No RTK reading available for this point.
+691,public_service,education,,,,,4.086157,9.742337067,2026-03-21T12:59:44,3.79,,Primary school,No RTK reading available for this point.
+692,industry,storage_and_warehousing,,,,,4.085915783,9.741915817,2026-03-21T13:01:12,3.79,,Storage,No RTK reading available for this point.
+693,public_service,healthcare,,,,,4.085393233,9.74192155,2026-03-21T13:02:55,3.79,,Hospital,No RTK reading available for this point.
+694,residential,,,,,,4.085231483,9.7419449,2026-03-21T13:03:18,3.79,,R,No RTK reading available for this point.
+695,residential,,,,,,4.085068083,9.741665383,2026-03-21T13:04:12,3.79,,R,No RTK reading available for this point.
+696,residential,,,,,,4.085348233,9.741572583,2026-03-21T13:05:56,3.79,,,No RTK reading available for this point.
+697,residential,,,,,,4.085399933,9.741591267,2026-03-21T13:06:10,3.79,,R,No RTK reading available for this point.
+698,residential,,,,,,4.085511483,9.741598183,2026-03-21T13:06:29,4.187,,R,No RTK reading available for this point.
+699,residential,,,,,,4.085637983,9.741567117,2026-03-21T13:06:53,3.812,,R,No RTK reading available for this point.
+700,residential,,,,,,4.085874933,9.741571267,2026-03-21T13:07:27,3.79,,R,No RTK reading available for this point.
+701,residential,,,,,,4.085899367,9.741571783,2026-03-21T13:07:37,3.79,,R,No RTK reading available for this point.
+702,commercial,restaurant|food,,,,,4.086074967,9.741562933,2026-03-21T13:08:10,3.79,,Restaurant,No RTK reading available for this point.
+703,residential,,,,,,4.085171183,9.742516733,2026-03-21T13:13:42,4.882,,R,No RTK reading available for this point.
+704,commercial,general_retail,,,,,4.0851456,9.74216375,2026-03-21T13:15:01,3.79,,Shops multiple,No RTK reading available for this point.
+705,residential,,,,,,4.08478475,9.742320917,2026-03-21T13:17:34,3.79,,R,No RTK reading available for this point.
+706,residential,,,,,,4.084774083,9.742421833,2026-03-21T13:17:49,3.79,,R,No RTK reading available for this point.
+707,residential,,,,,,4.084925933,9.743080117,2026-03-21T13:19:13,3.79,,R,No RTK reading available for this point.
+708,residential,,,,,,4.08526955,9.743029117,2026-03-21T13:20:03,3.79,,R,No RTK reading available for this point.
+709,residential,,,,,,4.085509433,9.743045733,2026-03-21T13:20:29,3.79,,R,No RTK reading available for this point.
+710,residential,,,,,,4.085711583,9.743034717,2026-03-21T13:20:52,3.79,,R,No RTK reading available for this point.
+711,residential,,,,,,4.085841583,9.743033083,2026-03-21T13:21:08,3.79,,R,No RTK reading available for this point.
+712,residential,,,,,,4.086023617,9.743053267,2026-03-21T13:21:27,3.79,,R,No RTK reading available for this point.
+713,residential,,,,,,4.086148733,9.7430366,2026-03-21T13:21:44,3.79,,R,No RTK reading available for this point.
+714,residential,,,,,,4.086424567,9.742936083,2026-03-21T13:22:35,3.79,,R,No RTK reading available for this point.
+715,residential,,,,,,4.086729383,9.74293825,2026-03-21T13:23:12,3.79,,R,No RTK reading available for this point.
+716,residential,,,,,,4.0867099,9.743061017,2026-03-21T13:25:30,3.79,,R,No RTK reading available for this point.
+717,residential,,,,,,4.086622717,9.743247883,2026-03-21T13:27:56,3.79,,R,No RTK reading available for this point.

@@ -1,0 +1,21 @@
+You have wal_accessibility.ipynb as example of what I want to build. 
+it uses a python package available here https://github.com/CityScope/UrbanAccessAnalyzer 
+I want for the douala.csv and fotouni.csv datssets under data to create a proximity map as there is a lot of info about shops and services. 
+I want the following categories:
+Fountain (each category should have a name and emoji)
+Healthcare
+School
+Food
+Clothes
+Construction 
+Electronics
+Car repairs/parts
+Animal food 
+Bar/Pub/Club 
+Public building/space 
+So dont use residential buildings at all. 
+I want the map to be a bit different from the current notebook. 
+I would like to have a walk score that just gives smae importance to all categories so the final score is just a count of how many categories are accessible 
+but I want a distance score (as real distance and not as a 0-1 score) for each category so on the map I can decide what I want to see in a layer control dropoup box where I can select if I want nothing, walk score, or any specific score for one category. 
+I want the map to display the pois with a checkboxes on the legend where I can activate or deactivate the pois of a category. (when on the dropuot one specfiic category for the score is selected automatically deactivate all except selcted category). And the legend should display some cmap bar with the colors and score values (or distance values). Remember to process everything as a score and then remap into distances if needed as the code works with 1 better than 0 and distances are opposide 100 is better than 1000. 
+Prepare a folder under proximity douala and fotouni one for each map with the input csv and interactive map with hexagon grid, population balls (let user sleect on a dropout box on legend if they want hexagons or population) on the map bottom left there should be a stats emoji if clicked some gneeral stats open with the scores (of the sleected score layer) and the population and % for the complete map. And a csv with the population stats. Download the population from worldpop and the streets from OSM on a population folder under proximity and streets folder under proximity. 
