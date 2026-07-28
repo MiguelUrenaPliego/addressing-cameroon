@@ -26,9 +26,16 @@ esptool-venv/
 Thumbs.db
 
 # -----------------------------------------------------------------------------
-# Reports (any "reports" folder anywhere in the repo)
+# Reports
 # -----------------------------------------------------------------------------
-reports/
+
+# Ignore reports folders everywhere
+**/reports/*
+
+# But keep root reports/project_web
+!reports/
+!reports/project_web/
+!reports/project_web/**
 
 # -----------------------------------------------------------------------------
 # Video/photo dumps not tracked in git

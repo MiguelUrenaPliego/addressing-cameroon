@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Building Survey</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site">
+  <h1>Building Survey</h1>
+  <p class="subtitle">Initial RTK/GPS building survey data and the plan for a full Fotouni census</p>
+</header>
+<nav class="crumbs"><a href="../../../index.html">Home</a> / Building Survey</nav>
+
+<main class="article">
+<h2>Why survey buildings at all</h2>
+<p>An estimated four billion people worldwide lack a reliable, usable address, with direct consequences for banking, mail delivery, emergency response, voter registration, and utility connection <a href="#ref1">1</a>. Every other pipeline on this site, including the <a href="../addressing-system/index.html">addressing system</a> and the <a href="../proximity/index.html">proximity analysis</a>, runs on the same underlying input. That input is a building-level survey pairing each real building with an accurate location, a land use classification, and, where available, a photo. This page describes that initial survey data and the plan to extend it into a full community-driven census for the town of Fotouni.</p>
+<h2>Initial survey data</h2>
+<p>Two pilot datasets were collected in the field, one in surveyed blocks of Bonamoussadi in Douala, the other around the town center and chieftaincies of Fotouni. Each row records a paired RTK-rover and mobile-phone GPS fix for the same physical point, together with a land use classification and, for a subset of Fotouni points, a geotagged photo and bearing.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Bonamoussadi, Douala</th>
+<th>Fotouni</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Survey dates</td>
+<td>March 20 to 21, 2026</td>
+<td>March 24 to 25, 2026</td>
+</tr>
+<tr>
+<td>Points surveyed</td>
+<td>717</td>
+<td>358</td>
+</tr>
+<tr>
+<td>RTK precision (median / mean)</td>
+<td>0.02 m / 0.15 m</td>
+<td>0.11 m / 0.17 m</td>
+</tr>
+<tr>
+<td>Mobile precision (median / mean)</td>
+<td>1.70 m / 2.33 m</td>
+<td>3.79 m / 4.01 m</td>
+</tr>
+<tr>
+<td>Mobile position error vs. RTK (median / mean)</td>
+<td>4.06 m / 4.62 m</td>
+<td>5.13 m / 6.32 m</td>
+</tr>
+<tr>
+<td>Coverage</td>
+<td>Two contiguous urban blocks</td>
+<td>Town center and the third-level chieftaincies</td>
+</tr>
+</tbody>
+</table>
+<p>Comparing the paired RTK and mobile GPS fixes recorded for the same physical point directly shows the accuracy gap between the two capture methods. Median RTK precision is a few centimeters in both datasets, and median mobile-phone precision is roughly one to two orders of magnitude coarser. The resulting mobile position error, the horizontal distance between each point's RTK and mobile fix, has a median of 4.06 m in Douala and 5.13 m in Fotouni. This is the expected order-of-magnitude difference between consumer GPS and RTK-corrected positioning, and it shows directly how much precision would be lost if a future, larger-scale community survey relied on volunteers' own phones rather than dedicated RTK equipment.</p>
+<p>Each surveyed building carries its own interactive marker on the maps below, combining its reverse-geocoded address from the <a href="../addressing-system/index.html">addressing pipeline</a>, its RTK and mobile GPS fixes with accuracy circles, and any attached photo.</p>
+<figure><img alt="Interactive survey map, Bonamoussadi, Douala" src="../figures/survey_map_douala.jpg"><figcaption>Interactive survey map for the surveyed Bonamoussadi blocks in Douala, combining the OSM street network with every surveyed building as a clickable, landuse-coded marker.</figcaption></figure>
+<figure><img alt="Interactive survey map, Fotouni" src="../figures/survey_map_fotouni.jpg"><figcaption>Interactive survey map for the Fotouni pilot area, covering the town center, the access corridor, and the surrounding chieftaincies.</figcaption></figure>
+<h2>The Fotouni community census and addressing pilot</h2>
+<p>The clearest, most concrete next step from this initial survey is an ongoing pilot to build a complete, community-driven address and census system for the whole town of Fotouni. It aims to show that such a system can be built quickly, cheaply, and with genuine local ownership, rather than waiting years for a formal national cadastral survey. Every step of the pipeline this pilot depends on has already been shown end to end on real data on this site. What Fotouni adds is scale, and a first full run on a genuinely rural, chieftaincy-organized town rather than an established urban grid.</p>
+<p>Smart EFYL is developing a dedicated mobile survey application to run this survey across every house in Fotouni, recording each building's location together with basic demographic information for a lightweight census. This includes household size, access to electricity and water, housing conditions, education level, and livelihood. Once the survey is complete, the resulting data will run through the same <a href="../addressing-system/index.html">addressing pipeline</a> described elsewhere on this site, using radial numbering from the town's central chieftaincy. A CSV of every street and house number, together with an interactive map, will then go to the Fotouni chief. The chief and residents will decide the actual street names directly on that map, a deliberately community-driven step meant to give residents ownership of the resulting address scheme rather than having it imposed from outside. Once names are confirmed and the census is complete, physical street name plaques will be printed and installed, and the dataset becomes the official first census and address system for the town.</p>
+<p>Beyond Fotouni itself, this pilot works as a proof of concept for other towns, chieftaincies, and municipalities across Cameroon. It shows how inexpensively and quickly a community-owned address and census infrastructure can be built with open data and low-cost surveying tools, without needing a large national mapping programme to get started. The same survey data will also seed a digital twin of Fotouni, on which future simulation work, from the pedestrian accessibility analysis already shown on this site to service planning, can be built directly.</p>
+<div class="references">
+<h2>References</h2>
+<ol>
+<li><span id="ref1"></span><span class="ref-authors">Universal Postal Union</span> (2012). Addressing the World, An Address for Everyone.<br><a class="ref-link" href="https://www.upu.int/UPU/media/upu/publications/whitePaperAddressingTheWorldEn.pdf">https://www.upu.int/UPU/media/upu/publications/whitePaperAddressingTheWorldEn.pdf</a></li>
+</ol>
+</div>
+</main>
+
+<div class="map-embed">
+  <h2 style="text-align:center; font-family: sans-serif; font-weight: 600; color: var(--muted); font-size: 0.95rem; letter-spacing: 0.03em; text-transform: uppercase;">Interactive map</h2>
+  <iframe src="../../../data/survey_maps_index.html" loading="lazy"></iframe>
+  <p class="caption">Use the dropdown inside the map to switch between areas or drives.</p>
+</div>
+
+<footer class="site">Low-Cost Geospatial Infrastructure for Community-Driven Urban Development in Cameroon</footer>
+</body>
+</html>
