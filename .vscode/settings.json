@@ -1,0 +1,7 @@
+{
+  "markdown.marp.themes": [
+    "/reports/FUASPresentation/theme.css"
+  ],
+  "markdown.marp.html": "all",
+  "markdown.marp.enableHtml": true
+}

@@ -1,0 +1,865 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Interactive house-numbering demo</title>
+<style>
+  :root {
+    --ink: #1a1a1a;
+    --muted: #666;
+    --line-inactive: #bbbbbb;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: -apple-system, 'Segoe UI', Calibri, Arial, sans-serif;
+    color: var(--ink);
+    background: #ffffff;
+    height: 100%;
+  }
+  .house-num {
+    font-size: 9px;
+    font-weight: 700;
+    fill: #1a1a1a;
+    text-anchor: middle;
+    dominant-baseline: central;
+    paint-order: stroke;
+    stroke: #ffffff;
+    stroke-width: 2.5px;
+    stroke-linejoin: round;
+  }
+  .house-emoji {
+    font-size: 21px;
+    text-anchor: middle;
+    dominant-baseline: central;
+  }
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px 14px;
+  }
+  .tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex: 0 0 auto;
+  }
+  .tabs button {
+    font: inherit;
+    font-size: 0.85rem;
+    padding: 5px 14px;
+    border-radius: 999px;
+    border: 1px solid #123a72;
+    background: white;
+    color: #123a72;
+    cursor: pointer;
+  }
+  .tabs button.active {
+    background: #123a72;
+    color: white;
+  }
+  .panel {
+    display: none;
+    flex: 1 1 auto;
+    min-height: 0;
+    gap: 14px;
+  }
+  .panel.active { display: flex; }
+  .stage {
+    flex: 1 1 auto;
+    min-width: 0;
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #eef5ea;
+    overflow: hidden;
+  }
+  svg { width: 100%; height: 100%; display: block; }
+  .side {
+    flex: 0 0 210px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 0.8rem;
+    padding-top: 4px;
+  }
+  .side h3 { margin: 0 0 2px 0; font-size: 0.95rem; color: #123a72; }
+  .side p { margin: 0; color: var(--muted); line-height: 1.35; }
+  .hint {
+    background: #eef2f8;
+    border-left: 3px solid #123a72;
+    padding: 6px 8px;
+    font-size: 0.75rem;
+  }
+  .slider-row { display: flex; flex-direction: column; gap: 4px; }
+  .slider-row input[type=range] { width: 100%; }
+  .angle-readout { font-weight: bold; color: #123a72; }
+  .legend { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+  .legend .bar {
+    width: 120px; height: 12px; border-radius: 3px;
+    background: linear-gradient(90deg,#fde725,#bade28,#7ad151,#41be71,#22a884,#1f908a,#27758e,#33578f,#443983);
+    border: 1px solid #999;
+  }
+  .legend span { font-size: 0.7rem; color: var(--muted); }
+  #origin-handle { cursor: grab; }
+  #origin-handle:active { cursor: grabbing; }
+  .badge {
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    background: #123a72;
+    color: white;
+    display: inline-block;
+  }
+  .compass-box {
+    margin-top: auto;
+    flex: 0 0 auto;
+    width: 100%;
+    max-width: 175px;
+    align-self: center;
+  }
+  .compass-box svg { width: 100%; height: auto; display: block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="tabs">
+    <button id="tab-radial" class="active">Radial numbering (Fotouni-style)</button>
+    <button id="tab-grid">Grid numbering (Douala-style)</button>
+  </div>
+
+  <div id="panel-radial" class="panel active">
+    <div class="stage">
+      <svg id="svg-radial" viewBox="-344 -312 800 640" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="side">
+      <h3>Drag the origin</h3>
+      <p>Drag the red marker anywhere. Every street re-colors live: numbers always climb <em>away</em>
+      from whichever end sits closest to the origin. A street whose two ends are almost equidistant
+      from the origin instead becomes <span class="badge">transversal</span> and climbs across.</p>
+      <div class="hint" id="radial-status">Origin at the network center — every arm climbs outward.</div>
+      <div class="legend"><span>near</span><div class="bar"></div><span>far</span></div>
+      <p style="margin-top:6px;">Colormap: <em>viridis (reversed)</em> — yellow = near, blue = far</p>
+    </div>
+  </div>
+
+  <div id="panel-grid" class="panel">
+    <div class="stage">
+      <svg id="svg-grid" viewBox="-48 -48 736 560" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="side">
+      <h3>Rotate the grid direction</h3>
+      <p>Set the town's dominant compass direction. Streets aligned with it become
+      <span class="badge">primary</span> and climb along that direction; the perpendicular
+      streets become <span class="badge">cross</span> streets and climb the other way —
+      independent of any center point.</p>
+      <div class="slider-row">
+        <label for="angle-slider">Direction angle: <span class="angle-readout" id="angle-readout">0°</span></label>
+        <input id="angle-slider" type="range" min="0" max="179" step="1" value="0" />
+      </div>
+      <div class="legend"><span>near</span><div class="bar"></div><span>far</span></div>
+      <div class="compass-box">
+        <svg id="svg-grid-compass" viewBox="-105 -105 210 210" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  // ---------- shared: viridis colormap, reversed (near=yellow, far=blue) ----------
+  const VIRIDIS_R_STOPS = [
+    [0.000, [253, 231, 37]],
+    [0.125, [186, 222, 40]],
+    [0.250, [122, 209, 81]],
+    [0.375, [65, 190, 113]],
+    [0.500, [34, 168, 132]],
+    [0.625, [31, 144, 138]],
+    [0.750, [39, 117, 142]],
+    [0.875, [51, 87, 143]],
+    [1.000, [68, 57, 131]],
+  ];
+  function plasma(t) {
+    t = Math.max(0, Math.min(1, t));
+    for (let i = 0; i < VIRIDIS_R_STOPS.length - 1; i++) {
+      const [t0, c0] = VIRIDIS_R_STOPS[i];
+      const [t1, c1] = VIRIDIS_R_STOPS[i + 1];
+      if (t >= t0 && t <= t1) {
+        const f = (t - t0) / (t1 - t0);
+        const r = Math.round(c0[0] + f * (c1[0] - c0[0]));
+        const g = Math.round(c0[1] + f * (c1[1] - c0[1]));
+        const b = Math.round(c0[2] + f * (c1[2] - c0[2]));
+        return `rgb(${r},${g},${b})`;
+      }
+    }
+    return "rgb(240,249,33)";
+  }
+
+  function svgPointFromEvent(svg, evt) {
+    const pt = svg.createSVGPoint();
+    pt.x = evt.clientX;
+    pt.y = evt.clientY;
+    const ctm = svg.getScreenCTM();
+    const inv = ctm.inverse();
+    const p = pt.matrixTransform(inv);
+    return { x: p.x, y: p.y };
+  }
+
+  function dist(a, b) {
+    return Math.hypot(a.x - b.x, a.y - b.y);
+  }
+
+  const SVGNS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs) {
+    const e = document.createElementNS(SVGNS, tag);
+    for (const k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  // Draws a road as an asphalt casing + dashed centerline (drawn first, under the colored segments).
+  function drawRoadbed(group, p1, p2) {
+    const casing = el("line", {
+      x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y,
+      stroke: "#d9d6cf", "stroke-width": 11, "stroke-linecap": "round",
+    });
+    const dash = el("line", {
+      x1: p1.x, y1: p1.y, x2: p2.x, y2: p2.y,
+      stroke: "#ffffff", "stroke-width": 1, "stroke-dasharray": "5 5",
+      opacity: 0.85,
+    });
+    group.appendChild(casing);
+    group.appendChild(dash);
+  }
+
+  // Places house-emoji + number pairs along [start -> end] at a fixed absolute spacing
+  // (not proportional to edge length), so every house on the network sits the same
+  // distance from its neighbors and the same fixed offset from the street centerline.
+  const HOUSE_SPACING = 22;
+  const HOUSE_OFFSET = 15;
+  // Keep houses clear of intersections at both ends, so it's visually obvious which
+  // street each house belongs to instead of clustering right on top of a crossing.
+  // Kept well above the house-to-street offset so the "near the crossing" and
+  // "near the street" cues never compete.
+  const HOUSE_END_CLEARANCE = HOUSE_OFFSET * 5 + 5;
+
+  // A registry of every house marker placed so far across the *whole* map (reset once
+  // per redraw, shared across every street) — so houses from two different, nearby
+  // streets (e.g. either side of a sharp bend, or near a diagonal crossing) never end
+  // up overlapping either, not just neighbors along the same street.
+  const MIN_HOUSE_GAP = 20;
+  let HOUSE_MARKERS = [];
+  function resetHouseMarkers() { HOUSE_MARKERS = []; }
+
+  // Emoji and number both anchor at the exact same point — offset units from the
+  // street, i.e. the same perpendicular (point-to-line) distance for every house
+  // regardless of the street's direction — with the number centered right on top of
+  // (inside) the house icon rather than stacked beside it. Returns false (and draws
+  // nothing) if that spot is too close to an already-placed house.
+  function placeHouseMarker(group, hx, hy, label) {
+    for (const m of HOUSE_MARKERS) {
+      if (Math.hypot(m.x - hx, m.y - hy) < MIN_HOUSE_GAP) return false;
+    }
+    const emoji = el("text", { x: hx, y: hy, class: "house-emoji" });
+    emoji.textContent = "🏠";
+    const numEl = el("text", { x: hx, y: hy, class: "house-num" });
+    numEl.textContent = label;
+    group.appendChild(emoji);
+    group.appendChild(numEl);
+    HOUSE_MARKERS.push({ x: hx, y: hy });
+    return true;
+  }
+
+  const SUBNUMBER_LETTERS = ["A", "B", "C"];
+
+  // A street's house *positions* are geometry, fixed once from its canonical direction
+  // (points[0] -> points[last], never reversed) and never recomputed when the origin
+  // moves. Only each house's *number* is dynamic: it's derived from that house's fixed
+  // distance to whichever end is currently the numbering's near end — the same real
+  // rule that means a house doesn't have to start the street at 1 if it doesn't sit
+  // right at the start of the road.
+  function buildHouseSlots(length, spacing) {
+    spacing = spacing || HOUSE_SPACING;
+    const clearance = Math.min(HOUSE_END_CLEARANCE, length / 2 - 1);
+    const slots = [];
+    for (let d = clearance; d < length - clearance; d += spacing) {
+      slots.push({ d, side: slots.length % 2 === 0 ? -1 : 1 });
+    }
+    // Infill "subnumber" gaps: every few same-side pairs get one or more evenly-spaced
+    // extra houses between them (fixed geometry too), cycling A / A+B / A+B+C.
+    const gaps = [];
+    let gapIdx = 0;
+    for (let i = 2; i < slots.length; i++) {
+      if ((i + 1) % 6 !== 5) continue;
+      const lo = slots[i - 2], hi = slots[i];
+      const subCount = (gapIdx % 3) + 1;
+      gapIdx++;
+      const positions = [];
+      for (let k = 0; k < subCount; k++) {
+        const frac = (k + 1) / (subCount + 1);
+        positions.push(lo.d + frac * (hi.d - lo.d));
+      }
+      gaps.push({ lowIdx: i - 2, highIdx: i, side: lo.side, positions });
+    }
+    return { slots, gaps, length };
+  }
+
+  // Renders a street's already-fixed house slots, given the direction (`nearIsStart`)
+  // its numbers currently climb — true if canonical position 0 is the near end.
+  function renderHouseSlots(group, houseData, posFn, nearIsStart, spacing, offset) {
+    spacing = spacing || HOUSE_SPACING;
+    offset = offset || HOUSE_OFFSET;
+    const { slots, gaps, length } = houseData;
+    const distFromNear = (d) => (nearIsStart ? d : length - d);
+    const numOf = (d) => Math.max(1, Math.round(distFromNear(d) / spacing));
+
+    const nums = slots.map((s) => numOf(s.d));
+    slots.forEach((s, i) => {
+      const p = posFn(s.d);
+      placeHouseMarker(group, p.x + p.px * offset * s.side, p.y + p.py * offset * s.side, String(nums[i]));
+    });
+
+    for (const gap of gaps) {
+      const baseNum = Math.min(nums[gap.lowIdx], nums[gap.highIdx]);
+      for (let k = 0; k < gap.positions.length; k++) {
+        const p = posFn(gap.positions[k]);
+        const placed = placeHouseMarker(
+          group, p.x + p.px * offset * gap.side, p.y + p.py * offset * gap.side,
+          `${baseNum}${SUBNUMBER_LETTERS[k]}`
+        );
+        if (!placed) break; // no B without A, no C without B
+      }
+    }
+  }
+
+  // Canonical (fixed, never-reversed) position sampler for a straight edge.
+  function straightPosFn(start, end) {
+    const dx = end.x - start.x, dy = end.y - start.y;
+    const length = Math.hypot(dx, dy) || 1;
+    const ux = dx / length, uy = dy / length;
+    const px = -uy, py = ux;
+    return (d) => ({ x: start.x + ux * d, y: start.y + uy * d, px, py });
+  }
+
+  // Canonical (fixed, never-reversed) position sampler for a multi-point polyline.
+  function polylinePosFn(points) {
+    const segs = [];
+    for (let i = 0; i < points.length - 1; i++) {
+      const a = points[i], b = points[i + 1];
+      const len = Math.hypot(b.x - a.x, b.y - a.y) || 1;
+      segs.push({ a, b, len, ux: (b.x - a.x) / len, uy: (b.y - a.y) / len });
+    }
+    return (d) => {
+      let acc = 0, seg = segs[segs.length - 1], localD = 0;
+      for (const s of segs) {
+        if (d <= acc + s.len) { seg = s; localD = d - acc; break; }
+        acc += s.len;
+      }
+      return { x: seg.a.x + seg.ux * localD, y: seg.a.y + seg.uy * localD, px: -seg.uy, py: seg.ux };
+    };
+  }
+
+  // ================= RADIAL PANEL =================
+  (function initRadial() {
+    const svg = document.getElementById("svg-radial");
+    const statusEl = document.getElementById("radial-status");
+
+    // Fixed network geometry: an organic little town — a hub with four bending main
+    // roads, side branches, two dead-end cul-de-sacs, and two ring roads connecting
+    // branch tips (which become the "transversal" streets to demonstrate).
+    // Streets are drawn 1.6x longer than the base layout below (house spacing itself
+    // stays fixed), so on screen the gap from house 1 to house 3 reads as a smaller
+    // fraction of the street instead of dominating a short block.
+    const RS = 1.6;
+    function P(x, y) { return { x: x * RS, y: y * RS }; }
+    const H   = P(0, 0);
+    const N1  = P(8, -70),   N2  = P(25, -150);
+    const NE1 = P(75, -55),  NE2 = P(140, -95);
+    const E1  = P(90, 15),   E2  = P(180, 35),  E3 = P(245, 15);
+    const ES  = P(130, -45); // cul-de-sac stub off E1
+    const S1  = P(5, 85),    S2  = P(-30, 160);
+    const SS  = P(55, 130);  // cul-de-sac stub off S1
+    const SW1 = P(-95, 110), SW2 = P(-160, 140);
+    const W1  = P(-85, 10),  W2  = P(-170, -25);
+    const NW1 = P(-60, -70), NW2 = P(-100, -145);
+
+    // Raw geometric segments (used only to draw the roadbed casing).
+    const SEGMENTS = [
+      { p1: H, p2: N1 }, { p1: N1, p2: N2 }, { p1: N1, p2: NE1 }, { p1: NE1, p2: NE2 },
+      { p1: H, p2: E1 }, { p1: E1, p2: E2 }, { p1: E2, p2: E3 }, { p1: E1, p2: ES },
+      { p1: H, p2: S1 }, { p1: S1, p2: S2 }, { p1: S1, p2: SS }, { p1: S2, p2: SW1 }, { p1: SW1, p2: SW2 },
+      { p1: H, p2: W1 }, { p1: W1, p2: W2 }, { p1: W1, p2: NW1 }, { p1: NW1, p2: NW2 },
+      { p1: N2, p2: NE2 }, // ring road across the north branch tips
+      { p1: W2, p2: NW2 }, // ring road across the west branch tips
+    ];
+    const N_SEG_PER_UNIT = 16 / 90; // centerline subdivision density
+
+    // Merge raw segments into logical "streets". At a node where exactly two roads
+    // meet (a bend, not a junction) the street always keeps a single id. At a real
+    // junction (3+ roads) it also continues straight through — rather than splitting
+    // every road at every crossing — whenever two of the roads there are close to
+    // collinear (e.g. the two arms of a crossroads); the remaining, non-collinear
+    // roads still end there as separate streets. A street that loops back on itself
+    // (a ring road) is cut at the one node where it closes, since a single street
+    // can't have both ends at the same point.
+    const STRAIGHT_THROUGH_MIN_ANGLE = (150 * Math.PI) / 180;
+    function buildStreets(segments) {
+      const adj = new Map();
+      function addAdj(a, b, seg) {
+        if (!adj.has(a)) adj.set(a, []);
+        adj.get(a).push({ other: b, seg });
+      }
+      for (const s of segments) {
+        addAdj(s.p1, s.p2, s);
+        addAdj(s.p2, s.p1, s);
+      }
+
+      // For every node, decide which incident roads continue straight through it.
+      // Degree 2: the only two roads always continue into each other. Degree 3+:
+      // greedily pair off whichever roads are most nearly opposite in direction
+      // (closest to 180° apart), as long as they're straight enough; anything left
+      // unpaired ends at this node as a genuine street boundary.
+      const continuePartner = new Map(); // node -> Map(segment -> continuing segment)
+      for (const [node, list] of adj) {
+        const map = new Map();
+        if (node === H) {
+          // The town's main 4-way intersection is a real crossroads: every road
+          // arriving there ends as its own street id, none pass straight through.
+        } else if (list.length === 2) {
+          map.set(list[0].seg, list[1].seg);
+          map.set(list[1].seg, list[0].seg);
+        } else if (list.length >= 3) {
+          const pairs = [];
+          for (let i = 0; i < list.length; i++) {
+            for (let j = i + 1; j < list.length; j++) {
+              const a = list[i], b = list[j];
+              const dax = a.other.x - node.x, day = a.other.y - node.y;
+              const dbx = b.other.x - node.x, dby = b.other.y - node.y;
+              const la = Math.hypot(dax, day) || 1, lb = Math.hypot(dbx, dby) || 1;
+              const cos = Math.max(-1, Math.min(1, (dax * dbx + day * dby) / (la * lb)));
+              pairs.push({ a, b, angle: Math.acos(cos) });
+            }
+          }
+          pairs.sort((p, q) => q.angle - p.angle); // straightest (closest to 180°) first
+          const used = new Set();
+          for (const p of pairs) {
+            if (p.angle < STRAIGHT_THROUGH_MIN_ANGLE) break;
+            if (used.has(p.a.seg) || used.has(p.b.seg)) continue;
+            used.add(p.a.seg); used.add(p.b.seg);
+            map.set(p.a.seg, p.b.seg);
+            map.set(p.b.seg, p.a.seg);
+          }
+        }
+        continuePartner.set(node, map);
+      }
+
+      function otherEndOf(seg, node) { return seg.p1 === node ? seg.p2 : seg.p1; }
+
+      // A street can't have both ends at the same point, so any ring road that would
+      // otherwise close back on itself is cut at the one node in that ring farthest
+      // from the town's center (H) — not wherever the merge happened to reach first.
+      const loopCheckVisited = new Set();
+      for (const s of segments) {
+        if (loopCheckVisited.has(s)) continue;
+        const seq = [s.p1, s.p2];
+        const segSeq = [s];
+        let curSeg = s, curNode = s.p2, closedAt = -1;
+        for (;;) {
+          const partner = continuePartner.get(curNode).get(curSeg);
+          if (!partner) break;
+          const nextNode = otherEndOf(partner, curNode);
+          segSeq.push(partner);
+          const idx = seq.indexOf(nextNode);
+          seq.push(nextNode);
+          if (idx !== -1) { closedAt = idx; break; }
+          curSeg = partner;
+          curNode = nextNode;
+        }
+        for (const sg of segSeq) loopCheckVisited.add(sg);
+        if (closedAt === -1) continue;
+        const cycleNodes = seq.slice(closedAt, seq.length - 1);
+        let farthest = cycleNodes[0], best = dist(farthest, H);
+        for (const n of cycleNodes) {
+          const d = dist(n, H);
+          if (d > best) { best = d; farthest = n; }
+        }
+        continuePartner.set(farthest, new Map()); // sever any pass-through here
+      }
+
+      const visited = new Set();
+      const streets = [];
+      for (const s of segments) {
+        if (visited.has(s)) continue;
+        visited.add(s);
+        const chainNodes = new Set([s.p1, s.p2]);
+
+        const forwardPts = [s.p2];
+        let curSeg = s, curNode = s.p2;
+        for (;;) {
+          const partner = continuePartner.get(curNode).get(curSeg);
+          if (!partner || visited.has(partner)) break;
+          const nextNode = otherEndOf(partner, curNode);
+          if (chainNodes.has(nextNode)) break;
+          visited.add(partner);
+          chainNodes.add(nextNode);
+          forwardPts.push(nextNode);
+          curSeg = partner;
+          curNode = nextNode;
+        }
+
+        const backwardPts = [s.p1];
+        curSeg = s; curNode = s.p1;
+        for (;;) {
+          const partner = continuePartner.get(curNode).get(curSeg);
+          if (!partner || visited.has(partner)) break;
+          const nextNode = otherEndOf(partner, curNode);
+          if (chainNodes.has(nextNode)) break;
+          visited.add(partner);
+          chainNodes.add(nextNode);
+          backwardPts.push(nextNode);
+          curSeg = partner;
+          curNode = nextNode;
+        }
+        backwardPts.reverse();
+
+        streets.push({ points: [...backwardPts, ...forwardPts] });
+      }
+      return streets;
+    }
+
+    function polylineLength(points) {
+      let total = 0;
+      for (let i = 0; i < points.length - 1; i++) total += dist(points[i], points[i + 1]);
+      return total;
+    }
+
+    let origin = { x: 0, y: 0 };
+
+    // a few park/greenery blobs so the canvas reads as a neighborhood, not a diagram
+    const PARKS = [
+      { cx: 55, cy: -40, r: 20 }, { cx: -130, cy: 55, r: 18 }, { cx: 170, cy: -55, r: 16 },
+      { cx: -35, cy: 120, r: 16 }, { cx: -25, cy: -110, r: 14 },
+    ];
+    for (const p of PARKS) {
+      svg.appendChild(el("circle", { cx: p.cx * RS, cy: p.cy * RS, r: p.r, fill: "#d7ecd0", opacity: 0.8 }));
+    }
+
+    // roadbeds (asphalt casing) drawn first, underneath the numbering-colored centerlines
+    const roadbedGroup = el("g", {});
+    svg.appendChild(roadbedGroup);
+    for (const e of SEGMENTS) drawRoadbed(roadbedGroup, e.p1, e.p2);
+
+    svg.appendChild(el("circle", { cx: H.x, cy: H.y, r: 3, fill: "#333" }));
+
+    // Streets are merged once, from the fixed geometry — only the numbering direction
+    // per street changes as the origin moves, not the street boundaries or house
+    // positions themselves.
+    const STREETS = buildStreets(SEGMENTS).map((s) => {
+      const length = polylineLength(s.points);
+      return { ...s, length, houseData: buildHouseSlots(length), posFn: polylinePosFn(s.points) };
+    });
+
+    // one <g> of line segments per street, redrawn on origin change
+    const streetGroups = STREETS.map(() => {
+      const g = el("g", {});
+      svg.appendChild(g);
+      return g;
+    });
+
+    // house markers sit above the colored streets, redrawn alongside them
+    const houseGroups = STREETS.map(() => {
+      const g = el("g", {});
+      svg.appendChild(g);
+      return g;
+    });
+
+    const originHandle = el("circle", { id: "origin-handle", cx: 0, cy: 0, r: 7, fill: "#e74c3c", stroke: "white", "stroke-width": 1.5 });
+    const originLabel = el("text", { x: 10, y: -10, "font-size": 11, fill: "#e74c3c", "font-weight": "bold" });
+    originLabel.textContent = "origin (drag me)";
+
+    function drawStreet(street, group, houseGroup) {
+      while (group.firstChild) group.removeChild(group.firstChild);
+      while (houseGroup.firstChild) houseGroup.removeChild(houseGroup.firstChild);
+      const pts = street.points;
+      const p1 = pts[0], p2 = pts[pts.length - 1];
+      const length = street.length;
+      const d1 = dist(p1, origin);
+      const d2 = dist(p2, origin);
+      const isTransversal = Math.abs(d1 - d2) / length < 0.10;
+
+      let ordered;
+      if (isTransversal) {
+        // Climb clockwise (as seen on screen) around the origin, via whichever of the
+        // two sweep directions between the endpoints is the shorter arc.
+        const a1 = Math.atan2(p1.y - origin.y, p1.x - origin.x);
+        const a2 = Math.atan2(p2.y - origin.y, p2.x - origin.x);
+        const cwSweep = ((a2 - a1) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI);
+        ordered = cwSweep <= Math.PI ? pts : pts.slice().reverse();
+      } else {
+        ordered = d1 <= d2 ? pts : pts.slice().reverse();
+      }
+
+      // draw sub-segments with color by cumulative distance from the near end (0..1 of the whole street)
+      let cum = 0;
+      for (let i = 0; i < ordered.length - 1; i++) {
+        const a = ordered[i], b = ordered[i + 1];
+        const segLen = dist(a, b);
+        const nSeg = Math.max(2, Math.round(segLen * N_SEG_PER_UNIT));
+        for (let k = 0; k < nSeg; k++) {
+          const t0 = k / nSeg, t1 = (k + 1) / nSeg;
+          const x0 = a.x + t0 * (b.x - a.x), y0 = a.y + t0 * (b.y - a.y);
+          const x1 = a.x + t1 * (b.x - a.x), y1 = a.y + t1 * (b.y - a.y);
+          const tmid = (cum + ((t0 + t1) / 2) * segLen) / length;
+          const seg = el("line", {
+            x1: x0, y1: y0, x2: x1, y2: y1,
+            stroke: plasma(tmid), "stroke-width": 5, "stroke-linecap": "round",
+          });
+          group.appendChild(seg);
+        }
+        cum += segLen;
+      }
+
+      // small arrowhead near the near end, pointing back toward it
+      const a = ordered[0], b = ordered[1];
+      const dx = b.x - a.x, dy = b.y - a.y;
+      const L = Math.hypot(dx, dy) || 1;
+      const ux = dx / L, uy = dy / L;
+      const tipX = a.x + 0.15 * dx, tipY = a.y + 0.15 * dy;
+      const backX = tipX + ux * 10, backY = tipY + uy * 10;
+      const perpX = -uy * 4, perpY = ux * 4;
+      const arrow = el("polygon", {
+        points: `${tipX},${tipY} ${backX + perpX},${backY + perpY} ${backX - perpX},${backY - perpY}`,
+        fill: "#1a7a3c",
+      });
+      group.appendChild(arrow);
+
+      renderHouseSlots(houseGroup, street.houseData, street.posFn, ordered[0] === p1);
+
+      return isTransversal;
+    }
+
+    function redraw() {
+      resetHouseMarkers();
+      let anyTransversal = false;
+      STREETS.forEach((street, i) => {
+        const t = drawStreet(street, streetGroups[i], houseGroups[i]);
+        anyTransversal = anyTransversal || t;
+      });
+      statusEl.textContent = anyTransversal
+        ? "At least one street is now classified transversal (climbs across, not outward) — see the green arrow direction."
+        : "Every street climbs outward from whichever end sits closest to the origin.";
+    }
+
+    svg.appendChild(originHandle);
+    svg.appendChild(originLabel);
+
+    let dragging = false;
+    originHandle.addEventListener("pointerdown", (evt) => {
+      dragging = true;
+      originHandle.setPointerCapture(evt.pointerId);
+    });
+    originHandle.addEventListener("pointermove", (evt) => {
+      if (!dragging) return;
+      const p = svgPointFromEvent(svg, evt);
+      origin = p;
+      originHandle.setAttribute("cx", p.x);
+      originHandle.setAttribute("cy", p.y);
+      originLabel.setAttribute("x", p.x + 10);
+      originLabel.setAttribute("y", p.y - 10);
+      redraw();
+    });
+    originHandle.addEventListener("pointerup", (evt) => {
+      dragging = false;
+      originHandle.releasePointerCapture(evt.pointerId);
+    });
+
+    redraw();
+  })();
+
+  // ================= GRID PANEL =================
+  (function initGrid() {
+    const svg = document.getElementById("svg-grid");
+    const compassSvg = document.getElementById("svg-grid-compass");
+    const slider = document.getElementById("angle-slider");
+    const readout = document.getElementById("angle-readout");
+
+    // Irregular block sizes (real towns don't tile perfectly) plus two diagonal
+    // avenues and a partial stub lane, so the grid reads as a real district, not
+    // a bare lattice. Bearing-based classification (below) handles the diagonals
+    // the same way it handles the orthogonal streets.
+    // Blocks are drawn 1.6x larger than the base layout below (house spacing itself
+    // stays fixed), so on screen the gap from house 1 to house 3 reads as a smaller
+    // fraction of the block instead of dominating it.
+    const GS = 1.6;
+    const XS = [0, 70, 150, 230, 320, 400].map((v) => v * GS);
+    const YS = [0, 60, 130, 210, 290, 370].map((v) => v * GS);
+    const MAXX = XS[XS.length - 1];
+    // The lowest horizontal street is gone, so the built district only extends down to
+    // the next one up — everything below that (that unbuilt last row) is cut away.
+    const MAXY = YS[YS.length - 2];
+    const N_SEG = 24;
+
+    const lines = [];
+    for (const x of XS) lines.push({ p1: { x, y: 0 }, p2: { x, y: MAXY } });
+    for (const y of YS.slice(0, -1)) lines.push({ p1: { x: 0, y }, p2: { x: MAXX, y } });
+    // two diagonal avenues cutting across the grid
+    lines.push({ p1: { x: 0, y: MAXY }, p2: { x: MAXX, y: 0 } });
+    lines.push({ p1: { x: 150 * GS, y: 0 }, p2: { x: MAXX, y: 210 * GS } });
+    // a short stub lane that doesn't reach either edge (a minor, partially built street)
+    lines.push({ p1: { x: 190 * GS, y: 130 * GS }, p2: { x: 190 * GS, y: 290 * GS } });
+
+    // city blocks (soft rounded rects) behind the streets, so the grid reads as blocks + roads
+    const blockGroup = el("g", {});
+    svg.appendChild(blockGroup);
+    for (let bx = 0; bx < XS.length - 1; bx++) {
+      for (let by = 0; by < YS.length - 2; by++) {
+        const pad = 12;
+        const x0 = XS[bx] + pad, x1 = XS[bx + 1] - pad;
+        const y0 = YS[by] + pad, y1 = YS[by + 1] - pad;
+        blockGroup.appendChild(el("rect", {
+          x: x0, y: y0, width: Math.max(0, x1 - x0), height: Math.max(0, y1 - y0),
+          rx: 8, fill: (bx + by) % 3 === 0 ? "#d7ecd0" : "#e4ded0", opacity: 0.7,
+        }));
+      }
+    }
+
+    // Each line's houses are fixed geometry too — computed once here, not re-derived
+    // from whichever end the rotation slider currently treats as "near".
+    for (const line of lines) {
+      line.length = dist(line.p1, line.p2);
+      line.houseData = buildHouseSlots(line.length);
+      line.posFn = straightPosFn(line.p1, line.p2);
+    }
+
+    const roadbedGroup = el("g", {});
+    svg.appendChild(roadbedGroup);
+    for (const line of lines) drawRoadbed(roadbedGroup, line.p1, line.p2);
+
+    const lineGroups = lines.map(() => {
+      const g = el("g", {});
+      svg.appendChild(g);
+      return g;
+    });
+
+    const houseGroups = lines.map(() => {
+      const g = el("g", {});
+      svg.appendChild(g);
+      return g;
+    });
+
+    // The primary/cross direction arrows live in their own small compass diagram in
+    // the side panel, not on the map, so the map canvas isn't spent on legend space.
+    const arrowGroup = el("g", {});
+    compassSvg.appendChild(arrowGroup);
+
+    function corners() {
+      return [
+        { x: 0, y: 0 }, { x: MAXX, y: 0 },
+        { x: 0, y: MAXY }, { x: MAXX, y: MAXY },
+      ];
+    }
+
+    // Arrow drawn from a shared `base` (tail) to `base + dir*len` (tip); the label sits
+    // just past the tip.
+    function drawArrow(group, base, dir, color, label) {
+      const len = 40;
+      const tipX = base.x + dir.x * len, tipY = base.y + dir.y * len;
+      const line = el("line", { x1: base.x, y1: base.y, x2: tipX, y2: tipY, stroke: color, "stroke-width": 4 });
+      const perp = { x: -dir.y * 7, y: dir.x * 7 };
+      const back = { x: tipX - dir.x * 13, y: tipY - dir.y * 13 };
+      const head = el("polygon", {
+        points: `${tipX},${tipY} ${back.x + perp.x},${back.y + perp.y} ${back.x - perp.x},${back.y - perp.y}`,
+        fill: color,
+      });
+      const textX = tipX + dir.x * 22, textY = tipY + dir.y * 22 + 5;
+      const text = el("text", { x: textX, y: textY, "font-size": 17, "font-weight": "bold", fill: color, "text-anchor": "middle" });
+      text.textContent = label;
+      group.appendChild(line);
+      group.appendChild(head);
+      group.appendChild(text);
+    }
+
+    function redraw() {
+      resetHouseMarkers();
+      const thetaDeg = parseFloat(slider.value);
+      readout.textContent = thetaDeg.toFixed(0) + "°";
+      const theta = (thetaDeg * Math.PI) / 180;
+      const u = { x: Math.cos(theta), y: Math.sin(theta) };
+      const v = { x: -Math.sin(theta), y: Math.cos(theta) };
+
+      const cs = corners();
+      const projU = cs.map((c) => c.x * u.x + c.y * u.y);
+      const projV = cs.map((c) => c.x * v.x + c.y * v.y);
+      const vmin = Math.min(Math.min(...projU), Math.min(...projV));
+      const vmax = Math.max(Math.max(...projU), Math.max(...projV));
+
+      function edgeBearingCloserToU(edge) {
+        const dx = edge.p2.x - edge.p1.x, dy = edge.p2.y - edge.p1.y;
+        const edgeAngle = Math.atan2(dy, dx);
+        let diffU = Math.abs(edgeAngle - theta) % Math.PI;
+        if (diffU > Math.PI / 2) diffU = Math.PI - diffU;
+        let diffV = Math.abs(edgeAngle - (theta + Math.PI / 2)) % Math.PI;
+        if (diffV > Math.PI / 2) diffV = Math.PI - diffV;
+        return diffU <= diffV;
+      }
+
+      lines.forEach((edge, i) => {
+        const group = lineGroups[i];
+        const houseGroup = houseGroups[i];
+        while (group.firstChild) group.removeChild(group.firstChild);
+        while (houseGroup.firstChild) houseGroup.removeChild(houseGroup.firstChild);
+        const useU = edgeBearingCloserToU(edge);
+        const axis = useU ? u : v;
+        for (let s = 0; s < N_SEG; s++) {
+          const t0 = s / N_SEG, t1 = (s + 1) / N_SEG;
+          const x0 = edge.p1.x + t0 * (edge.p2.x - edge.p1.x);
+          const y0 = edge.p1.y + t0 * (edge.p2.y - edge.p1.y);
+          const x1 = edge.p1.x + t1 * (edge.p2.x - edge.p1.x);
+          const y1 = edge.p1.y + t1 * (edge.p2.y - edge.p1.y);
+          const xm = (x0 + x1) / 2, ym = (y0 + y1) / 2;
+          const proj = xm * axis.x + ym * axis.y;
+          const tnorm = (proj - vmin) / (vmax - vmin);
+          const seg = el("line", {
+            x1: x0, y1: y0, x2: x1, y2: y1,
+            stroke: plasma(tnorm), "stroke-width": 6, "stroke-linecap": "round",
+          });
+          group.appendChild(seg);
+        }
+        // houses stay put — only which end (p1 or p2) currently counts as "near" changes
+        const projP1 = edge.p1.x * axis.x + edge.p1.y * axis.y;
+        const projP2 = edge.p2.x * axis.x + edge.p2.y * axis.y;
+        const nearIsP1 = projP1 <= projP2;
+        renderHouseSlots(houseGroup, edge.houseData, edge.posFn, nearIsP1);
+      });
+
+      while (arrowGroup.firstChild) arrowGroup.removeChild(arrowGroup.firstChild);
+      // Compass diagram: both arrows share the same starting point, centered in their
+      // own small side-panel svg.
+      const arrowBase = { x: 0, y: 0 };
+      drawArrow(arrowGroup, arrowBase, u, "#1a7a3c", "primary");
+      drawArrow(arrowGroup, arrowBase, v, "#c0392b", "cross");
+    }
+
+    slider.addEventListener("input", redraw);
+    redraw();
+  })();
+
+  // ================= TABS =================
+  const tabRadial = document.getElementById("tab-radial");
+  const tabGrid = document.getElementById("tab-grid");
+  const panelRadial = document.getElementById("panel-radial");
+  const panelGrid = document.getElementById("panel-grid");
+  tabRadial.addEventListener("click", () => {
+    tabRadial.classList.add("active"); tabGrid.classList.remove("active");
+    panelRadial.classList.add("active"); panelGrid.classList.remove("active");
+  });
+  tabGrid.addEventListener("click", () => {
+    tabGrid.classList.add("active"); tabRadial.classList.remove("active");
+    panelGrid.classList.add("active"); panelRadial.classList.remove("active");
+  });
+})();
+</script>
+</body>
+</html>
