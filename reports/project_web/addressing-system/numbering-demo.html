@@ -77,36 +77,37 @@
   }
   svg { width: 100%; height: 100%; display: block; }
   .side {
-    flex: 0 0 210px;
+    flex: 0 0 128px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    font-size: 0.8rem;
+    gap: 8px;
+    font-size: 0.68rem;
     padding-top: 4px;
   }
-  .side h3 { margin: 0 0 2px 0; font-size: 0.95rem; color: #123a72; }
-  .side p { margin: 0; color: var(--muted); line-height: 1.35; }
+  .side h3 { margin: 0; font-size: 0.72rem; color: #123a72; text-transform: uppercase; letter-spacing: 0.02em; }
+  .side p { margin: 0; color: var(--muted); line-height: 1.25; }
   .hint {
     background: #eef2f8;
     border-left: 3px solid #123a72;
-    padding: 6px 8px;
-    font-size: 0.75rem;
+    padding: 4px 6px;
+    font-size: 0.65rem;
+    line-height: 1.25;
   }
   .slider-row { display: flex; flex-direction: column; gap: 4px; }
   .slider-row input[type=range] { width: 100%; }
   .angle-readout { font-weight: bold; color: #123a72; }
-  .legend { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+  .legend { display: flex; align-items: center; gap: 4px; }
   .legend .bar {
-    width: 120px; height: 12px; border-radius: 3px;
+    flex: 1 1 auto; height: 10px; border-radius: 3px; min-width: 0;
     background: linear-gradient(90deg,#fde725,#bade28,#7ad151,#41be71,#22a884,#1f908a,#27758e,#33578f,#443983);
     border: 1px solid #999;
   }
-  .legend span { font-size: 0.7rem; color: var(--muted); }
+  .legend span { font-size: 0.62rem; color: var(--muted); }
   #origin-handle { cursor: grab; }
   #origin-handle:active { cursor: grabbing; }
   .badge {
-    font-size: 0.7rem;
-    padding: 2px 6px;
+    font-size: 0.62rem;
+    padding: 1px 5px;
     border-radius: 4px;
     background: #123a72;
     color: white;
@@ -134,13 +135,10 @@
       <svg id="svg-radial" viewBox="-344 -312 800 640" preserveAspectRatio="xMidYMid meet"></svg>
     </div>
     <div class="side">
-      <h3>Drag the origin</h3>
-      <p>Drag the red marker anywhere. Every street re-colors live: numbers always climb <em>away</em>
-      from whichever end sits closest to the origin. A street whose two ends are almost equidistant
-      from the origin instead becomes <span class="badge">transversal</span> and climbs across.</p>
-      <div class="hint" id="radial-status">Origin at the network center — every arm climbs outward.</div>
+      <h3>Drag origin</h3>
+      <p>Numbers climb away from nearest end. Equidistant ends → <span class="badge">transversal</span>.</p>
+      <div class="hint" id="radial-status">Center: all arms climb out.</div>
       <div class="legend"><span>near</span><div class="bar"></div><span>far</span></div>
-      <p style="margin-top:6px;">Colormap: <em>viridis (reversed)</em> — yellow = near, blue = far</p>
     </div>
   </div>
 
@@ -149,13 +147,10 @@
       <svg id="svg-grid" viewBox="-48 -48 736 560" preserveAspectRatio="xMidYMid meet"></svg>
     </div>
     <div class="side">
-      <h3>Rotate the grid direction</h3>
-      <p>Set the town's dominant compass direction. Streets aligned with it become
-      <span class="badge">primary</span> and climb along that direction; the perpendicular
-      streets become <span class="badge">cross</span> streets and climb the other way —
-      independent of any center point.</p>
+      <h3>Rotate grid</h3>
+      <p><span class="badge">primary</span> along · <span class="badge">cross</span> across</p>
       <div class="slider-row">
-        <label for="angle-slider">Direction angle: <span class="angle-readout" id="angle-readout">0°</span></label>
+        <label for="angle-slider">Angle: <span class="angle-readout" id="angle-readout">0°</span></label>
         <input id="angle-slider" type="range" min="0" max="179" step="1" value="0" />
       </div>
       <div class="legend"><span>near</span><div class="bar"></div><span>far</span></div>
@@ -648,8 +643,8 @@
         anyTransversal = anyTransversal || t;
       });
       statusEl.textContent = anyTransversal
-        ? "At least one street is now classified transversal (climbs across, not outward) — see the green arrow direction."
-        : "Every street climbs outward from whichever end sits closest to the origin.";
+        ? "1+ street transversal now."
+        : "All arms climb outward.";
     }
 
     svg.appendChild(originHandle);
