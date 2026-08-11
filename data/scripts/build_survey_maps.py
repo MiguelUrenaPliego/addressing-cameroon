@@ -65,6 +65,11 @@ LIST_SEP = "|"
 _MAX_ZOOM = 28
 _MAX_NATIVE_ZOOM = 20
 
+# Default view for Fotouni's own address/survey maps: the town's main
+# intersection, not whatever the streets/buildings bounding box computes to.
+FOTOUNI_DEFAULT_CENTER = (5.321098, 10.227436)
+FOTOUNI_DEFAULT_ZOOM = 17
+
 
 def _new_map_max_zoom(location, zoom_start):
     """Wraps street_editor._new_map to raise both the map's own maxZoom and
@@ -619,7 +624,9 @@ document.addEventListener("DOMContentLoaded", function() {
 """
 
 
-def _regenerate_geocode_maps(experiment_dir: str, numbering_mode: str) -> None:
+def _regenerate_geocode_maps(experiment_dir: str, numbering_mode: str,
+                              default_center: tuple[float, float] | None = None,
+                              default_zoom: int | None = None) -> None:
     """Refresh every subregion's own geocode_map.html in place (thicker
     streets + legend), reusing whatever origin/streets it already has."""
     for streets_path in sorted(glob.glob(os.path.join(experiment_dir, "**", "streets.gpkg"), recursive=True)):
@@ -633,7 +640,7 @@ def _regenerate_geocode_maps(experiment_dir: str, numbering_mode: str) -> None:
         # _grid_direction_widget_html's docstring).
         fmap = geocode_map.build_interactive_geocode_map(
             streets_gdf, out_path, numbering_mode=numbering_mode,
-            origin=origin,
+            origin=origin, default_center=default_center, default_zoom=default_zoom,
         )
         fmap.get_root().html.add_child(Element(_legend_html(include_buildings=False, numbering_mode=numbering_mode)))
         close_js = _close_button_js().replace("__OSM_GEOCODE_MAP_VAR__", fmap.get_name())
@@ -646,7 +653,9 @@ def _regenerate_geocode_maps(experiment_dir: str, numbering_mode: str) -> None:
 
 
 def build_survey_map(csv_path: str, experiment_dir: str, data_dir: str, numbering_mode: str,
-                      images_dir: str | None) -> None:
+                      images_dir: str | None,
+                      default_center: tuple[float, float] | None = None,
+                      default_zoom: int | None = None) -> None:
     site_name = os.path.basename(data_dir)
     print(f"Building survey map for {site_name}")
     _apply_thicker_street_style()
@@ -671,7 +680,7 @@ def build_survey_map(csv_path: str, experiment_dir: str, data_dir: str, numberin
     # in _regenerate_geocode_maps.
     fmap = geocode_map.build_interactive_geocode_map(
         streets_gdf, out_html_path, numbering_mode=numbering_mode,
-        origin=origin,
+        origin=origin, default_center=default_center, default_zoom=default_zoom,
     )
 
     buildings_js = _buildings_js(buildings).replace("__OSM_GEOCODE_MAP_VAR__", fmap.get_name())
@@ -687,8 +696,9 @@ def build_survey_map(csv_path: str, experiment_dir: str, data_dir: str, numberin
     # bigger than the actual surveyed area - opening the map framed on the
     # full street extent buries the buildings in a mostly-empty view (and,
     # at low zoom, can make it look like only a handful of markers exist).
-    # Frame on the buildings' own bounding box instead, when there are any.
-    if buildings:
+    # Frame on the buildings' own bounding box instead, when there are any -
+    # unless an explicit default_center was requested, which should win.
+    if buildings and default_center is None:
         lats = [b["lat"] for b in buildings]
         lons = [b["lon"] for b in buildings]
         bounds_js = f"""
@@ -704,7 +714,7 @@ document.addEventListener("DOMContentLoaded", function() {{
     fmap.save(out_html_path)
     print(f"  wrote {out_html_path}")
 
-    _regenerate_geocode_maps(experiment_dir, numbering_mode)
+    _regenerate_geocode_maps(experiment_dir, numbering_mode, default_center=default_center, default_zoom=default_zoom)
 
 
 SITES = [
@@ -721,6 +731,8 @@ SITES = [
         data_dir=os.path.join(REPO_ROOT, "data", "fotouni"),
         numbering_mode="radial",
         images_dir=os.path.join(REPO_ROOT, "data", "fotouni", "images"),
+        default_center=FOTOUNI_DEFAULT_CENTER,
+        default_zoom=FOTOUNI_DEFAULT_ZOOM,
     ),
 ]
 

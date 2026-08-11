@@ -31,11 +31,18 @@ def find_maps() -> list[tuple[str, str]]:
 def build_html(maps: list[tuple[str, str]]) -> str:
     options = []
     first_path = None
+    default_path = None
     for site_name, rel_path in maps:
         if first_path is None:
             first_path = rel_path
-        options.append(f'  <option value="{html.escape(rel_path)}">{html.escape(site_name)}</option>')
+        if site_name == "fotouni":
+            default_path = rel_path
+        selected = ' selected' if site_name == "fotouni" else ''
+        options.append(f'  <option value="{html.escape(rel_path)}"{selected}>{html.escape(site_name)}</option>')
     options_html = "\n".join(options)
+    # Fotouni is the site we want the page to open on by default, when present,
+    # regardless of where it falls alphabetically among the scanned sites.
+    default_path = default_path or first_path
 
     return f"""<!doctype html>
 <html>
@@ -61,7 +68,7 @@ def build_html(maps: list[tuple[str, str]]) -> str:
 {options_html}
   </select>
 </div>
-<iframe id="viewer" src="{html.escape(first_path or "")}"></iframe>
+<iframe id="viewer" src="{html.escape(default_path or "")}"></iframe>
 <script>
   const select = document.getElementById("map-select");
   const viewer = document.getElementById("viewer");

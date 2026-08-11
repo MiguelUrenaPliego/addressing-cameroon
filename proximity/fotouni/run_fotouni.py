@@ -15,6 +15,10 @@ sys.path.insert(0, str(PROX))
 import map_utils as mu  # noqa: E402
 
 PLACE = "Fotouni"
+# Default view for the published map: the town's main intersection, not the
+# AOI centroid, so the map opens where visitors actually want to look first.
+DEFAULT_CENTER = [5.321098, 10.227436]
+DEFAULT_ZOOM = 17
 AOI_PATH = PROX / "aoi_fotouni.gpkg"
 CSV_PATH = HERE / "fotouni.csv"
 STREETS_DIR = PROX / "streets" / "fotouni"
@@ -28,7 +32,7 @@ def main():
     print(f"[{PLACE}] loading AOI + survey points")
     aoi = gpd.read_file(AOI_PATH).to_crs("EPSG:4326")
     aoi_poly = aoi.geometry.iloc[0]
-    center = [aoi_poly.centroid.y, aoi_poly.centroid.x]
+    center = DEFAULT_CENTER
 
     points = mu.load_points(CSV_PATH)
     print(f"[{PLACE}] {len(points)} geolocated rows, "
@@ -60,7 +64,8 @@ def main():
     )
 
     print(f"[{PLACE}] building map -> {OUT_HTML}")
-    stats = mu.build_map(PLACE, center, hex_gdf, dist_df, walk_score, pop_series, points, OUT_HTML, G=G)
+    stats = mu.build_map(PLACE, center, hex_gdf, dist_df, walk_score, pop_series, points, OUT_HTML, G=G,
+                          default_zoom=DEFAULT_ZOOM, default_base="pop")
 
     # population_stats.csv: per-hex breakdown for every layer's accessible/not split
     out = hex_gdf[["hex_id"]].copy()

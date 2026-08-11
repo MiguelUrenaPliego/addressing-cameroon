@@ -612,11 +612,13 @@ def build_map(
     points: gpd.GeoDataFrame,
     out_html: Path,
     G=None,
+    default_zoom: int = 16,
+    default_base: str = "hex",
 ):
     # max_zoom=28 lets the user zoom in far past any basemap's native tile
     # resolution — Leaflet just upscales the last available tile (maxNativeZoom
     # stays at each layer's real limit) instead of capping the zoom control.
-    m = folium.Map(location=center_latlon, zoom_start=16, tiles=None, control_scale=True, max_zoom=28)
+    m = folium.Map(location=center_latlon, zoom_start=default_zoom, tiles=None, control_scale=True, max_zoom=28)
     map_name = m.get_name()
 
     # -- Basemap switcher: CartoDB Positron (default) vs. Google Hybrid @60% opacity --
@@ -744,7 +746,7 @@ def build_map(
     legend_div_html.append(_pop_size_legend_div(pop_size_div_id, pmax, display="none"))
 
     # -- Controls panel (HTML) --
-    controls_html = _build_controls_html(place)
+    controls_html = _build_controls_html(place, default_base=default_base)
     m.get_root().html.add_child(folium.Element(controls_html))
 
     # Legends are stacked in a single flex column anchored bottom-right, so
@@ -863,7 +865,7 @@ def _pop_size_legend_div(div_id, pmax, display="none"):
 """
 
 
-def _build_controls_html(place: str) -> str:
+def _build_controls_html(place: str, default_base: str = "hex") -> str:
     options = ['<option value="none">None</option>', '<option value="walk_score" selected>Walk score</option>']
     for cat_key in CATEGORY_ORDER:
         name, emoji, _, _ = CATEGORIES[cat_key]
@@ -889,8 +891,8 @@ def _build_controls_html(place: str) -> str:
     </select></label></div>
   <div style="margin-top:6px"><label>Base layer<br>
     <select id="base-select" onchange="onBaseChange(this)" style="width:100%">
-      <option value="hex">Hexagon grid</option>
-      <option value="pop">Population</option>
+      <option value="hex"{' selected' if default_base == 'hex' else ''}>Hexagon grid</option>
+      <option value="pop"{' selected' if default_base == 'pop' else ''}>Population</option>
     </select></label></div>
   <div style="margin-top:6px"><label>Basemap<br>
     <select id="basemap-select" onchange="onBasemapChange(this)" style="width:100%">
