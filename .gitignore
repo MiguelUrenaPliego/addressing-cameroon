@@ -38,6 +38,17 @@ Thumbs.db
 !reports/project_web/**
 
 # -----------------------------------------------------------------------------
+# documents/: only project_web and the CameroonPaper submodule are tracked;
+# the FUAS report/presentation, MediaLabWeb, proposal_MIT, and trip folders
+# stay local only.
+# -----------------------------------------------------------------------------
+documents/FUASPresentation/
+documents/FUASProjektarbeit/
+documents/MediaLabWeb/
+documents/proposal_MIT/
+documents/trip/
+
+# -----------------------------------------------------------------------------
 # Video/photo dumps not tracked in git
 # -----------------------------------------------------------------------------
 fotouintv/
@@ -85,6 +96,11 @@ gps/*
 # IUC: not tracked at all (workshop rasters/shapefiles/spreadsheets)
 # -----------------------------------------------------------------------------
 IUC/
+
+# -----------------------------------------------------------------------------
+# survey: raw field survey data/exports, not tracked at all
+# -----------------------------------------------------------------------------
+survey/
 
 # Cache directories
 __pycache__/

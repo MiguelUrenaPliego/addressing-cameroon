@@ -48,6 +48,50 @@ header.site p.subtitle {
   color: var(--muted);
   font-size: 1rem;
 }
+header.site p.eyebrow {
+  margin: 0 0 0.3rem;
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+}
+header.site p.byline {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+nav.toptabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.4rem;
+  padding: 0.6rem 1.5rem 1.6rem;
+  font-family: sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+nav.toptabs a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+nav.toptabs a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+.consortium-list {
+  max-width: 600px;
+  margin: 1.4rem auto 0;
+  text-align: left;
+  font-size: 0.92rem;
+  padding-left: 1.2rem;
+}
+.consortium-list li { margin-bottom: 0.4rem; }
 nav.crumbs {
   text-align: center;
   font-size: 0.9rem;
@@ -116,6 +160,58 @@ nav.crumbs a:hover { color: var(--accent); }
   max-height: 40px;
   max-width: 140px;
   object-fit: contain;
+}
+a.logo-chip {
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+a.logo-chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(30, 25, 15, 0.15);
+}
+
+.team {
+  max-width: 1100px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+}
+.team h2 {
+  font-family: sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+.team-inst {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.1rem 1.3rem;
+  box-shadow: var(--shadow);
+}
+.team-inst h3 {
+  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+  color: var(--accent);
+}
+.team-inst h3:not(:first-child) {
+  margin-top: 1.1rem;
+}
+.team-inst ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+}
+.team-inst li {
+  margin-bottom: 0.4rem;
 }
 
 .card {
