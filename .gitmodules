@@ -1,6 +1,3 @@
 [submodule "OSMAddressSystem"]
 	path = OSMAddressSystem
 	url = https://github.com/MiguelUrenaPliego/OSMAddressSystem.git
-[submodule "documents/CameroonPaper"]
-	path = documents/CameroonPaper
-	url = git@github.com:MiguelUrenaPliego/CameroonPaper.git

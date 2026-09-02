@@ -38,15 +38,18 @@ Thumbs.db
 !reports/project_web/**
 
 # -----------------------------------------------------------------------------
-# documents/: only project_web and the CameroonPaper submodule are tracked;
-# the FUAS report/presentation, MediaLabWeb, proposal_MIT, and trip folders
-# stay local only.
+# documents/: only project_web is tracked here; the FUAS report/
+# presentation, MediaLabWeb, proposal_MIT, and trip folders stay local
+# only. CameroonPaper is its OWN separate git repo (not a submodule of
+# this one - CI has no credentials to clone it) - ignored entirely so
+# this repo never tracks or references its contents.
 # -----------------------------------------------------------------------------
 documents/FUASPresentation/
 documents/FUASProjektarbeit/
 documents/MediaLabWeb/
 documents/proposal_MIT/
 documents/trip/
+documents/CameroonPaper/
 
 # -----------------------------------------------------------------------------
 # Video/photo dumps not tracked in git
