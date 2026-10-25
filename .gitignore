@@ -22,88 +22,56 @@ esptool-venv/
 
 .claude/
 
+# server credentials and deployment helpers: never commit
+hosting/
+**/csfuturecities.txt
+**/*credentials*
+**/*password*
+
 .DS_Store
 Thumbs.db
 
 # -----------------------------------------------------------------------------
-# Reports
+# Layout: code/ (one git repo per package/tool), reports/, bibliography/, data/
 # -----------------------------------------------------------------------------
 
-# Ignore reports folders everywhere
+# Reports: only project_web (the public site) is tracked here. The other
+# report folders stay local; AddressPaper is its OWN separate git repo (CI
+# has no credentials to clone it).
 **/reports/*
-
-# But keep root reports/project_web
 !reports/
 !reports/project_web/
 !reports/project_web/**
+reports/AddressPaper/
 
-# -----------------------------------------------------------------------------
-# documents/: only project_web is tracked here; the FUAS report/
-# presentation, MediaLabWeb, proposal_MIT, and trip folders stay local
-# only. CameroonPaper is its OWN separate git repo (not a submodule of
-# this one - CI has no credentials to clone it) - ignored entirely so
-# this repo never tracks or references its contents.
-# -----------------------------------------------------------------------------
-documents/FUASPresentation/
-documents/FUASProjektarbeit/
-documents/MediaLabWeb/
-documents/proposal_MIT/
-documents/trip/
-documents/CameroonPaper/
-
-# -----------------------------------------------------------------------------
 # Video/photo dumps not tracked in git
-# -----------------------------------------------------------------------------
-fotouintv/
 data/trip_photos/
 
-# -----------------------------------------------------------------------------
-# data/car_cam: keep only the three CSV streams the IMU road-quality
-# experiment actually loads per drive (Location.csv, Accelerometer.csv,
-# Gravity.csv - see IMURoadQuality/src/imu_road_quality/io.py's
-# REQUIRED_FILES). Everything else (Camera/ footage, DCIM, IMU-only extra
-# streams, Gyroscope/Orientation/TotalAcceleration/Metadata/Annotation CSVs,
-# etc.) is ignored.
-# -----------------------------------------------------------------------------
-data/car_cam/**
-!data/car_cam/**/
-!data/car_cam/**/Location.csv
-!data/car_cam/**/Accelerometer.csv
-!data/car_cam/**/Gravity.csv
+# code/: OSMAddressSystem is a submodule. The other code/* folders are their
+# own nested git repos; they are not tracked by this repo until they have a
+# remote and are registered with `git submodule add`.
+code/IMURoadQuality/
+code/proximity/
+code/building_survey/
+code/fotouni_town_qc/
+code/gps/
 
-# -----------------------------------------------------------------------------
-# data/douala and data/fotouni: raw survey exports and the methodology
-# writeup are not tracked - only the built douala.csv/fotouni.csv,
-# survey_map.html, images/, and streets.gpkg are.
-# -----------------------------------------------------------------------------
-data/douala/raw/
-data/fotouni/raw/
-data/building_datasets.md
+# data/imu: raw phone IMU drives (Sensor Logger exports), large - not tracked
+data/imu/**
+!data/imu/README.md
 
-# -----------------------------------------------------------------------------
-# gps: keep only Python source files and their dependency manifests
-# (firmware binaries, the SNIP installer, the C++ ntrip client, and any
-# build output/venvs are not tracked).
-# -----------------------------------------------------------------------------
-gps/*
+# data/*/pilot_survey: raw RTK survey exports are not tracked - only the
+# built douala.csv/fotouni.csv, survey_map.html, images/ and streets.gpkg.
+**/pilot_survey/raw/
 
-# Keep the gps directory itself
-!gps/
-
-# Allow the specific scripts
-!gps/check_rctm.py
-!gps/rtk2go_and_fix_error.py
-!gps/rtk2go.py
-
-# -----------------------------------------------------------------------------
-# IUC: not tracked at all (workshop rasters/shapefiles/spreadsheets)
-# -----------------------------------------------------------------------------
-IUC/
-
-# -----------------------------------------------------------------------------
-# survey: raw field survey data/exports, not tracked at all
-# -----------------------------------------------------------------------------
-survey/
+# data/douala/iuc and data/fotouni/town_survey: raw workshop files and phone-app
+# exports (contain personal contact data) are not tracked, only READMEs.
+data/douala/iuc/**
+data/fotouni/town_survey/**
+!data/*/*/README.md
+!data/*/README.md
+!data/fotouni/town_survey/*/
+!data/fotouni/town_survey/*/README.md
 
 # Cache directories
 __pycache__/
@@ -115,12 +83,6 @@ cache/
 *.py[cod]
 *$py.class
 
-# Large sensor CSV exports (use Parquet instead)
-data/car_cam/**/*.csv
-
-**/raw/**
-**/_raw/**
-**/proximity/population/**
-**/proximity/streets/**
-
-*.osm
+# Methodology writeup and paper PDFs stay local
+data/building_datasets.md
+bibliography/papers/*.pdf
