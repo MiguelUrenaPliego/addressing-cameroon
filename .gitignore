@@ -86,3 +86,6 @@ cache/
 # Methodology writeup and paper PDFs stay local
 data/building_datasets.md
 bibliography/papers/*.pdf
+
+# personal notes
+todo.txt
