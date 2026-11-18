@@ -50,6 +50,9 @@
             </script>
 
         
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
 </head>
 <body>
     
@@ -80,8 +83,8 @@
     </select></label></div>
   <div style="margin-top:6px"><label>Basemap<br>
     <select id="basemap-select" onchange="onBasemapChange(this)" style="width:100%">
-      <option value="cartodb">CartoDB (light)</option>
-      <option value="google_hybrid">Google Hybrid (60% opacity)</option>
+      <option value="google_hybrid">Google Hybrid</option>
+      <option value="openfreemap">OpenFreeMap (vector)</option>
     </select></label></div>
   <div style="margin-top:6px"><label><input type="checkbox" id="streets-cb" onchange="onStreetsToggle(this.checked)">
     Show streets (coloured by active score)</label></div>
@@ -226,24 +229,8 @@
 
         
     
-            var tile_layer_4d54e63e96f609055b9fe2edd30b44b5 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 28,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
         
     
-            tile_layer_4d54e63e96f609055b9fe2edd30b44b5.addTo(map_64da18abc550175cb48db78425f001f9);
         
     
             var tile_layer_f110bc1a5da2512feb252acf3f6b1df2 = L.tileLayer(
@@ -257,10 +244,11 @@
   "subdomains": "abc",
   "detectRetina": false,
   "tms": false,
-  "opacity": 0.6,
+  "opacity": 1,
 }
 
             );
+            tile_layer_f110bc1a5da2512feb252acf3f6b1df2.addTo(map_64da18abc550175cb48db78425f001f9);
         
     
             var feature_group_50fbe90eb78152acfc2f961c680915b8 = L.featureGroup(
@@ -330603,7 +330591,8 @@
   var legends = {"walk_score": "legend-walk_score", "fountain": "legend-fountain", "healthcare": "legend-healthcare", "school": "legend-school", "food": "legend-food", "clothes": "legend-clothes", "construction": "legend-construction", "electronics": "legend-electronics", "car_repairs": "legend-car_repairs", "animal_food": "legend-animal_food", "bar_pub_club": "legend-bar_pub_club", "public_building": "legend-public_building"};               // key -> div id
   var popSizeLegendId = "legend-pop-size";
   var stats = {"total_population": 3266.158100045908, "walk_score": {"title": "Walk score \u2014 population by class", "unit": "categories", "rows": [{"label": "0\u20132 (very low)", "pop": 0.0, "pct": 0.0}, {"label": "3\u20134 (low)", "pop": 0.0, "pct": 0.0}, {"label": "5\u20136 (moderate)", "pop": 0.0, "pct": 0.0}, {"label": "7\u20138 (high)", "pop": 0.0, "pct": 0.0}, {"label": "9\u201311 (very high)", "pop": 3266.158100045908, "pct": 100.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 8.999999999999998}, "fountain": {"title": "\ud83d\udca7 Fountain \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 857.9971571807143, "pct": 26.269308799493036}, {"label": "200\u2013400 m", "pop": 1449.2449885213914, "pct": 44.371550431101944}, {"label": "400\u2013600 m", "pop": 498.69105080677923, "pct": 15.268429620714619}, {"label": "600\u2013800 m", "pop": 460.2249035370228, "pct": 14.090711148690383}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 332.6274892293127}, "healthcare": {"title": "\ud83c\udfe5 Healthcare \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 2396.578368918988, "pct": 73.37606740118619}, {"label": "200\u2013400 m", "pop": 804.1734552363489, "pct": 24.621387899901286}, {"label": "400\u2013600 m", "pop": 65.40627589057095, "pct": 2.0025446989125117}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 153.0756166501214}, "school": {"title": "\ud83c\udfeb School \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 2176.5582312082192, "pct": 66.63970832206887}, {"label": "200\u2013400 m", "pop": 1029.3879747497506, "pct": 31.5167834262304}, {"label": "400\u2013600 m", "pop": 60.21189408793816, "pct": 1.8435082517007317}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 166.57236725431747}, "food": {"title": "\ud83c\udf7d\ufe0f Food \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 2247.8109680384987, "pct": 68.82125418260996}, {"label": "200\u2013400 m", "pop": 968.2389827481747, "pct": 29.644584036962737}, {"label": "400\u2013600 m", "pop": 50.10814925923454, "pct": 1.5341617804272925}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 151.24118447721594}, "clothes": {"title": "\ud83d\udc55 Clothes \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 2840.99865662177, "pct": 86.98288844565845}, {"label": "200\u2013400 m", "pop": 425.159443424138, "pct": 13.01711155434154}, {"label": "400\u2013600 m", "pop": 0.0, "pct": 0.0}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 120.0926999632904}, "construction": {"title": "\ud83e\uddf1 Construction \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 2426.0762027605297, "pct": 74.279202918145}, {"label": "200\u2013400 m", "pop": 436.8625118724448, "pct": 13.375424535214766}, {"label": "400\u2013600 m", "pop": 403.2193854129333, "pct": 12.345372546640219}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 158.5830048609767}, "electronics": {"title": "\ud83d\udd0c Electronics \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 2344.9549801192115, "pct": 71.79551351437188}, {"label": "200\u2013400 m", "pop": 804.4543811485495, "pct": 24.62998901177632}, {"label": "400\u2013600 m", "pop": 116.74873877814673, "pct": 3.5744974738517934}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 148.93568416883093}, "car_repairs": {"title": "\ud83d\ude97 Car repairs/parts \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 2773.3413363486134, "pct": 84.91142349507307}, {"label": "200\u2013400 m", "pop": 492.8167636972946, "pct": 15.088576504926927}, {"label": "400\u2013600 m", "pop": 0.0, "pct": 0.0}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 110.11586167052293}, "animal_food": {"title": "\ud83c\udf3e Animal food \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 0.0, "pct": 0.0}, {"label": "200\u2013400 m", "pop": 0.0, "pct": 0.0}, {"label": "400\u2013600 m", "pop": 0.0, "pct": 0.0}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 3266.158100045908, "pct": 100.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": null}, "bar_pub_club": {"title": "\ud83c\udf7a Bar/Pub/Club \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 2606.489685768265, "pct": 79.80292459607601}, {"label": "200\u2013400 m", "pop": 659.6684142776421, "pct": 20.197075403923957}, {"label": "400\u2013600 m", "pop": 0.0, "pct": 0.0}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 0.0, "pct": 0.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": 135.2424547461514}, "public_building": {"title": "\ud83c\udfdb\ufe0f Public building/space \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 0.0, "pct": 0.0}, {"label": "200\u2013400 m", "pop": 0.0, "pct": 0.0}, {"label": "400\u2013600 m", "pop": 0.0, "pct": 0.0}, {"label": "600\u2013800 m", "pop": 0.0, "pct": 0.0}, {"label": "800\u20131000 m", "pop": 0.0, "pct": 0.0}, {"label": ">1000 m / unreachable", "pop": 3266.158100045908, "pct": 100.0}, {"label": "Total", "pop": 3266.158100045908, "pct": 100.0}], "weighted_mean": null}};
-  var basemapLayers = {"cartodb": "tile_layer_4d54e63e96f609055b9fe2edd30b44b5", "google_hybrid": "tile_layer_f110bc1a5da2512feb252acf3f6b1df2"};  // key -> layer var name
+  window.openfreemap_layer = window.openfreemap_layer || L.maplibreGL({style: 'https://tiles.openfreemap.org/styles/liberty'});
+  var basemapLayers = {"openfreemap": "openfreemap_layer", "google_hybrid": "tile_layer_f110bc1a5da2512feb252acf3f6b1df2"};  // key -> layer var name
   var map = map_64da18abc550175cb48db78425f001f9;
 
   function hideGroup(layers) {

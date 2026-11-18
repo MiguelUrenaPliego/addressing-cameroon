@@ -50,6 +50,9 @@
             </script>
 
         
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
 </head>
 <body>
     
@@ -80,8 +83,8 @@
     </select></label></div>
   <div style="margin-top:6px"><label>Basemap<br>
     <select id="basemap-select" onchange="onBasemapChange(this)" style="width:100%">
-      <option value="cartodb">CartoDB (light)</option>
-      <option value="google_hybrid">Google Hybrid (60% opacity)</option>
+      <option value="google_hybrid">Google Hybrid</option>
+      <option value="openfreemap">OpenFreeMap (vector)</option>
     </select></label></div>
   <div style="margin-top:6px"><label><input type="checkbox" id="streets-cb" onchange="onStreetsToggle(this.checked)">
     Show streets (coloured by active score)</label></div>
@@ -226,24 +229,8 @@
 
         
     
-            var tile_layer_767a4d51027b855c7ebee1726868318b = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 28,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
         
     
-            tile_layer_767a4d51027b855c7ebee1726868318b.addTo(map_6508d0346d3d8d7954a73124a63d0358);
         
     
             var tile_layer_693135cfaf0bef4a076517e1bfb5729c = L.tileLayer(
@@ -257,10 +244,11 @@
   "subdomains": "abc",
   "detectRetina": false,
   "tms": false,
-  "opacity": 0.6,
+  "opacity": 1,
 }
 
             );
+            tile_layer_693135cfaf0bef4a076517e1bfb5729c.addTo(map_6508d0346d3d8d7954a73124a63d0358);
         
     
             var feature_group_c9368b19422076c00b23111af17ee3cb = L.featureGroup(
@@ -675641,7 +675629,8 @@
   var legends = {"walk_score": "legend-walk_score", "fountain": "legend-fountain", "healthcare": "legend-healthcare", "school": "legend-school", "food": "legend-food", "clothes": "legend-clothes", "construction": "legend-construction", "electronics": "legend-electronics", "car_repairs": "legend-car_repairs", "animal_food": "legend-animal_food", "bar_pub_club": "legend-bar_pub_club", "public_building": "legend-public_building"};               // key -> div id
   var popSizeLegendId = "legend-pop-size";
   var stats = {"total_population": 4843.316920727128, "walk_score": {"title": "Walk score \u2014 population by class", "unit": "categories", "rows": [{"label": "0\u20132 (very low)", "pop": 1557.904827605787, "pct": 32.16607240667411}, {"label": "3\u20134 (low)", "pop": 1436.6292786278339, "pct": 29.662095257069254}, {"label": "5\u20136 (moderate)", "pop": 488.042736803711, "pct": 10.076621967790642}, {"label": "7\u20138 (high)", "pop": 253.31149870108666, "pct": 5.230124372349704}, {"label": "9\u201311 (very high)", "pop": 1107.4285789887092, "pct": 22.865085996116292}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 4.794448553591554}, "fountain": {"title": "\ud83d\udca7 Fountain \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 942.2087321080407, "pct": 19.453790605273603}, {"label": "200\u2013400 m", "pop": 811.8214661767629, "pct": 16.761683768876395}, {"label": "400\u2013600 m", "pop": 489.19752439547824, "pct": 10.100464875671092}, {"label": "600\u2013800 m", "pop": 482.55659757623425, "pct": 9.963349610906485}, {"label": "800\u20131000 m", "pop": 390.63505168314623, "pct": 8.06544477837928}, {"label": ">1000 m / unreachable", "pop": 1726.897548787465, "pct": 35.65526636089314}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 866.3527982400949}, "healthcare": {"title": "\ud83c\udfe5 Healthcare \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 288.1591082663299, "pct": 5.949623222736961}, {"label": "200\u2013400 m", "pop": 326.31231474648774, "pct": 6.737372756881217}, {"label": "400\u2013600 m", "pop": 378.58893247671335, "pct": 7.816728466735887}, {"label": "600\u2013800 m", "pop": 433.64363983191026, "pct": 8.95344341346152}, {"label": "800\u20131000 m", "pop": 271.18961391801315, "pct": 5.59925394841392}, {"label": ">1000 m / unreachable", "pop": 3145.4233114876733, "pct": 64.9435781917705}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 1566.5695493325356}, "school": {"title": "\ud83c\udfeb School \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 686.4824275015848, "pct": 14.173807717677146}, {"label": "200\u2013400 m", "pop": 633.991890922525, "pct": 13.090035223780975}, {"label": "400\u2013600 m", "pop": 549.627506412193, "pct": 11.348163157774062}, {"label": "600\u2013800 m", "pop": 594.4405806096065, "pct": 12.273419029543149}, {"label": "800\u20131000 m", "pop": 504.751571281459, "pct": 10.421609395853466}, {"label": ">1000 m / unreachable", "pop": 1874.0229439997588, "pct": 38.692965475371196}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 1109.0402730306564}, "food": {"title": "\ud83c\udf7d\ufe0f Food \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 790.1660245217971, "pct": 16.314563706129917}, {"label": "200\u2013400 m", "pop": 698.1634502367286, "pct": 14.414985879798948}, {"label": "400\u2013600 m", "pop": 758.8843404578782, "pct": 15.668690545733417}, {"label": "600\u2013800 m", "pop": 750.4636146522978, "pct": 15.49482775823868}, {"label": "800\u20131000 m", "pop": 487.5563758800486, "pct": 10.06658007023112}, {"label": ">1000 m / unreachable", "pop": 1358.0831149783771, "pct": 28.04035203986792}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 769.7753145921134}, "clothes": {"title": "\ud83d\udc55 Clothes \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 268.88049671668045, "pct": 5.551577588614899}, {"label": "200\u2013400 m", "pop": 265.9024623908172, "pct": 5.49009009203753}, {"label": "400\u2013600 m", "pop": 260.8027912071741, "pct": 5.3847971436901085}, {"label": "600\u2013800 m", "pop": 340.61717897587613, "pct": 7.032725393587072}, {"label": "800\u20131000 m", "pop": 219.53450497920795, "pct": 4.532730535136016}, {"label": ">1000 m / unreachable", "pop": 3487.579486457372, "pct": 72.00807924693437}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 2289.685311553357}, "construction": {"title": "\ud83e\uddf1 Construction \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 744.5426875650573, "pct": 15.372578333223736}, {"label": "200\u2013400 m", "pop": 303.6853959770701, "pct": 6.2701945990244585}, {"label": "400\u2013600 m", "pop": 402.04421014624927, "pct": 8.301009756881454}, {"label": "600\u2013800 m", "pop": 427.36399793483866, "pct": 8.823787601135928}, {"label": "800\u20131000 m", "pop": 276.77145010682085, "pct": 5.71450216116085}, {"label": ">1000 m / unreachable", "pop": 2688.9091789970907, "pct": 55.51792754857356}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 1251.8717056532787}, "electronics": {"title": "\ud83d\udd0c Electronics \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 223.57291970882346, "pct": 4.61611171369018}, {"label": "200\u2013400 m", "pop": 205.6089903255394, "pct": 4.245210331903519}, {"label": "400\u2013600 m", "pop": 296.9848061336535, "pct": 6.131847471361984}, {"label": "600\u2013800 m", "pop": 359.7149345852672, "pct": 7.427036893783592}, {"label": "800\u20131000 m", "pop": 249.83468257559775, "pct": 5.158338524295661}, {"label": ">1000 m / unreachable", "pop": 3507.600587398246, "pct": 72.42145506496504}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 2347.5468081895847}, "car_repairs": {"title": "\ud83d\ude97 Car repairs/parts \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 321.07319667965504, "pct": 6.629200647713392}, {"label": "200\u2013400 m", "pop": 228.73309483971204, "pct": 4.722653887480324}, {"label": "400\u2013600 m", "pop": 285.9444188107472, "pct": 5.903896513297303}, {"label": "600\u2013800 m", "pop": 383.91118894627533, "pct": 7.92661713511489}, {"label": "800\u20131000 m", "pop": 171.5532705132623, "pct": 3.5420616350562297}, {"label": ">1000 m / unreachable", "pop": 3452.1017509374756, "pct": 71.27557018133786}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 2258.8129963281363}, "animal_food": {"title": "\ud83c\udf3e Animal food \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 326.3995787725098, "pct": 6.7391744978667925}, {"label": "200\u2013400 m", "pop": 498.30598381794096, "pct": 10.28852730419983}, {"label": "400\u2013600 m", "pop": 490.6523394903216, "pct": 10.130502453609001}, {"label": "600\u2013800 m", "pop": 468.2953436574621, "pct": 9.668897396603915}, {"label": "800\u20131000 m", "pop": 282.4259360473419, "pct": 5.8312503738644725}, {"label": ">1000 m / unreachable", "pop": 2777.2377389415515, "pct": 57.341647973856}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 2093.362880479841}, "bar_pub_club": {"title": "\ud83c\udf7a Bar/Pub/Club \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 1136.4183024519207, "pct": 23.463637029172773}, {"label": "200\u2013400 m", "pop": 991.2669383540072, "pct": 20.46669574959774}, {"label": "400\u2013600 m", "pop": 712.1105163088882, "pct": 14.702951055327162}, {"label": "600\u2013800 m", "pop": 446.03387515743594, "pct": 9.209264693140767}, {"label": "800\u20131000 m", "pop": 442.4756614492384, "pct": 9.135798228599286}, {"label": ">1000 m / unreachable", "pop": 1115.0116270056367, "pct": 23.021653244162266}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 684.1514239363999}, "public_building": {"title": "\ud83c\udfdb\ufe0f Public building/space \u2014 population by distance band", "unit": "m", "rows": [{"label": "0\u2013200 m", "pop": 1229.8722417273127, "pct": 25.393181199108312}, {"label": "200\u2013400 m", "pop": 872.3261834262983, "pct": 18.01092510987978}, {"label": "400\u2013600 m", "pop": 696.8497198932827, "pct": 14.387861279758345}, {"label": "600\u2013800 m", "pop": 418.41186027229105, "pct": 8.638952749131166}, {"label": "800\u20131000 m", "pop": 233.8008584620915, "pct": 4.827288040176214}, {"label": ">1000 m / unreachable", "pop": 1392.0560569458512, "pct": 28.74179162194618}, {"label": "Total", "pop": 4843.316920727128, "pct": 100.0}], "weighted_mean": 765.4246556986549}};
-  var basemapLayers = {"cartodb": "tile_layer_767a4d51027b855c7ebee1726868318b", "google_hybrid": "tile_layer_693135cfaf0bef4a076517e1bfb5729c"};  // key -> layer var name
+  window.openfreemap_layer = window.openfreemap_layer || L.maplibreGL({style: 'https://tiles.openfreemap.org/styles/liberty'});
+  var basemapLayers = {"openfreemap": "openfreemap_layer", "google_hybrid": "tile_layer_693135cfaf0bef4a076517e1bfb5729c"};  // key -> layer var name
   var map = map_6508d0346d3d8d7954a73124a63d0358;
 
   function hideGroup(layers) {

@@ -50,6 +50,9 @@
             </script>
 
         
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="https://unpkg.com/@maplibre/maplibre-gl-leaflet@0.0.22/leaflet-maplibre-gl.js"></script>
 </head>
 <body>
     
@@ -128,7 +131,7 @@
   "subdomains": "abc",
   "detectRetina": false,
   "tms": false,
-  "opacity": 0.6,
+  "opacity": 1,
 }
 
             );
@@ -137,21 +140,6 @@
             tile_layer_942f8287a68dc2a9454aa476fa9dc61c.addTo(map_80b6aac84530b96a1ee4ed41b3926a81);
         
     
-            var tile_layer_39d649bd7ebaf7de99480c5157bf0ec9 = L.tileLayer(
-                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
-                {
-  "minZoom": 0,
-  "maxZoom": 20,
-  "maxNativeZoom": 20,
-  "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
-  "subdomains": "abcd",
-  "detectRetina": false,
-  "tms": false,
-  "opacity": 1,
-}
-
-            );
         
     
             var feature_group_62caa7e89ef076e4db2e4896457f97bc = L.featureGroup(
@@ -20353,10 +20341,11 @@
             feature_group_79dfe2fed8dfb563beec52477329f836.addTo(map_80b6aac84530b96a1ee4ed41b3926a81);
         
     
+            var openfreemap_layer = L.maplibreGL({style: 'https://tiles.openfreemap.org/styles/liberty'});
             var layer_control_6001b9d7c49943587933bf9a46c3435d_layers = {
                 base_layers : {
-                    "Google Hybrid (60% opacity)" : tile_layer_942f8287a68dc2a9454aa476fa9dc61c,
-                    "CartoDB (light)" : tile_layer_39d649bd7ebaf7de99480c5157bf0ec9,
+                    "Google Hybrid" : tile_layer_942f8287a68dc2a9454aa476fa9dc61c,
+                    "OpenFreeMap (vector)" : openfreemap_layer,
                 },
                 overlays :  {
                     "paved" : feature_group_62caa7e89ef076e4db2e4896457f97bc,
