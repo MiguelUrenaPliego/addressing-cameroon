@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Redirecting…</title>
+<script>
+  // Old links used /documents/...; the folder is now /reports/...
+  var p = location.pathname;
+  if (p.indexOf('/documents/') !== -1) {
+    location.replace(p.replace('/documents/', '/reports/') + location.search + location.hash);
+  }
+</script>
+</head>
+<body>
+<p>Page not found. <a href="./">Go to the project home page</a>.</p>
+</body>
+</html>
