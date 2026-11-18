@@ -20,3 +20,6 @@ The three project strands:
 This repo (website in `reports/project_web`, built pilot-survey outputs in `data/`) tracks `code/OSMAddressSystem` as a submodule. The other `code/*` folders are separate git repos that must each stay self-contained (they carry copies of the data they need). They are git-ignored here until they have a remote and are added with `git submodule add`. Maps shown on the website are copied into `reports/project_web/maps/` by `reports/project_web/sync_maps.py`.
 
 Utility scripts at the root: `check_large_files.py`, `compress_files.py`, `uncompress_files.py` (keep large files out of git).
+
+
+**Permanent map URLs:** the map addresses published online must not change. See [reports/project_web/maps/PERMANENT_URLS.md](reports/project_web/maps/PERMANENT_URLS.md) before moving or renaming anything under `reports/`, `data/` or the redirect files.
